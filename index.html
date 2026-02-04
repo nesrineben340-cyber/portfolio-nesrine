@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio BTS SIO - Nesrine Benallal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+
+    <nav>
+        <div class="logo">MonPortfolio.</div>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#veille">Veille</a></li>
+            <li><a href="CV Benallal Nesrine.pdf" download class="btn-cv">Mon CV</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <img src="photo-nesrine.png" alt="Nesrine Benallal" class="profile-pic">
+            <h1>Salut, je suis <span class="txt-gradient">Nesrine</span> 👋</h1>
+            <p>Étudiante en <strong>BTS SIO SISR</strong> à l'<strong>EPSI Montpellier</strong>.</p>
+            <p>Future technicienne systèmes et réseaux passionnée par la Cybersécurité.</p>
+            <div class="hero-buttons">
+                <a href="https://www.linkedin.com/in/nesrine-benallal-472a7b250" target="_blank" class="btn-main">Mon LinkedIn</a>   
+                <a href="CV Benallal Nesrine.pdf" download class="btn-secondary">Télécharger mon CV</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="projets" class="container">
+        <h2>Mes Réalisations</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Projet GSB</h3>
+                <p>Application de gestion de frais développée en PHP/MySQL.</p>
+                <span class="tag">Développement</span>
+            </div>
+            <div class="card">
+                <h3>Infrastructure Réseau</h3>
+                <p>Mise en place d'un serveur Active Directory et DNS.</p>
+                <span class="tag">Réseau</span>
+            </div>
+        </div>
+    </section>
+
+   <div class="comp-item">
+    <span>🛡️</span>
+    <h4>Réseaux & Sécurité</h4>
+    <p>TCP/IP, DHCP, DNS</p>
+    <div class="progress-bar">
+        <div class="progress" data-progress="85%"></div>
+    </div>
+</div>
+
+<div class="comp-item">
+    <span>🐍</span>
+    <h4>Développement</h4>
+    <p>Python, Java, SQL</p>
+    <div class="progress-bar">
+        <div class="progress" data-progress="70%"></div>
+    </div>
+</div>
+
+        <div class="soft-skills-container" style="margin-top: 40px;">
+            <h3>Mes atouts</h3>
+            <div class="skills-tags">
+                <span class="skill-bubble">Travail en équipe</span>
+                <span class="skill-bubble">Sens de l'organisation </span>
+                <span class="skill-bubble">Autonomie </span>
+               <span class="skill-bubble">Adaptation </span>
+            </div>
+        </div>
+    </section>
+
+    <section id="parcours" class="container">
+        <h2>Mon Parcours Professionnel</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">Stage</span>
+                <h3>Technicienne Support</h3>
+                <p><strong>Mairie de Tlemcen (Algérie)</strong> |2023 - 2024</p>
+               <p>Mission : Gestion et maintenance des serveurs locaux.</p>
+            </div>
+            <div class="card">
+                <span class="tag">Stage</span>
+                <h3>Technicienne Support</h3>
+                <p><strong>XEFI Montpellier Ouest</strong> |2022 - 2023 </p>
+                <p>Mission : Traitement de tickets via l'outil GLPI.</p>
+            </div>
+            <div class="card" style="border-left: 5px solid var(--pink);">
+                <span class="tag">Formation</span>
+                <h3>BTS SIO - Option SISR</h3>
+                <p><strong>EPSI Montpellier</strong> |2023 - 2025 </p>
+                <p>Spécialisation en solutions d'infrastructure, systèmes et réseaux.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="veille" class="container">
+        <h2>Veille Technologique</h2>
+        <div class="veille-container">
+            <div class="veille-intro">
+                <p>Thème : <strong>"L'évolution des menaces en Cybersécurité et la protection des infrastructures"</strong>.</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <h3>Mes Outils de Veille</h3>
+                    <ul class="veille-list">
+                        <li><span>🔔</span> Google Alerts</li>
+                        <li><span>📰</span> Le Monde Informatique & Zataz</li>
+                        <li><span>📱</span> Flux RSS & Réseaux spécialisés</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Sujets Récents</h3>
+                    <p>Analyse des attaques par Ransomware et l'importance de la double authentification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Nesrine Benallal - 2026 - Portfolio BTS SIO SISR [cite: 1]</p>
+        <p>📍 Montpellier |📞 07 87 80 31 66 </p>
+       <p>📧 <a href="mailto:nesrine.benallal@ecoles-epsi.net">nesrine.benallal@ecoles-epsi.net</a> </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
