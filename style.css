@@ -176,4 +176,11 @@ footer {
     text-align: center;
     padding: 40px;
     border-top: 1px solid #eee;
+
+}
+/* CORRECTIF LISIBILITÉ SOMBRE */
+.dark-theme .skill-bubble {
+    background-color: #D1C4E9 !important; /* Fond violet pastel */
+    color: #1a1a2e !important;           /* Texte bleu nuit foncé */
+    border: none !important;
 }
