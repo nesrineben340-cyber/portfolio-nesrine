@@ -20,6 +20,7 @@ body {
     color: var(--dark);
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden; /* Évite les bugs de défilement horizontal */
 }
 
 /* --- NAVIGATION --- */
@@ -35,9 +36,37 @@ nav {
     z-index: 1000;
 }
 
-nav ul { display: flex; list-style: none; }
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+nav ul { 
+    display: flex; 
+    list-style: none; 
+}
+
 nav ul li { margin-left: 20px; }
 nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; }
+
+/* --- STYLE DU BURGER (LES 3 BARRES) --- */
+.burger {
+    display: none; /* Caché sur ordinateur */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark); /* Couleur des barres */
+    border-radius: 3px;
+    transition: 0.3s;
+    display: block; /* Important pour la visibilité */
+}
 
 /* --- HERO SECTION --- */
 .hero {
@@ -70,14 +99,14 @@ nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; }
     justify-content: center;
 }
 
-.btn-main, .btn-secondary {
+.btn-main, .btn-secondary, .btn-cv {
     padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
 }
 
-.btn-main { background: var(--purple); color: white; }
+.btn-main, .btn-cv { background: var(--purple); color: white !important; }
 .btn-secondary { border: 2px solid var(--blue); color: var(--dark); }
 
 /* --- GRILLE ET CARTES --- */
@@ -99,12 +128,6 @@ nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; }
 .card:hover { transform: translateY(-10px); }
 
 /* --- COMPETENCES & ATOUTS --- */
-.competence-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
 .progress-bar {
     background: #eee;
     height: 10px;
@@ -128,6 +151,7 @@ nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; }
     border-radius: 50px;
     border: 2px solid var(--pink);
     font-size: 0.9rem;
+    color: var(--dark);
 }
 
 /* --- MODE SOMBRE (DARK MODE) --- */
@@ -136,13 +160,14 @@ body.dark-theme {
     color: #ffffff;
 }
 
-/* Force la visibilité des textes en mode sombre */
 .dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme h4, 
-.dark-theme p, .dark-theme li, .dark-theme a {
+.dark-theme p, .dark-theme li, .dark-theme a:not(.btn-cv) {
     color: #ffffff !important;
 }
 
 .dark-theme nav { background: rgba(26, 26, 46, 0.95); }
+.dark-theme .logo { color: white; }
+.dark-theme .burger span { background-color: white; }
 
 .dark-theme .card, .dark-theme .comp-item {
     background: #252545 !important;
@@ -152,7 +177,7 @@ body.dark-theme {
 .dark-theme .skill-bubble {
     background: var(--purple) !important;
     color: #1a1a2e !important;
-    border: none;
+    border: none !important;
 }
 
 .dark-theme .progress-bar { background: #444; }
@@ -171,16 +196,46 @@ body.dark-theme {
     z-index: 2000;
 }
 
+/* --- RESPONSIVE MOBILE (ÉCRAN < 768px) --- */
+@media screen and (max-width: 768px) {
+    .burger {
+        display: flex; /* Affiche les 3 barres */
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        width: 70%;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%); /* Cache le menu */
+        transition: transform 0.4s ease-in-out;
+        box-shadow: -10px 0 20px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links li { 
+        margin: 20px 0; 
+        margin-left: 0;
+    }
+
+    .nav-active {
+        transform: translateX(0%); /* Montre le menu au clic */
+    }
+
+    body.dark-theme .nav-links {
+        background-color: #1a1a2e;
+    }
+}
+
 /* --- FOOTER --- */
 footer {
     text-align: center;
     padding: 40px;
     border-top: 1px solid #eee;
-
-}
-/* CORRECTIF LISIBILITÉ SOMBRE */
-.dark-theme .skill-bubble {
-    background-color: #D1C4E9 !important; /* Fond violet pastel */
-    color: #1a1a2e !important;           /* Texte bleu nuit foncé */
-    border: none !important;
 }
