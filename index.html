@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - Nesrine Benallal</title>
+    <title>Mon Portfolio BTS SIO - Nesrine Benallal</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <button id="theme-toggle" class="theme-btn">🌙</button>
-
-    <nav>
-        <div class="logo">MonPortfolio.</div>
-        <div class="burger" id="burger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#competences">Compétences</a></li>
-            <li><a href="#parcours">Parcours</a></li>
-            <li><a href="#veille">Veille</a></li>
-            <li><a href="CV Benallal Nesrine.pdf" download class="btn-cv">Mon CV</a></li>
-        </ul>
-    </nav>
+<nav>
+    <div class="logo">MonPortfolio.</div>
+    <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links" id="nav-links"> 
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#competences">Compétences</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#veille">Veille</a></li>
+        <li><a href="CV Benallal Nesrine.pdf" download class="btn-cv">Mon CV</a></li>
+    </ul>
+</nav>
 
     <header class="hero">
         <div class="hero-content">
-            <img src="photo-nesrine.png" alt="Nesrine Benallal" class="profile-pic">
             <h1>Salut, je suis <span class="txt-gradient">Nesrine</span> 👋</h1>
             <p>Étudiante en <strong>BTS SIO SISR</strong> à l'<strong>EPSI Montpellier</strong>.</p>
             <p>Future technicienne systèmes et réseaux passionnée par la Cybersécurité.</p>
@@ -56,34 +54,33 @@
     </section>
 
     <section id="competences" class="container">
-        <h2>Mes Compétences</h2>
-        <div class="grid">
-            <div class="comp-item">
-                <span>🛡️</span>
-                <h4>Réseaux & Sécurité</h4>
-                <p>TCP/IP, DHCP, DNS</p>
-                <div class="progress-bar">
-                    <div class="progress" data-progress="85%"></div>
-                </div>
-            </div>
-            <div class="comp-item">
-                <span>🐍</span>
-                <h4>Développement</h4>
-                <p>Python, Java, SQL</p>
-                <div class="progress-bar">
-                    <div class="progress" data-progress="70%"></div>
-                </div>
-            </div>
+       <div class="comp-item">
+        <span>🛡️</span>
+        <h4>Réseaux & Sécurité</h4>
+        <p>TCP/IP, DHCP, DNS</p>
+        <div class="progress-bar">
+            <div class="progress" data-progress="85%"></div>
         </div>
-        <div class="soft-skills-container" style="margin-top: 40px;">
-            <h3>Mes atouts</h3>
-            <div class="skills-tags">
-                <span class="skill-bubble">Travail en équipe</span>
-                <span class="skill-bubble">Sens de l'organisation</span>
-                <span class="skill-bubble">Autonomie</span>
-                <span class="skill-bubble">Adaptation</span>
-            </div>
+    </div>
+
+    <div class="comp-item">
+        <span>🐍</span>
+        <h4>Développement</h4>
+        <p>Python, Java, SQL</p>
+        <div class="progress-bar">
+            <div class="progress" data-progress="70%"></div>
         </div>
+    </div>
+
+    <div class="soft-skills-container" style="margin-top: 40px;">
+        <h3>Mes atouts</h3>
+        <div class="skills-tags">
+            <span class="skill-bubble">Travail en équipe</span>
+            <span class="skill-bubble">Sens de l'organisation </span>
+            <span class="skill-bubble">Autonomie </span>
+           <span class="skill-bubble">Adaptation </span>
+        </div>
+    </div>
     </section>
 
     <section id="parcours" class="container">
@@ -92,21 +89,23 @@
             <div class="card">
                 <span class="tag">Stage</span>
                 <h3>Technicienne Support</h3>
-                <p><strong>Mairie de Tlemcen (Algérie)</strong> | 2023 - 2024</p>
-                <p>Mission : Gestion et maintenance des serveurs locaux.</p>
+                <p><strong>Mairie de Tlemcen (Algérie)</strong> |2023 - 2024</p>
+               <p>Mission : Gestion et maintenance des serveurs locaux.</p>
             </div>
             <div class="card">
                 <span class="tag">Stage</span>
                 <h3>Technicienne Support</h3>
-                <p><strong>XEFI Montpellier Ouest</strong> | 2022 - 2023</p>
+                <p><strong>XEFI Montpellier Ouest</strong> |2022 - 2023 </p>
                 <p>Mission : Traitement de tickets via l'outil GLPI.</p>
+            </div>
+            <div class="card" style="border-left: 5px solid var(--pink);">
+                <span class="tag">Formation</span>
+                <h3>BTS SIO - Option SISR</h3>
+                <p><strong>EPSI Montpellier</strong> |2023 - 2025 </p>
+                <p>Spécialisation en solutions d'infrastructure, systèmes et réseaux.</p>
             </div>
         </div>
     </section>
-
-    <script src="script.js"></script>
-</body>
-</html>
 
     <section id="veille" class="container">
         <h2>Veille Technologique</h2>
@@ -142,4 +141,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
