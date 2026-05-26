@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet GLPI - Nesrine Benallal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .projet-hero {
+            background: linear-gradient(135deg, #e0f2f1 0%, #f0fffe 100%);
+            padding: 60px 10% 40px;
+            border-bottom: 1px solid #b2dfdb;
+        }
+        body.dark-theme .projet-hero {
+            background: linear-gradient(135deg, #0d2420 0%, #112825 100%);
+            border-bottom: 1px solid #1a4a40;
+        }
+        .projet-hero h1 { font-size: 2rem; margin-bottom: 8px; }
+        .projet-hero .subtitle { font-size: 1rem; color: #777; margin-bottom: 20px; }
+        body.dark-theme .projet-hero .subtitle { color: #aaa; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .badge {
+            background: white; border: 1px solid #ddd;
+            border-radius: 20px; padding: 5px 14px;
+            font-size: 0.8rem; font-weight: 600;
+        }
+        body.dark-theme .badge { background: #112825; border-color: #1a4a40; color: white; }
+
+        .chapitre {
+            background: var(--white); border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            padding: 35px; margin-bottom: 30px;
+        }
+        body.dark-theme .chapitre { background: #252545; }
+        .chapitre h2 {
+            font-size: 1.2rem; margin-bottom: 20px;
+            padding-bottom: 10px; border-bottom: 2px solid #80cbc4;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .mission-block {
+            margin-bottom: 25px; padding-left: 15px;
+            border-left: 3px solid #b2dfdb;
+        }
+        body.dark-theme .mission-block { border-left-color: #1a4a40; }
+        .mission-block h3 { font-size: 1rem; margin-bottom: 8px; color: #00897b; }
+        body.dark-theme .mission-block h3 { color: #4db6ac; }
+        .mission-block ul { margin-left: 20px; }
+        .mission-block li { margin-bottom: 6px; font-size: 0.92rem; }
+        .tools-used { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .tool-tag {
+            background: #e0f2f1; color: #00897b;
+            border-radius: 10px; padding: 3px 12px;
+            font-size: 0.78rem; font-weight: 600;
+        }
+        body.dark-theme .tool-tag { background: #0d2420; color: #4db6ac; }
+
+        .bilan-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px; margin-top: 15px;
+        }
+        .bilan-item { background: #e0f2f1; border-radius: 15px; padding: 20px; }
+        body.dark-theme .bilan-item { background: #0d2420; }
+        .bilan-item h4 { font-size: 0.9rem; margin-bottom: 8px; color: #00897b; }
+        body.dark-theme .bilan-item h4 { color: #4db6ac; }
+        .bilan-item p { font-size: 0.85rem; }
+
+        .schema {
+            background: #f0fffe; border: 1px solid #b2dfdb;
+            border-radius: 15px; padding: 25px;
+            font-family: monospace; font-size: 0.85rem;
+            line-height: 2; color: #00695c; margin: 15px 0;
+        }
+        body.dark-theme .schema { background: #0d2420; border-color: #1a4a40; color: #4db6ac; }
+
+        .back-btn {
+            display: inline-block; margin: 20px 10%;
+            color: #00897b; text-decoration: none;
+            font-weight: 600; font-size: 0.9rem;
+        }
+        .back-btn:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+    <nav>
+        <div class="logo">MonPortfolio.</div>
+        <div class="burger" id="burger"><span></span><span></span><span></span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html#projets">Projets</a></li>
+            <li><a href="index.html#competences">Compétences</a></li>
+            <li><a href="index.html#parcours">Parcours</a></li>
+            <li><a href="index.html#veille">Veille</a></li>
+            <li><a href="CV Benallal Nesrine.pdf" download class="btn-cv">Mon CV</a></li>
+        </ul>
+    </nav>
+
+    <a href="index.html#projets" class="back-btn">← Retour aux projets</a>
+
+    <div class="projet-hero">
+        <div class="badge-row">
+            <span class="badge">🎓 Projet BTS SIO SISR</span>
+            <span class="badge">🖥️ Gestion de parc</span>
+            <span class="badge">📅 Mars 2026</span>
+        </div>
+        <h1>Projet — <span class="txt-gradient">Installation GLPI</span></h1>
+        <p class="subtitle">Déploiement et configuration d'un serveur de gestion de parc informatique</p>
+        <p style="max-width: 700px; font-size: 0.95rem;">
+            Projet consistant à installer et configurer <strong>GLPI (Gestionnaire Libre de Parc Informatique)</strong>
+            sur un serveur Linux. GLPI permet de gérer l'inventaire du matériel, les tickets d'assistance
+            et le suivi des actifs informatiques d'une organisation.
+        </p>
+    </div>
+
+    <div class="container">
+
+        <div class="chapitre">
+            <h2>🎯 Objectifs du projet</h2>
+            <div class="mission-block">
+                <ul>
+                    <li>Installer un serveur <strong>LAMP</strong> (Linux, Apache, MySQL, PHP) pour héberger GLPI.</li>
+                    <li>Déployer et configurer <strong>GLPI</strong> avec sa base de données MySQL.</li>
+                    <li>Configurer les <strong>profils utilisateurs</strong> (administrateur, technicien, utilisateur).</li>
+                    <li>Mettre en place l'<strong>inventaire du parc</strong> informatique.</li>
+                    <li>Configurer le <strong>système de tickets</strong> d'assistance (helpdesk).</li>
+                    <li>Intégrer le plugin <strong>FusionInventory</strong> pour l'inventaire automatique des postes.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>🏗️ Architecture déployée</h2>
+            <div class="schema">
+                🖥️  Serveur Linux (Ubuntu Server)
+                │
+                ├── 🌐  Apache2 — Serveur web (port 80/443)
+                ├── 🗄️  MySQL — Base de données GLPI
+                ├── 🐘  PHP 8.x — Moteur de traitement
+                │
+                └── 📦  GLPI (application web)
+                         ├── Module Parc → inventaire matériel & logiciels
+                         ├── Module Helpdesk → tickets d'assistance
+                         ├── Module Contrats → suivi des garanties
+                         └── Plugin FusionInventory → collecte automatique
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>⚙️ Étapes de réalisation</h2>
+
+            <div class="mission-block">
+                <h3>1 · Préparation du serveur Linux</h3>
+                <ul>
+                    <li>Installation d'<strong>Ubuntu Server</strong> en machine virtuelle.</li>
+                    <li>Mise à jour du système : <code>apt update && apt upgrade</code>.</li>
+                    <li>Configuration de l'adresse IP statique du serveur.</li>
+                    <li>Ouverture des ports nécessaires dans le pare-feu (<code>ufw allow 80</code>).</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Ubuntu Server</span>
+                    <span class="tool-tag">Terminal Linux</span>
+                    <span class="tool-tag">ufw</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>2 · Installation de la pile LAMP</h3>
+                <ul>
+                    <li>Installation d'<strong>Apache2</strong> : <code>apt install apache2</code>.</li>
+                    <li>Installation de <strong>MySQL</strong> et création de la base de données GLPI.</li>
+                    <li>Installation de <strong>PHP</strong> et des extensions requises par GLPI.</li>
+                    <li>Vérification du bon fonctionnement de chaque composant.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Apache2</span>
+                    <span class="tool-tag">MySQL</span>
+                    <span class="tool-tag">PHP 8</span>
+                    <span class="tool-tag">LAMP</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>3 · Déploiement et configuration de GLPI</h3>
+                <ul>
+                    <li>Téléchargement et extraction des sources GLPI dans <code>/var/www/html/glpi</code>.</li>
+                    <li>Attribution des droits sur les dossiers : <code>chown -R www-data:www-data</code>.</li>
+                    <li>Configuration via l'interface web : connexion à la base MySQL, création du compte admin.</li>
+                    <li>Suppression du fichier d'installation pour sécuriser l'accès.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">GLPI</span>
+                    <span class="tool-tag">Configuration web</span>
+                    <span class="tool-tag">Droits Linux</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>4 · Configuration des profils et du helpdesk</h3>
+                <ul>
+                    <li>Création des profils : <strong>Administrateur</strong>, <strong>Technicien</strong>, <strong>Utilisateur final</strong>.</li>
+                    <li>Configuration des catégories de tickets (matériel, logiciel, réseau…).</li>
+                    <li>Paramétrage des règles d'attribution automatique des tickets aux techniciens.</li>
+                    <li>Test du cycle complet : ouverture → traitement → clôture d'un ticket.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Helpdesk</span>
+                    <span class="tool-tag">Profils GLPI</span>
+                    <span class="tool-tag">Gestion des tickets</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>5 · Plugin FusionInventory — Inventaire automatique</h3>
+                <ul>
+                    <li>Installation du plugin <strong>FusionInventory</strong> dans GLPI.</li>
+                    <li>Déploiement de l'agent FusionInventory sur les postes clients.</li>
+                    <li>Vérification de la remontée automatique des informations matérielles et logicielles.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">FusionInventory</span>
+                    <span class="tool-tag">Agent inventaire</span>
+                    <span class="tool-tag">Automatisation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>📋 Compétences validées</h2>
+            <div class="bilan-grid">
+                <div class="bilan-item">
+                    <h4>🖥️ Administration Linux</h4>
+                    <p>Installation et configuration d'un serveur Ubuntu, gestion des droits, services système.</p>
+                </div>
+                <div class="bilan-item">
+                    <h4>🗄️ Base de données</h4>
+                    <p>Création et configuration d'une base MySQL dédiée à une application web.</p>
+                </div>
+                <div class="bilan-item">
+                    <h4>📦 Déploiement applicatif</h4>
+                    <p>Installation et paramétrage complet de GLPI en environnement de production.</p>
+                </div>
+                <div class="bilan-item">
+                    <h4>🎫 Gestion de parc</h4>
+                    <p>Configuration du helpdesk, des profils utilisateurs et de l'inventaire automatique.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>📎 Documents</h2>
+            <a href="index.html#projets" class="btn-secondary">← Retour aux projets</a>
+            <p style="margin-top: 15px; font-size: 0.85rem; color: #aaa;">
+                💡 Tu peux ajouter ici des captures d'écran de l'interface GLPI ou un compte rendu.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Nesrine Benallal — 2026 — Portfolio BTS SIO SISR</p>
+        <p>📍 Montpellier | 📧 <a href="mailto:nesrine.benallal@ecoles-epsi.net">nesrine.benallal@ecoles-epsi.net</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
