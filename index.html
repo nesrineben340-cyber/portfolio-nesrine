@@ -25,15 +25,63 @@
         </ul>
     </nav>
 
+    <style>
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            padding: 80px 10%;
+            text-align: left;
+        }
+        .hero-content { flex: 1; max-width: 560px; }
+        .hero-photo-wrap {
+            flex-shrink: 0;
+            position: relative;
+        }
+        .hero-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+            border: 5px solid var(--purple);
+            box-shadow: 0 8px 30px rgba(177,156,217,0.35);
+            display: block;
+        }
+        .hero-photo-ring {
+            position: absolute;
+            inset: -10px;
+            border-radius: 50%;
+            border: 2px dashed var(--pink);
+            animation: spin-slow 18s linear infinite;
+        }
+        @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+        @media screen and (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 30px;
+                padding: 50px 6%;
+            }
+            .hero-photo { width: 160px; height: 160px; }
+        }
+    </style>
+
     <header class="hero">
         <div class="hero-content">
             <h1>Salut, je suis <span class="txt-gradient">Nesrine</span> 👋</h1>
             <p>Étudiante en <strong>BTS SIO SISR</strong> à l'<strong>EPSI Montpellier</strong>.</p>
             <p>Future administratrice systèmes & réseaux, passionnée par la <strong>Cybersécurité</strong>.</p>
-            <div class="hero-buttons">
+            <div class="hero-buttons" style="margin-top: 25px;">
                 <a href="https://www.linkedin.com/in/nesrine-benallal-472a7b250" target="_blank" class="btn-main">Mon LinkedIn</a>  
                 <a href="CV Benallal Nesrine.pdf" download class="btn-secondary">Télécharger mon CV</a>
             </div>
+        </div>
+        <div class="hero-photo-wrap">
+            <div class="hero-photo-ring"></div>
+            <img src="photo-nesrine.png" alt="Photo de Nesrine Benallal" class="hero-photo">
         </div>
     </header>
 
