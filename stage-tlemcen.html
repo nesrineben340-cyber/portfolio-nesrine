@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage Mairie de Tlemcen - Nesrine Benallal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .stage-hero {
+            background: linear-gradient(135deg, #fce4ec 0%, #fff5f8 100%);
+            padding: 60px 10% 40px;
+            border-bottom: 1px solid #f8bbd0;
+        }
+        body.dark-theme .stage-hero {
+            background: linear-gradient(135deg, #2d1a20 0%, #352030 100%);
+            border-bottom: 1px solid #5a2a38;
+        }
+        .stage-hero h1 { font-size: 2rem; margin-bottom: 8px; }
+        .stage-hero .subtitle { font-size: 1rem; color: #777; margin-bottom: 20px; }
+        body.dark-theme .stage-hero .subtitle { color: #aaa; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .badge {
+            background: white; border: 1px solid #ddd;
+            border-radius: 20px; padding: 5px 14px;
+            font-size: 0.8rem; font-weight: 600;
+        }
+        body.dark-theme .badge { background: #3a2030; border-color: #5a3040; color: white; }
+
+        .chapitre {
+            background: var(--white); border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            padding: 35px; margin-bottom: 30px;
+        }
+        body.dark-theme .chapitre { background: #252545; }
+        .chapitre h2 {
+            font-size: 1.2rem; margin-bottom: 20px;
+            padding-bottom: 10px; border-bottom: 2px solid var(--pink);
+            display: flex; align-items: center; gap: 10px;
+        }
+        .mission-block {
+            margin-bottom: 25px; padding-left: 15px;
+            border-left: 3px solid #fce4ec;
+        }
+        body.dark-theme .mission-block { border-left-color: #5a2a38; }
+        .mission-block h3 { font-size: 1rem; margin-bottom: 8px; color: #c0607a; }
+        body.dark-theme .mission-block h3 { color: #e899aa; }
+        .mission-block ul { margin-left: 20px; }
+        .mission-block li { margin-bottom: 6px; font-size: 0.92rem; }
+        .tools-used { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .tool-tag {
+            background: #fff0f4; color: #c0607a;
+            border-radius: 10px; padding: 3px 12px;
+            font-size: 0.78rem; font-weight: 600;
+        }
+        body.dark-theme .tool-tag { background: #3a2030; color: #e899aa; }
+
+        .bilan-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px; margin-top: 15px;
+        }
+        .bilan-item { background: #fff5f8; border-radius: 15px; padding: 20px; }
+        body.dark-theme .bilan-item { background: #2a1820; }
+        .bilan-item h4 { font-size: 0.9rem; margin-bottom: 8px; color: #c0607a; }
+        body.dark-theme .bilan-item h4 { color: #e899aa; }
+        .bilan-item p { font-size: 0.85rem; }
+
+        .back-btn {
+            display: inline-block; margin: 20px 10%;
+            color: #c0607a; text-decoration: none;
+            font-weight: 600; font-size: 0.9rem;
+        }
+        .back-btn:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+    <nav>
+        <div class="logo">MonPortfolio.</div>
+        <div class="burger" id="burger"><span></span><span></span><span></span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html#projets">Projets</a></li>
+            <li><a href="index.html#competences">Compétences</a></li>
+            <li><a href="index.html#parcours">Parcours</a></li>
+            <li><a href="index.html#veille">Veille</a></li>
+            <li><a href="CV Benallal Nesrine.pdf" download class="btn-cv">Mon CV</a></li>
+        </ul>
+    </nav>
+
+    <a href="index.html#parcours" class="back-btn">← Retour au parcours</a>
+
+    <div class="stage-hero">
+        <div class="badge-row">
+            <span class="badge">🗓️ 2023 – 2024</span>
+            <span class="badge">📍 Mairie de Tlemcen — Algérie</span>
+            <span class="badge">🎓 BTS SIO SISR — 1ère année</span>
+        </div>
+        <h1>Stage — <span class="txt-gradient">Mairie de Tlemcen</span></h1>
+        <p class="subtitle">Administration serveurs · Maintenance réseau · Support informatique</p>
+        <p style="max-width: 700px; font-size: 0.95rem;">
+            Stage effectué au sein du service informatique de la Mairie de Tlemcen (Algérie). 
+            Découverte de l'administration des systèmes dans un environnement institutionnel 
+            avec gestion des serveurs locaux et maintenance du parc informatique municipal.
+        </p>
+    </div>
+
+    <div class="container">
+
+        <div class="chapitre">
+            <h2>🏛️ Contexte & Environnement</h2>
+            <p style="font-size: 0.92rem; line-height: 1.8;">
+                La Mairie de Tlemcen est une institution publique algérienne disposant d'un service 
+                informatique interne chargé de la gestion de l'infrastructure IT municipale. 
+                Le parc informatique comprend des postes administratifs, des serveurs locaux 
+                et un réseau interne gérant les services municipaux.
+            </p>
+        </div>
+
+        <div class="chapitre">
+            <h2>🖥️ Administration des serveurs locaux</h2>
+            <div class="mission-block">
+                <h3>Gestion et maintenance des serveurs</h3>
+                <ul>
+                    <li>Surveillance de l'état des serveurs locaux et des services associés.</li>
+                    <li>Vérification des sauvegardes et contrôle de l'intégrité des données.</li>
+                    <li>Gestion des comptes utilisateurs et des droits d'accès.</li>
+                    <li>Application des mises à jour systèmes pour maintenir la sécurité.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Windows Server</span>
+                    <span class="tool-tag">Gestion des comptes</span>
+                    <span class="tool-tag">Sauvegardes</span>
+                </div>
+            </div>
+            <div class="mission-block">
+                <h3>Administration du réseau local</h3>
+                <ul>
+                    <li>Surveillance et maintenance du réseau interne de la mairie.</li>
+                    <li>Dépannage des problèmes de connectivité entre les services.</li>
+                    <li>Configuration de base des équipements réseau.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Réseau LAN</span>
+                    <span class="tool-tag">TCP/IP</span>
+                    <span class="tool-tag">Dépannage réseau</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>🔧 Maintenance du parc informatique</h2>
+            <div class="mission-block">
+                <h3>Maintenance préventive et corrective</h3>
+                <ul>
+                    <li>Inventaire et suivi du matériel informatique des services municipaux.</li>
+                    <li>Maintenance physique des postes (nettoyage, remplacement de composants).</li>
+                    <li>Installation et configuration de nouveaux postes de travail.</li>
+                    <li>Réinstallation de systèmes d'exploitation et des logiciels métiers.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Windows</span>
+                    <span class="tool-tag">Maintenance matérielle</span>
+                    <span class="tool-tag">Inventaire parc</span>
+                </div>
+            </div>
+            <div class="mission-block">
+                <h3>Support utilisateur</h3>
+                <ul>
+                    <li>Assistance technique auprès des agents municipaux.</li>
+                    <li>Résolution des incidents courants : pannes logicielles, problèmes d'impression, accès réseau.</li>
+                    <li>Formation et accompagnement des utilisateurs sur les outils bureautiques.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Support N1</span>
+                    <span class="tool-tag">Bureautique</span>
+                    <span class="tool-tag">Formation utilisateur</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>📋 Bilan — Compétences acquises</h2>
+            <div class="bilan-grid">
+                <div class="bilan-item">
+                    <h4>🖥️ Administration serveurs</h4>
+                    <p>Gestion des serveurs locaux, comptes utilisateurs, sauvegardes et surveillance des services.</p>
+                </div>
+                <div class="bilan-item">
+                    <h4>🌐 Réseau local</h4>
+                    <p>Maintenance et dépannage d'un réseau LAN institutionnel avec plusieurs services connectés.</p>
+                </div>
+                <div class="bilan-item">
+                    <h4>🔧 Maintenance parc</h4>
+                    <p>Inventaire, maintenance préventive et corrective du parc informatique municipal.</p>
+                </div>
+                <div class="bilan-item">
+                    <h4>👥 Accompagnement</h4>
+                    <p>Support et formation d'utilisateurs non-techniciens en environnement institutionnel.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>📎 Documents</h2>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <a href="diaporama-mairie-tlemcen-nesrine.pdf" target="_blank" class="btn-main">📊 Diaporama (PDF)</a>
+                <a href="index.html#parcours" class="btn-secondary">← Retour au portfolio</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Nesrine Benallal — 2026 — Portfolio BTS SIO SISR</p>
+        <p>📍 Montpellier | 📧 <a href="mailto:nesrine.benallal@ecoles-epsi.net">nesrine.benallal@ecoles-epsi.net</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
