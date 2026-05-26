@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage SMAG - Nesrine Benallal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .stage-hero {
+            background: linear-gradient(135deg, #e8e0f7 0%, #f9f0fb 100%);
+            padding: 60px 10% 40px;
+            border-bottom: 1px solid #e0d7f5;
+        }
+        body.dark-theme .stage-hero {
+            background: linear-gradient(135deg, #1e1b35 0%, #252545 100%);
+            border-bottom: 1px solid #3a3660;
+        }
+        .stage-hero h1 { font-size: 2rem; margin-bottom: 8px; }
+        .stage-hero .subtitle { font-size: 1rem; color: #777; margin-bottom: 20px; }
+        body.dark-theme .stage-hero .subtitle { color: #aaa; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .badge {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        body.dark-theme .badge { background: #2e2b50; border-color: #4a4770; color: white; }
+
+        /* Chapitres */
+        .chapitre {
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            padding: 35px;
+            margin-bottom: 30px;
+        }
+        body.dark-theme .chapitre { background: #252545; }
+        .chapitre h2 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--purple);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .mission-block {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 3px solid #e8e0f7;
+        }
+        body.dark-theme .mission-block { border-left-color: #3a3660; }
+        .mission-block h3 { font-size: 1rem; margin-bottom: 8px; color: #7c65c1; }
+        body.dark-theme .mission-block h3 { color: #b19cd9; }
+        .mission-block ul { margin-left: 20px; }
+        .mission-block li { margin-bottom: 6px; font-size: 0.92rem; }
+        .tools-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .tool-tag {
+            background: #f0ebff;
+            color: #6a4fc1;
+            border-radius: 10px;
+            padding: 3px 12px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+        body.dark-theme .tool-tag { background: #3a3360; color: #c9b8f7; }
+
+        /* Bilan */
+        .bilan-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .bilan-item {
+            background: #f9f7ff;
+            border-radius: 15px;
+            padding: 20px;
+        }
+        body.dark-theme .bilan-item { background: #1e1b35; }
+        .bilan-item h4 { font-size: 0.9rem; margin-bottom: 8px; color: #7c65c1; }
+        body.dark-theme .bilan-item h4 { color: #b19cd9; }
+        .bilan-item p { font-size: 0.85rem; }
+
+        /* Contexte entreprise */
+        .entreprise-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.88rem; }
+        .entreprise-table td { padding: 9px 12px; border-bottom: 1px solid #eee; }
+        .entreprise-table td:first-child { font-weight: 600; width: 40%; }
+        body.dark-theme .entreprise-table td { border-bottom-color: #3a3660; }
+
+        .back-btn {
+            display: inline-block;
+            margin: 20px 10%;
+            color: #7c65c1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .back-btn:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+
+    <nav>
+        <div class="logo">MonPortfolio.</div>
+        <div class="burger" id="burger"><span></span><span></span><span></span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html#projets">Projets</a></li>
+            <li><a href="index.html#competences">Compétences</a></li>
+            <li><a href="index.html#parcours">Parcours</a></li>
+            <li><a href="index.html#veille">Veille</a></li>
+            <li><a href="CV Benallal Nesrine.pdf" download class="btn-cv">Mon CV</a></li>
+        </ul>
+    </nav>
+
+    <a href="index.html#parcours" class="back-btn">← Retour au parcours</a>
+
+    <!-- HERO STAGE -->
+    <div class="stage-hero">
+        <div class="badge-row">
+            <span class="badge">🗓️ 2025 – 2026</span>
+            <span class="badge">📍 SMAG Montpellier</span>
+            <span class="badge">🎓 BTS SIO SISR — 2ème année</span>
+            <span class="badge">⏱️ 8 semaines</span>
+        </div>
+        <h1>Stage — Pôle Infrastructure <span class="txt-gradient">SMAG</span></h1>
+        <p class="subtitle">Administration systèmes & réseaux · Automatisation · Sécurité périmétrique</p>
+        <p style="max-width: 750px; font-size: 0.95rem;">
+            Stage de 2ème année effectué au sein du pôle Infrastructure de SMAG (Smart Agriculture), 
+            leader français des logiciels de gestion agricole. Immersion dans un environnement IT critique 
+            supportant des services SaaS utilisés par 30 000 utilisateurs.
+        </p>
+    </div>
+
+    <div class="container">
+
+        <!-- ENTREPRISE -->
+        <div class="chapitre">
+            <h2>🏢 Présentation de l'entreprise</h2>
+            <table class="entreprise-table">
+                <tr><td>Nom</td><td>SMAG (Smart Agriculture) — filiale Bioline Group / InVivo</td></tr>
+                <tr><td>Fondation</td><td>2001 (fusion Maferme + Neotic en 2012)</td></tr>
+                <tr><td>Effectif</td><td>185 collaborateurs (experts IT & ingénieurs agronomes)</td></tr>
+                <tr><td>Localisation</td><td>Siège : Châlons-en-Champagne · R&D : Montpellier</td></tr>
+                <tr><td>Activité</td><td>Éditeur de logiciels SaaS de gestion agricole (leader français, 40% de part de marché)</td></tr>
+                <tr><td>Clients majeurs</td><td>Michelin, Bonduelle, Limagrain, Semences de France</td></tr>
+                <tr><td>Périmètre</td><td>30 000 utilisateurs · 100 000 exploitations · 10 millions d'hectares</td></tr>
+            </table>
+            <p style="margin-top: 15px; font-size: 0.9rem;">
+                <strong>Problématique du stage :</strong> <em>Comment l'automatisation des processus de surveillance 
+                et l'industrialisation de la maintenance permettent-elles de sécuriser une infrastructure 
+                supportant des services SaaS critiques ?</em>
+            </p>
+        </div>
+
+        <!-- CHAPITRE I -->
+        <div class="chapitre">
+            <h2>🔐 Chapitre I — Ingénierie Réseau & Sécurité Périmétrique</h2>
+
+            <div class="mission-block">
+                <h3>2.1 · Audit et optimisation du pare-feu Fortinet (FortiOS)</h3>
+                <ul>
+                    <li>Analyse des règles de filtrage via les <strong>compteurs de trafic (Hit Count)</strong> en droits de lecture.</li>
+                    <li>Identification des règles obsolètes ou redondantes.</li>
+                    <li>Préparation de recommandations : suppression d'objets réseaux inutilisés, regroupement de règles, renommage selon la charte.</li>
+                    <li>Application des modifications en binôme avec le tuteur de stage.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Fortinet FortiOS</span>
+                    <span class="tool-tag">Analyse de règles</span>
+                    <span class="tool-tag">Sécurité périmétrique</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>2.2 · Veille et documentation — Sécurisation des accès (802.1X)</h3>
+                <ul>
+                    <li>Étude du standard <strong>802.1X</strong> pour la sécurisation des prises réseau physiques (RJ45).</li>
+                    <li>Analyse des trois composants : Supplicant (poste client), Authenticator (switch) et serveur RADIUS.</li>
+                    <li>Rédaction d'une documentation sur l'isolation des équipements non reconnus (VLAN de quarantaine).</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">802.1X</span>
+                    <span class="tool-tag">RADIUS</span>
+                    <span class="tool-tag">VLANs</span>
+                    <span class="tool-tag">Documentation technique</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>2.3 · Analyse comparative des architectures d'hyperviseurs</h3>
+                <ul>
+                    <li>Note documentaire sur les hyperviseurs <strong>Type 1 (Bare Metal)</strong> : VMware ESXi, Hyper-V — utilisés pour les BDD critiques de SMAG.</li>
+                    <li>Comparaison avec les hyperviseurs <strong>Type 2 (Hosted)</strong> : VirtualBox, VMware Workstation — utilisés pour les tests.</li>
+                    <li>Analyse des performances et des cas d'usage dans l'environnement SMAG.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">VMware ESXi</span>
+                    <span class="tool-tag">Hyper-V</span>
+                    <span class="tool-tag">VirtualBox</span>
+                    <span class="tool-tag">Virtualisation</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHAPITRE II -->
+        <div class="chapitre">
+            <h2>🖥️ Chapitre II — Industrialisation & Gestion du Cycle de Vie du Parc</h2>
+
+            <div class="mission-block">
+                <h3>3.1 · Déploiement des postes via PXE (Masterisation)</h3>
+                <ul>
+                    <li>Démarrage des postes sur la carte réseau (PXE) pour récupérer automatiquement une image système.</li>
+                    <li>Déploiement d'images Windows préconfigurées (OS + mises à jour + logiciels SMAG).</li>
+                    <li>Avantage : homogénéité du parc, gain de temps, conformité garantie dès la mise en service.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">PXE</span>
+                    <span class="tool-tag">Masterisation</span>
+                    <span class="tool-tag">Windows Server</span>
+                    <span class="tool-tag">Déploiement réseau</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>3.2 · Support utilisateur N2 & diagnostic matériel (GLPI)</h3>
+                <ul>
+                    <li>Traitement de tickets via <strong>GLPI</strong> — prise en main à distance pour diagnostic.</li>
+                    <li>Cas concret : panne Wi-Fi/Bluetooth → code erreur <strong>45 (périphérique non détecté)</strong> dans le Gestionnaire de périphériques.</li>
+                    <li>Diagnostic : carte réseau interne défectueuse (Realtek) → commande et envoi d'une carte de remplacement pour éviter l'immobilisation du poste.</li>
+                    <li>Démarche structurée : détection → analyse → résolution → clôture du ticket.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">GLPI</span>
+                    <span class="tool-tag">Prise en main à distance</span>
+                    <span class="tool-tag">Diagnostic matériel</span>
+                    <span class="tool-tag">Support N2</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>3.3 · Gestion du matériel obsolète & conformité RGPD (en binôme)</h3>
+                <ul>
+                    <li>Inventaire et retrait des équipements hors service de la base <strong>GLPI</strong>.</li>
+                    <li>Démontage des disques durs (SSD & HDD) pour destruction physique par prestataire spécialisé — <strong>conformité RGPD</strong>.</li>
+                    <li>Récupération de composants réutilisables (RAM, cartes réseau) pour le stock de maintenance.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">GLPI</span>
+                    <span class="tool-tag">RGPD</span>
+                    <span class="tool-tag">Décommissionnement</span>
+                    <span class="tool-tag">Gestion de parc</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHAPITRE III -->
+        <div class="chapitre">
+            <h2>⚙️ Chapitre III — Automatisation & Supervision Proactive</h2>
+
+            <div class="mission-block">
+                <h3>4.1 · Développement de scripts PowerShell (avec le DSI)</h3>
+                <ul>
+                    <li>Rédaction sous <strong>Notepad++</strong> de scripts PowerShell pour l'extraction des journaux Windows (Système, Sécurité, Application).</li>
+                    <li>Intégration de la collecte des logs d'erreurs <strong>MySQL</strong> et <strong>SQL Server</strong> avec l'appui du DSI.</li>
+                    <li>Choix de l'<strong>authentification intégrée Windows</strong> (Integrated Security=True) pour éviter le stockage de mots de passe en clair.</li>
+                    <li>Transmission des logs en temps réel vers un serveur Syslog.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">PowerShell</span>
+                    <span class="tool-tag">Notepad++</span>
+                    <span class="tool-tag">SQL Server</span>
+                    <span class="tool-tag">MySQL</span>
+                    <span class="tool-tag">Active Directory</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>4.2 · Ordonnancement & configuration du serveur Syslog</h3>
+                <ul>
+                    <li>Mise en place de <strong>tâches planifiées Windows</strong> via PowerShell pour automatiser l'exécution des scripts.</li>
+                    <li>Configuration du serveur Syslog Linux (<code>nano /etc/rsyslog.conf</code>) : ajout de la plage IP du client, paramétrage UDP/TCP, inclusion de l'IP source.</li>
+                    <li>Redémarrage et validation du service : <code>systemctl restart rsyslog</code>.</li>
+                    <li>Tests de réception via <strong>MobaXterm</strong> utilisé comme serveur Syslog de test.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">rsyslog</span>
+                    <span class="tool-tag">Syslog</span>
+                    <span class="tool-tag">MobaXterm</span>
+                    <span class="tool-tag">Linux (Ubuntu)</span>
+                    <span class="tool-tag">Tâches planifiées</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>4.3 · Sécurisation des accès privilégiés avec KeePass 2</h3>
+                <ul>
+                    <li>Utilisation de <strong>KeePass 2</strong> pour la gestion et le stockage sécurisé des mots de passe d'administration.</li>
+                    <li>Application des bonnes pratiques de sécurité des accès privilégiés dans un environnement de production.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">KeePass 2</span>
+                    <span class="tool-tag">Gestion des accès</span>
+                    <span class="tool-tag">Sécurité</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BILAN -->
+        <div class="chapitre">
+            <h2>📋 Bilan — Compétences SISR validées</h2>
+            <div class="bilan-grid">
+                <div class="bilan-item">
+                    <h4>🖥️ Administration système</h4>
+                    <p>Scripts PowerShell, tâches planifiées, gestion des droits Active Directory, authentification intégrée Windows.</p>
+                </div>
+                <div class="bilan-item">
+                    <h4>🔧 Maintenance & Support</h4>
+                    <p>Diagnostic de pannes matérielles structuré (de la détection à la clôture), gestion de tickets GLPI.</p>
+                </div>
+                <div class="bilan-item">
+                    <h4>🔐 Sécurité des infrastructures</h4>
+                    <p>Audit de règles Fortinet, procédures de décommissionnement RGPD, gestion des accès avec KeePass.</p>
+                </div>
+                <div class="bilan-item">
+                    <h4>🏭 Industrialisation</h4>
+                    <p>Déploiement PXE, masterisation d'images système, automatisation de la collecte de logs.</p>
+                </div>
+            </div>
+            <p style="margin-top: 25px; font-size: 0.9rem; font-style: italic; color: #888;">
+                « Ce stage m'a permis de passer de la théorie académique à la réalité d'une infrastructure critique. 
+                J'ai compris que le rôle de l'administrateur système ne se limite pas à la technique : il nécessite 
+                une vision globale de la sécurité, une capacité d'écoute et une volonté constante d'automatisation. »
+            </p>
+        </div>
+
+        <!-- DOCUMENTS -->
+        <div class="chapitre">
+            <h2>📎 Documents</h2>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 30px;">
+                <a href="Rapport_de_stage_SAMG.pdf" target="_blank" class="btn-main">📄 Rapport de stage (PDF)</a>
+                <a href="attestation%20de%20stage%20smag.pdf" target="_blank" class="btn-main">📋 Voir l'attestation</a>
+                <a href="attestation%20de%20stage%20smag.pdf" download class="btn-secondary">⬇️ Télécharger l'attestation</a>
+                <a href="index.html#parcours" class="btn-secondary">← Retour au portfolio</a>
+            </div>
+
+            <h3 style="margin-bottom: 15px; font-size: 1rem;">Attestation de stage — SMAG</h3>
+            <div style="
+                border: 2px solid #e0d7f5;
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+                max-width: 800px;
+            ">
+                <div style="
+                    background: #f5f0ff;
+                    padding: 10px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: #7c65c1;
+                ">
+                    <span>📋 Attestation de stage — SMAG Montpellier · SESSION 2026</span>
+                    <a href="attestation%20de%20stage%20smag.pdf" download style="color: #7c65c1; font-size: 0.8rem;">⬇️ Télécharger</a>
+                </div>
+                <iframe
+                    src="attestation%20de%20stage%20smag.pdf"
+                    width="100%"
+                    height="700px"
+                    style="display: block; border: none;"
+                    title="Attestation de stage SMAG">
+                    <p style="padding: 20px;">
+                        Votre navigateur ne supporte pas l'affichage PDF intégré.
+                        <a href="attestation%20de%20stage%20smag.pdf" target="_blank">Cliquez ici pour ouvrir l'attestation.</a>
+                    </p>
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Nesrine Benallal — 2026 — Portfolio BTS SIO SISR</p>
+        <p>📍 Montpellier | 📧 <a href="mailto:nesrine.benallal@ecoles-epsi.net">nesrine.benallal@ecoles-epsi.net</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
