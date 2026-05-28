@@ -521,25 +521,58 @@
     <section id="veille" class="container">
         <div class="section-divider">14 & 15 · Veille Technologique</div>
         <h2>Veille Technologique</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>📡 Veille 1 — Sources & Méthodes</h3>
-                <p>Thème : <strong>Cybersécurité</strong> — évolution des menaces et protection des infrastructures.</p>
-                <ul class="veille-list" style="list-style: none; margin-top: 12px;">
-                    <li>🔔 Google Alerts (mots-clés : ransomware, ANSSI, CVE…)</li>
-                    <li>📰 Le Monde Informatique & Zataz.com</li>
-                    <li>🔐 ANSSI — Agence Nationale de la Cybersécurité</li>
-                    <li>📡 Flux RSS hebdomadaires spécialisés</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>📋 Veille 2 — Synthèse & Analyse</h3>
-                <p>Analyse approfondie des <strong>Ransomwares</strong> et de la <strong>double authentification (MFA)</strong>.</p>
-                <p style="margin-top: 10px; font-size: 0.9rem; color: #888;">
-                    Méthode : alertes automatiques + lecture hebdomadaire + tableau de synthèse mis à jour régulièrement.
-                </p>
-                <a href="documents/tableau-veille.pdf" target="_blank" class="btn-secondary" style="margin-top: 12px; display: inline-block;">📊 Ouvrir mon tableau de veille</a>
-            </div>
+        <div class="grid" style="grid-template-columns: repeat(2, 1fr);">
+
+            <!-- VEILLE 1 - CYBERSÉCURITÉ -->
+            <a href="veille-cybersecurite.html" class="card-link">
+                <div class="card" style="border-left: 5px solid #e94560;">
+                    <span class="tag" style="background:#ffe0e5; color:#e94560;">Veille 1 — Mai 2026</span>
+                    <h3>🔐 Cybersécurité & Protection des Infrastructures</h3>
+                    <p style="margin-top:8px; font-size:0.88rem;">Évolution des menaces, analyses forensiques et stratégies de résilience.</p>
+                    <div style="margin-top:10px; display:flex; flex-wrap:wrap; gap:6px;">
+                        <span style="background:#ffe0e5; color:#e94560; border-radius:8px; padding:2px 10px; font-size:0.75rem; font-weight:600;">ANSSI</span>
+                        <span style="background:#ffe0e5; color:#e94560; border-radius:8px; padding:2px 10px; font-size:0.75rem; font-weight:600;">CERT-FR</span>
+                        <span style="background:#ffe0e5; color:#e94560; border-radius:8px; padding:2px 10px; font-size:0.75rem; font-weight:600;">ZATAZ</span>
+                        <span style="background:#ffe0e5; color:#e94560; border-radius:8px; padding:2px 10px; font-size:0.75rem; font-weight:600;">LMI</span>
+                    </div>
+                    <ul style="list-style:none; margin-top:12px; font-size:0.85rem; line-height:2;">
+                        <li>📊 3 586 événements traités · 128 ransomwares</li>
+                        <li>🤖 IA offensive · Exfiltration sèche · OT/IoT</li>
+                        <li>🏛️ Plan gouvernemental 200 M€ · Règle des 5%</li>
+                        <li>⚖️ NIS2 · DORA · Cyber Resilience Act</li>
+                    </ul>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+                        <span class="click-info" style="margin:0;">→ Voir le rapport complet</span>
+                        <a href="Veille_Cybersecurite_Mai2026_Complet.pdf" target="_blank" class="btn-secondary" style="font-size:0.78rem; padding:5px 12px;" onclick="event.stopPropagation();">📄 PDF</a>
+                    </div>
+                </div>
+            </a>
+
+            <!-- VEILLE 2 - RGPD -->
+            <a href="veille-rgpd.html" class="card-link">
+                <div class="card" style="border-left: 5px solid #4caf50;">
+                    <span class="tag" style="background:#e8f5e9; color:#2e7d32;">Veille 2 — Mai 2026</span>
+                    <h3>🔒 RGPD & Données Personnelles</h3>
+                    <p style="margin-top:8px; font-size:0.88rem;">Conformité, violations, sanctions et nouveaux enjeux (IA, NIS2).</p>
+                    <div style="margin-top:10px; display:flex; flex-wrap:wrap; gap:6px;">
+                        <span style="background:#e8f5e9; color:#2e7d32; border-radius:8px; padding:2px 10px; font-size:0.75rem; font-weight:600;">CNIL</span>
+                        <span style="background:#e8f5e9; color:#2e7d32; border-radius:8px; padding:2px 10px; font-size:0.75rem; font-weight:600;">CEPD</span>
+                        <span style="background:#e8f5e9; color:#2e7d32; border-radius:8px; padding:2px 10px; font-size:0.75rem; font-weight:600;">ICO</span>
+                        <span style="background:#e8f5e9; color:#2e7d32; border-radius:8px; padding:2px 10px; font-size:0.75rem; font-weight:600;">ZATAZ</span>
+                    </div>
+                    <ul style="list-style:none; margin-top:12px; font-size:0.85rem; line-height:2;">
+                        <li>📊 6 167 violations · 487 M€ d'amendes</li>
+                        <li>💸 TikTok 530 M€ · FREE 42 M€ · Reddit 17 M€</li>
+                        <li>🤖 IA & RGPD · Shadow IA · AI Act</li>
+                        <li>🛡️ Les 8 droits fondamentaux RGPD</li>
+                    </ul>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+                        <span class="click-info" style="margin:0;">→ Voir le rapport complet</span>
+                        <a href="Veille_RGPD_Mai2026_Complet.pdf" target="_blank" class="btn-secondary" style="font-size:0.78rem; padding:5px 12px;" onclick="event.stopPropagation();">📄 PDF</a>
+                    </div>
+                </div>
+            </a>
+
         </div>
     </section>
 
