@@ -6,80 +6,6 @@
     <title>Projet Serveur Web - Nesrine Benallal</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        .projet-hero {
-            background: linear-gradient(135deg, #fce4ec 0%, #fff5f8 100%);
-            padding: 60px 10% 40px;
-            border-bottom: 1px solid #f48fb1;
-        }
-        body.dark-theme .projet-hero {
-            background: linear-gradient(135deg, #2a0a15 0%, #30101a 100%);
-            border-bottom: 1px solid #5a1a2a;
-        }
-        .projet-hero h1 { font-size: 2rem; margin-bottom: 8px; }
-        .projet-hero .subtitle { font-size: 1rem; color: #777; margin-bottom: 20px; }
-        body.dark-theme .projet-hero .subtitle { color: #aaa; }
-        .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
-        .badge {
-            background: white; border: 1px solid #ddd;
-            border-radius: 20px; padding: 5px 14px;
-            font-size: 0.8rem; font-weight: 600;
-        }
-        body.dark-theme .badge { background: #2a0a15; border-color: #5a1a2a; color: white; }
-
-        .chapitre {
-            background: var(--white); border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            padding: 35px; margin-bottom: 30px;
-        }
-        body.dark-theme .chapitre { background: #252545; }
-        .chapitre h2 {
-            font-size: 1.2rem; margin-bottom: 20px;
-            padding-bottom: 10px; border-bottom: 2px solid #f48fb1;
-            display: flex; align-items: center; gap: 10px;
-        }
-        .mission-block {
-            margin-bottom: 25px; padding-left: 15px;
-            border-left: 3px solid #f8bbd0;
-        }
-        body.dark-theme .mission-block { border-left-color: #5a1a2a; }
-        .mission-block h3 { font-size: 1rem; margin-bottom: 8px; color: #c2185b; }
-        body.dark-theme .mission-block h3 { color: #f48fb1; }
-        .mission-block ul { margin-left: 20px; }
-        .mission-block li { margin-bottom: 6px; font-size: 0.92rem; }
-        .tools-used { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-        .tool-tag {
-            background: #fce4ec; color: #c2185b;
-            border-radius: 10px; padding: 3px 12px;
-            font-size: 0.78rem; font-weight: 600;
-        }
-        body.dark-theme .tool-tag { background: #2a0a15; color: #f48fb1; }
-
-        .schema {
-            background: #fff5f8; border: 1px solid #f8bbd0;
-            border-radius: 15px; padding: 25px;
-            font-family: monospace; font-size: 0.85rem;
-            line-height: 2; color: #880e4f; margin: 15px 0;
-        }
-        body.dark-theme .schema { background: #2a0a15; border-color: #5a1a2a; color: #f48fb1; }
-
-        .bilan-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; margin-top: 15px;
-        }
-        .bilan-item { background: #fce4ec; border-radius: 15px; padding: 20px; }
-        body.dark-theme .bilan-item { background: #2a0a15; }
-        .bilan-item h4 { font-size: 0.9rem; margin-bottom: 8px; color: #c2185b; }
-        body.dark-theme .bilan-item h4 { color: #f48fb1; }
-        .bilan-item p { font-size: 0.85rem; }
-
-        .back-btn {
-            display: inline-block; margin: 20px 10%;
-            color: #c2185b; text-decoration: none;
-            font-weight: 600; font-size: 0.9rem;
-        }
-        .back-btn:hover { text-decoration: underline; }
-    </style>
 </head>
 <body>
     <button id="theme-toggle" class="theme-btn">🌙</button>
@@ -97,18 +23,17 @@
 
     <a href="index.html#projets" class="back-btn">← Retour aux projets</a>
 
-    <div class="projet-hero">
+    <div class="section-hero">
         <div class="badge-row">
             <span class="badge">🎓 Projet BTS SIO SISR</span>
-            <span class="badge">🌐 Serveur web</span>
-            <span class="badge">📅 Déc. 2025 – Fév. 2026</span>
+            <span class="badge">🖥️ Serveur Web</span>
+            <span class="badge">📅 2ème année</span>
         </div>
-        <h1>Projet — <span class="txt-gradient">Serveur Web</span></h1>
-        <p class="subtitle">Déploiement et sécurisation d'un serveur web Apache sous Linux</p>
+        <h1>Projet — <span class="txt-gradient">Déploiement Serveur Apache</span></h1>
+        <p class="subtitle">Installation et configuration d'un serveur web Linux avec Apache</p>
         <p style="max-width: 700px; font-size: 0.95rem;">
-            Projet de déploiement d'un <strong>serveur web Apache</strong> sous Linux avec configuration
-            des hôtes virtuels, mise en place du protocole <strong>HTTPS</strong> et sécurisation
-            de l'accès au serveur.
+            Déploiement d'un serveur web Apache sous Linux incluant la configuration des hôtes virtuels,
+            du SSL/TLS, des modules et de la sécurité.
         </p>
     </div>
 
@@ -118,113 +43,106 @@
             <h2>🎯 Objectifs du projet</h2>
             <div class="mission-block">
                 <ul>
-                    <li>Installer et configurer un serveur <strong>Apache2</strong> sous Linux.</li>
-                    <li>Mettre en place des <strong>hôtes virtuels</strong> (Virtual Hosts) pour héberger plusieurs sites.</li>
-                    <li>Configurer le protocole <strong>HTTPS</strong> avec un certificat SSL.</li>
-                    <li>Sécuriser le serveur : pare-feu, droits d'accès, désactivation des modules inutiles.</li>
-                    <li>Configurer les <strong>logs</strong> Apache pour la supervision des accès.</li>
-                    <li>Tester le bon fonctionnement et la disponibilité du service web.</li>
+                    <li>Installer et configurer Apache2 sur un serveur Linux.</li>
+                    <li>Créer des hôtes virtuels (Virtual Hosts).</li>
+                    <li>Activer le SSL/TLS avec certificats auto-signés.</li>
+                    <li>Configurer les modules nécessaires (PHP, mod_rewrite, etc.).</li>
+                    <li>Implémenter des règles de sécurité (firewall, permissions).</li>
                 </ul>
             </div>
         </div>
 
         <div class="chapitre">
-            <h2>🏗️ Architecture déployée</h2>
+            <h2>🏗️ Architecture du serveur</h2>
             <div class="schema">
-                🖥️  Serveur Linux (Ubuntu Server)
-                │
-                ├── 🔥  Pare-feu UFW (ports 80 et 443 ouverts)
-                │
-                ├── 🌐  Apache2
-                │        ├── VirtualHost site1.local (port 80 → redirection HTTPS)
-                │        ├── VirtualHost site1.local (port 443 · SSL activé)
-                │        └── VirtualHost site2.local (port 443 · SSL activé)
-                │
-                ├── 🔒  Certificat SSL (Let's Encrypt / auto-signé)
-                │
-                └── 📋  Logs Apache
-                         ├── /var/log/apache2/access.log
-                         └── /var/log/apache2/error.log
+                Clients HTTP/HTTPS
+                    ↓
+                Pare-feu (Ports 80, 443)
+                    ↓
+                Serveur Apache
+                    |
+                    ├── VirtualHost 1 (exemple.com:80)
+                    ├── VirtualHost 2 (exemple.com:443 SSL)
+                    └── Module PHP, mod_rewrite
+                    ↓
+                Fichiers web (/var/www/html)
             </div>
         </div>
 
         <div class="chapitre">
-            <h2>⚙️ Étapes de réalisation</h2>
+            <h2>⚙️ Étapes de déploiement</h2>
 
             <div class="mission-block">
-                <h3>1 · Installation du serveur Apache</h3>
+                <h3>1 · Installation d'Apache</h3>
                 <ul>
-                    <li>Installation d'<strong>Apache2</strong> : <code>apt install apache2</code>.</li>
-                    <li>Vérification du statut du service : <code>systemctl status apache2</code>.</li>
-                    <li>Activation du démarrage automatique : <code>systemctl enable apache2</code>.</li>
-                    <li>Test de la page par défaut Apache depuis un navigateur.</li>
+                    <li>Installation : <code>apt install apache2</code>.</li>
+                    <li>Démarrage du service : <code>systemctl start apache2</code>.</li>
+                    <li>Activation au démarrage : <code>systemctl enable apache2</code>.</li>
+                    <li>Vérification du statut.</li>
                 </ul>
                 <div class="tools-used">
                     <span class="tool-tag">Apache2</span>
-                    <span class="tool-tag">systemctl</span>
-                    <span class="tool-tag">Ubuntu Server</span>
+                    <span class="tool-tag">Linux (Ubuntu)</span>
+                    <span class="tool-tag">Systemctl</span>
                 </div>
             </div>
 
             <div class="mission-block">
-                <h3>2 · Configuration des hôtes virtuels</h3>
+                <h3>2 · Configuration de base</h3>
                 <ul>
-                    <li>Création des répertoires de sites dans <code>/var/www/</code>.</li>
-                    <li>Rédaction des fichiers de configuration Virtual Host dans <code>/etc/apache2/sites-available/</code>.</li>
-                    <li>Activation des sites avec <code>a2ensite</code> et rechargement d'Apache.</li>
-                    <li>Modification du fichier <code>/etc/hosts</code> pour la résolution locale des noms.</li>
+                    <li>Édition du fichier <code>/etc/apache2/apache2.conf</code>.</li>
+                    <li>Configuration du nom de serveur et du port d'écoute.</li>
+                    <li>Tests de configuration : <code>apache2ctl configtest</code>.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">VirtualHost</span>
-                    <span class="tool-tag">a2ensite</span>
-                    <span class="tool-tag">/etc/hosts</span>
+                    <span class="tool-tag">Configuration Apache</span>
+                    <span class="tool-tag">Fichiers conf</span>
+                    <span class="tool-tag">Terminal</span>
                 </div>
             </div>
 
             <div class="mission-block">
-                <h3>3 · Mise en place du HTTPS (SSL/TLS)</h3>
+                <h3>3 · Hôtes virtuels (Virtual Hosts)</h3>
                 <ul>
+                    <li>Création de fichiers <code>.conf</code> dans <code>/etc/apache2/sites-available</code>.</li>
+                    <li>Activation avec <code>a2ensite nom-site</code>.</li>
+                    <li>Création des répertoires web : <code>/var/www/site1</code>, <code>/var/www/site2</code>.</li>
+                    <li>Configuration DNS (hosts ou DNS réel).</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Virtual Hosts</span>
+                    <span class="tool-tag">Domaines</span>
+                    <span class="tool-tag">DNS</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>4 · SSL/TLS et HTTPS</h3>
+                <ul>
+                    <li>Génération d'un certificat auto-signé : <code>openssl req</code>.</li>
                     <li>Activation du module SSL : <code>a2enmod ssl</code>.</li>
-                    <li>Génération ou installation d'un <strong>certificat SSL</strong>.</li>
-                    <li>Configuration du VirtualHost en port 443 avec les chemins vers le certificat.</li>
-                    <li>Redirection automatique du trafic HTTP (port 80) vers HTTPS (port 443).</li>
-                    <li>Vérification du cadenas vert dans le navigateur.</li>
+                    <li>Configuration des Virtual Hosts SSL (port 443).</li>
+                    <li>Redirection HTTP → HTTPS (optionnel).</li>
                 </ul>
                 <div class="tools-used">
+                    <span class="tool-tag">OpenSSL</span>
+                    <span class="tool-tag">Certificats</span>
                     <span class="tool-tag">SSL/TLS</span>
-                    <span class="tool-tag">HTTPS</span>
-                    <span class="tool-tag">a2enmod ssl</span>
-                    <span class="tool-tag">Certificat</span>
                 </div>
             </div>
 
             <div class="mission-block">
-                <h3>4 · Sécurisation du serveur</h3>
+                <h3>5 · Activation des modules et sécurité</h3>
                 <ul>
-                    <li>Configuration du <strong>pare-feu UFW</strong> : ouverture des seuls ports nécessaires (80, 443, 22).</li>
-                    <li>Attribution correcte des <strong>droits sur les fichiers</strong> : <code>chown -R www-data:www-data</code>.</li>
-                    <li>Désactivation des modules Apache non utilisés pour réduire la surface d'attaque.</li>
-                    <li>Masquage de la version d'Apache dans les en-têtes HTTP (directive <code>ServerTokens Prod</code>).</li>
+                    <li>Activation de mod_rewrite : <code>a2enmod rewrite</code>.</li>
+                    <li>Activation de mod_php : <code>apt install libapache2-mod-php</code>.</li>
+                    <li>Configuration des droits des fichiers : <code>chown www-data:www-data</code>.</li>
+                    <li>Ouverture des ports dans le pare-feu : <code>ufw allow 80,443</code>.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">UFW</span>
-                    <span class="tool-tag">Droits Linux</span>
-                    <span class="tool-tag">ServerTokens</span>
-                    <span class="tool-tag">Hardening</span>
-                </div>
-            </div>
-
-            <div class="mission-block">
-                <h3>5 · Supervision via les logs</h3>
-                <ul>
-                    <li>Consultation des logs d'accès : <code>tail -f /var/log/apache2/access.log</code>.</li>
-                    <li>Analyse des logs d'erreur pour détecter les problèmes de configuration.</li>
-                    <li>Mise en place d'une <strong>rotation des logs</strong> avec logrotate.</li>
-                </ul>
-                <div class="tools-used">
-                    <span class="tool-tag">Logs Apache</span>
-                    <span class="tool-tag">logrotate</span>
-                    <span class="tool-tag">Supervision</span>
+                    <span class="tool-tag">Modules Apache</span>
+                    <span class="tool-tag">Permissions</span>
+                    <span class="tool-tag">Firewall</span>
                 </div>
             </div>
         </div>
@@ -233,20 +151,20 @@
             <h2>📋 Compétences validées</h2>
             <div class="bilan-grid">
                 <div class="bilan-item">
+                    <h4>🖥️ Administration Linux</h4>
+                    <p>Installation de services, gestion des fichiers de configuration, permissions.</p>
+                </div>
+                <div class="bilan-item">
                     <h4>🌐 Serveur web</h4>
-                    <p>Installation, configuration et gestion d'Apache2 avec hôtes virtuels multiples.</p>
+                    <p>Apache, Virtual Hosts, modules, configuration avancée.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🔒 HTTPS & SSL</h4>
-                    <p>Mise en place du chiffrement SSL/TLS, redirection HTTP → HTTPS, gestion des certificats.</p>
+                    <h4>🔐 Sécurité</h4>
+                    <p>SSL/TLS, certificats, règles pare-feu, permissions fichiers.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🛡️ Sécurisation</h4>
-                    <p>Pare-feu UFW, droits Linux, désactivation des modules inutiles, masquage de la version.</p>
-                </div>
-                <div class="bilan-item">
-                    <h4>📋 Supervision</h4>
-                    <p>Lecture et analyse des logs Apache, détection d'erreurs, rotation des journaux.</p>
+                    <h4>🧪 Tests et maintenance</h4>
+                    <p>Vérification de la configuration, tests de connectivité, logs.</p>
                 </div>
             </div>
         </div>
@@ -254,9 +172,6 @@
         <div class="chapitre">
             <h2>📎 Documents</h2>
             <a href="index.html#projets" class="btn-secondary">← Retour aux projets</a>
-            <p style="margin-top: 15px; font-size: 0.85rem; color: #aaa;">
-                💡 Tu peux ajouter ici des captures d'écran de la configuration ou du site hébergé.
-            </p>
         </div>
 
     </div>

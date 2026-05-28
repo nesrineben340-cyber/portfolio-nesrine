@@ -6,79 +6,6 @@
     <title>Projet GSB - Nesrine Benallal</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        .projet-hero {
-            background: linear-gradient(135deg, #e8eaf6 0%, #f3f4ff 100%);
-            padding: 60px 10% 40px;
-            border-bottom: 1px solid #c5cae9;
-        }
-        body.dark-theme .projet-hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #1e1e3a 100%);
-            border-bottom: 1px solid #2a2a5a;
-        }
-        .projet-hero h1 { font-size: 2rem; margin-bottom: 8px; }
-        .projet-hero .subtitle { font-size: 1rem; color: #777; margin-bottom: 20px; }
-        body.dark-theme .projet-hero .subtitle { color: #aaa; }
-        .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
-        .badge {
-            background: white; border: 1px solid #ddd;
-            border-radius: 20px; padding: 5px 14px;
-            font-size: 0.8rem; font-weight: 600;
-        }
-        body.dark-theme .badge { background: #1e1e3a; border-color: #3a3a6a; color: white; }
-
-        .chapitre {
-            background: var(--white); border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            padding: 35px; margin-bottom: 30px;
-        }
-        body.dark-theme .chapitre { background: #252545; }
-        .chapitre h2 {
-            font-size: 1.2rem; margin-bottom: 20px;
-            padding-bottom: 10px; border-bottom: 2px solid #9fa8da;
-            display: flex; align-items: center; gap: 10px;
-        }
-        .mission-block {
-            margin-bottom: 25px; padding-left: 15px;
-            border-left: 3px solid #c5cae9;
-        }
-        body.dark-theme .mission-block { border-left-color: #2a2a5a; }
-        .mission-block h3 { font-size: 1rem; margin-bottom: 8px; color: #5c6bc0; }
-        body.dark-theme .mission-block h3 { color: #9fa8da; }
-        .mission-block ul { margin-left: 20px; }
-        .mission-block li { margin-bottom: 6px; font-size: 0.92rem; }
-        .tools-used { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-        .tool-tag {
-            background: #e8eaf6; color: #5c6bc0;
-            border-radius: 10px; padding: 3px 12px;
-            font-size: 0.78rem; font-weight: 600;
-        }
-        body.dark-theme .tool-tag { background: #1e1e3a; color: #9fa8da; }
-
-        /* Table fonctionnalités */
-        .feat-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.88rem; }
-        .feat-table th { background: #e8eaf6; padding: 10px 12px; text-align: left; font-weight: 600; }
-        body.dark-theme .feat-table th { background: #1e1e3a; color: #9fa8da; }
-        .feat-table td { padding: 9px 12px; border-bottom: 1px solid #eee; }
-        body.dark-theme .feat-table td { border-bottom-color: #2a2a5a; }
-
-        .bilan-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; margin-top: 15px;
-        }
-        .bilan-item { background: #f3f4ff; border-radius: 15px; padding: 20px; }
-        body.dark-theme .bilan-item { background: #1a1a2e; }
-        .bilan-item h4 { font-size: 0.9rem; margin-bottom: 8px; color: #5c6bc0; }
-        body.dark-theme .bilan-item h4 { color: #9fa8da; }
-        .bilan-item p { font-size: 0.85rem; }
-
-        .back-btn {
-            display: inline-block; margin: 20px 10%;
-            color: #5c6bc0; text-decoration: none;
-            font-weight: 600; font-size: 0.9rem;
-        }
-        .back-btn:hover { text-decoration: underline; }
-    </style>
 </head>
 <body>
     <button id="theme-toggle" class="theme-btn">🌙</button>
@@ -96,99 +23,105 @@
 
     <a href="index.html#projets" class="back-btn">← Retour aux projets</a>
 
-    <div class="projet-hero">
+    <div class="section-hero">
         <div class="badge-row">
-            <span class="badge">🎓 Projet BTS SIO</span>
-            <span class="badge">💻 Développement Web</span>
-            <span class="badge">🐘 PHP / MySQL</span>
+            <span class="badge">🎓 Projet BTS SIO SISR</span>
+            <span class="badge">💻 Développement</span>
+            <span class="badge">📅 1ère année</span>
         </div>
-        <h1>Projet — <span class="txt-gradient">GSB</span></h1>
-        <p class="subtitle">Application web de gestion des frais de déplacement — Galaxy Swiss Bourdin</p>
+        <h1>Projet — <span class="txt-gradient">Gestion des Frais (GSB)</span></h1>
+        <p class="subtitle">Application web de gestion des notes de frais développée en PHP/MySQL</p>
         <p style="max-width: 700px; font-size: 0.95rem;">
-            Projet pédagogique basé sur le contexte fictif de l'entreprise <strong>Galaxy Swiss Bourdin (GSB)</strong>, 
-            laboratoire pharmaceutique. L'objectif est de développer une application web permettant 
-            aux visiteurs médicaux de saisir leurs frais de déplacement et aux comptables de les valider.
+            Application de gestion des frais professionnels permettant aux visiteurs médicaux de déclarer 
+            leurs déplacements et frais engagés. Développée en PHP avec base de données MySQL.
         </p>
     </div>
 
     <div class="container">
 
         <div class="chapitre">
-            <h2>🎯 Contexte & Objectifs</h2>
+            <h2>🎯 Objectifs du projet</h2>
             <div class="mission-block">
-                <p style="font-size: 0.92rem; line-height: 1.8;">
-                    GSB est un laboratoire pharmaceutique fictif dont les visiteurs médicaux se déplacent 
-                    quotidiennement chez les médecins et pharmaciens. L'ancienne gestion des frais étant 
-                    papier, le projet vise à <strong>numériser et automatiser</strong> ce processus via une 
-                    application web sécurisée avec deux profils : <strong>visiteur</strong> et <strong>comptable</strong>.
-                </p>
+                <ul>
+                    <li>Créer une application web de saisie et suivi des frais.</li>
+                    <li>Gérer les utilisateurs (visiteurs, comptables, administrateurs).</li>
+                    <li>Implémenter un système de validation des notes de frais.</li>
+                    <li>Générer des rapports et statistiques.</li>
+                    <li>Sécuriser l'accès avec authentification.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>🏗️ Architecture technique</h2>
+            <div class="schema">
+                Frontend (HTML/CSS)
+                    ↓
+                PHP (Traitement métier)
+                    ↓
+                MySQL (Base de données)
+                    ↓
+                Rapports & Export
             </div>
         </div>
 
         <div class="chapitre">
             <h2>⚙️ Fonctionnalités développées</h2>
-            <table class="feat-table">
-                <tr>
-                    <th>Fonctionnalité</th>
-                    <th>Profil</th>
-                    <th>Statut</th>
-                </tr>
-                <tr><td>Authentification sécurisée (login/mot de passe)</td><td>Tous</td><td>✅</td></tr>
-                <tr><td>Saisie des frais forfaitisés (repas, hébergement, km)</td><td>Visiteur</td><td>✅</td></tr>
-                <tr><td>Saisie des frais hors forfait (justificatifs)</td><td>Visiteur</td><td>✅</td></tr>
-                <tr><td>Consultation de l'historique des fiches de frais</td><td>Visiteur</td><td>✅</td></tr>
-                <tr><td>Validation / rejet des fiches de frais</td><td>Comptable</td><td>✅</td></tr>
-                <tr><td>Mise en paiement des fiches validées</td><td>Comptable</td><td>✅</td></tr>
-                <tr><td>Tableau de bord comptable</td><td>Comptable</td><td>✅</td></tr>
-            </table>
-        </div>
-
-        <div class="chapitre">
-            <h2>🛠️ Technologies utilisées</h2>
 
             <div class="mission-block">
-                <h3>Back-end — PHP & MySQL</h3>
+                <h3>1 · Authentification et gestion d'utilisateurs</h3>
                 <ul>
-                    <li>Développement en <strong>PHP</strong> avec architecture MVC (Modèle-Vue-Contrôleur).</li>
-                    <li>Base de données <strong>MySQL</strong> : conception du schéma relationnel (visiteurs, fiches de frais, lignes de frais…).</li>
-                    <li>Requêtes SQL préparées pour sécuriser les accès aux données (protection injections SQL).</li>
-                    <li>Gestion des sessions PHP pour l'authentification et la gestion des profils.</li>
+                    <li>Système de login sécurisé avec sessions PHP.</li>
+                    <li>Différents rôles : visiteur, comptable, administrateur.</li>
+                    <li>Contrôle d'accès basé sur les rôles (RBAC).</li>
                 </ul>
                 <div class="tools-used">
                     <span class="tool-tag">PHP</span>
-                    <span class="tool-tag">MySQL</span>
-                    <span class="tool-tag">Architecture MVC</span>
-                    <span class="tool-tag">Sessions PHP</span>
-                    <span class="tool-tag">SQL préparé</span>
+                    <span class="tool-tag">Sessions</span>
+                    <span class="tool-tag">Authentification</span>
                 </div>
             </div>
 
             <div class="mission-block">
-                <h3>Front-end — HTML / CSS</h3>
+                <h3>2 · Saisie et gestion des frais</h3>
                 <ul>
-                    <li>Interfaces utilisateur en <strong>HTML5 / CSS3</strong>.</li>
-                    <li>Formulaires de saisie avec validation côté client.</li>
-                    <li>Affichage responsive adapté aux différents écrans.</li>
+                    <li>Formulaires pour saisie des déplacements et frais.</li>
+                    <li>Validation des données côté serveur.</li>
+                    <li>Stockage en base de données MySQL.</li>
+                    <li>Édition et suppression des frais.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">HTML5</span>
-                    <span class="tool-tag">CSS3</span>
+                    <span class="tool-tag">PHP</span>
+                    <span class="tool-tag">MySQL</span>
                     <span class="tool-tag">Formulaires</span>
                 </div>
             </div>
 
             <div class="mission-block">
-                <h3>Environnement de développement</h3>
+                <h3>3 · Workflow de validation</h3>
                 <ul>
-                    <li>Serveur local <strong>XAMPP</strong> (Apache + MySQL + PHP).</li>
-                    <li>Gestion de la base de données via <strong>phpMyAdmin</strong>.</li>
-                    <li>Éditeur de code : <strong>Visual Studio Code</strong>.</li>
+                    <li>États des frais : saisis, en validation, validés, remboursés.</li>
+                    <li>Interface pour comptables : visualisation et validation.</li>
+                    <li>Notifications et historique des modifications.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">XAMPP</span>
-                    <span class="tool-tag">phpMyAdmin</span>
-                    <span class="tool-tag">VS Code</span>
-                    <span class="tool-tag">Apache</span>
+                    <span class="tool-tag">Logique métier</span>
+                    <span class="tool-tag">Workflow</span>
+                    <span class="tool-tag">MySQL</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>4 · Rapports et statistiques</h3>
+                <ul>
+                    <li>Génération de rapports mensuels par visiteur.</li>
+                    <li>Montants totaux et par catégorie de frais.</li>
+                    <li>Export en format PDF/Excel.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">PHP</span>
+                    <span class="tool-tag">Requêtes SQL</span>
+                    <span class="tool-tag">Rapports</span>
                 </div>
             </div>
         </div>
@@ -198,31 +131,26 @@
             <div class="bilan-grid">
                 <div class="bilan-item">
                     <h4>💻 Développement PHP</h4>
-                    <p>Architecture MVC, gestion des sessions, traitement des formulaires, sécurité des accès.</p>
+                    <p>Programmation orientée objet, gestion de sessions, validation de formulaires.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🗄️ Base de données</h4>
-                    <p>Conception du schéma MySQL, requêtes SQL complexes, requêtes préparées anti-injection.</p>
+                    <h4>🗄️ Bases de données</h4>
+                    <p>Conception de schéma, requêtes SQL complexes, relations entre tables.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🔐 Sécurité web</h4>
-                    <p>Authentification, gestion des droits par profil, protection contre les injections SQL.</p>
+                    <h4>🔐 Sécurité</h4>
+                    <p>Authentification, protection contre l'injection SQL et XSS.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🌐 Front-end</h4>
-                    <p>Interfaces HTML/CSS fonctionnelles et ergonomiques adaptées aux profils utilisateurs.</p>
+                    <h4>📊 Logique métier</h4>
+                    <p>Implémentation de workflows complexes et règles de gestion.</p>
                 </div>
             </div>
         </div>
 
         <div class="chapitre">
             <h2>📎 Documents</h2>
-            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                <a href="index.html#projets" class="btn-secondary">← Retour aux projets</a>
-            </div>
-            <p style="margin-top: 15px; font-size: 0.85rem; color: #aaa;">
-                💡 Tu peux ajouter ici le cahier des charges, les captures d'écran ou le lien GitHub du projet.
-            </p>
+            <a href="index.html#projets" class="btn-secondary">← Retour aux projets</a>
         </div>
 
     </div>
@@ -231,7 +159,6 @@
         <p>Nesrine Benallal — 2026 — Portfolio BTS SIO SISR</p>
         <p>📍 Montpellier | 📧 <a href="mailto:nesrine.benallal@ecoles-epsi.net">nesrine.benallal@ecoles-epsi.net</a></p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

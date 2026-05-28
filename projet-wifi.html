@@ -3,83 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Borne Wi-Fi - Nesrine Benallal</title>
+    <title>Projet Wi-Fi - Nesrine Benallal</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        .projet-hero {
-            background: linear-gradient(135deg, #fff8e1 0%, #fffdf0 100%);
-            padding: 60px 10% 40px;
-            border-bottom: 1px solid #ffe082;
-        }
-        body.dark-theme .projet-hero {
-            background: linear-gradient(135deg, #2a2000 0%, #302800 100%);
-            border-bottom: 1px solid #4a3a00;
-        }
-        .projet-hero h1 { font-size: 2rem; margin-bottom: 8px; }
-        .projet-hero .subtitle { font-size: 1rem; color: #777; margin-bottom: 20px; }
-        body.dark-theme .projet-hero .subtitle { color: #aaa; }
-        .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
-        .badge {
-            background: white; border: 1px solid #ddd;
-            border-radius: 20px; padding: 5px 14px;
-            font-size: 0.8rem; font-weight: 600;
-        }
-        body.dark-theme .badge { background: #2a2000; border-color: #4a3a00; color: white; }
-
-        .chapitre {
-            background: var(--white); border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            padding: 35px; margin-bottom: 30px;
-        }
-        body.dark-theme .chapitre { background: #252545; }
-        .chapitre h2 {
-            font-size: 1.2rem; margin-bottom: 20px;
-            padding-bottom: 10px; border-bottom: 2px solid #ffd54f;
-            display: flex; align-items: center; gap: 10px;
-        }
-        .mission-block {
-            margin-bottom: 25px; padding-left: 15px;
-            border-left: 3px solid #ffe082;
-        }
-        body.dark-theme .mission-block { border-left-color: #4a3a00; }
-        .mission-block h3 { font-size: 1rem; margin-bottom: 8px; color: #f9a825; }
-        body.dark-theme .mission-block h3 { color: #ffd54f; }
-        .mission-block ul { margin-left: 20px; }
-        .mission-block li { margin-bottom: 6px; font-size: 0.92rem; }
-        .tools-used { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-        .tool-tag {
-            background: #fff8e1; color: #f9a825;
-            border-radius: 10px; padding: 3px 12px;
-            font-size: 0.78rem; font-weight: 600;
-        }
-        body.dark-theme .tool-tag { background: #2a2000; color: #ffd54f; }
-
-        .schema {
-            background: #fffdf0; border: 1px solid #ffe082;
-            border-radius: 15px; padding: 25px;
-            font-family: monospace; font-size: 0.85rem;
-            line-height: 2; color: #795600; margin: 15px 0;
-        }
-        body.dark-theme .schema { background: #2a2000; border-color: #4a3a00; color: #ffd54f; }
-
-        .bilan-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; margin-top: 15px;
-        }
-        .bilan-item { background: #fff8e1; border-radius: 15px; padding: 20px; }
-        body.dark-theme .bilan-item { background: #2a2000; }
-        .bilan-item h4 { font-size: 0.9rem; margin-bottom: 8px; color: #f9a825; }
-        body.dark-theme .bilan-item h4 { color: #ffd54f; }
-        .bilan-item p { font-size: 0.85rem; }
-
-        .back-btn {
-            display: inline-block; margin: 20px 10%;
-            color: #f9a825; text-decoration: none;
-            font-weight: 600; font-size: 0.9rem;
-        }
-        .back-btn:hover { text-decoration: underline; }
-    </style>
 </head>
 <body>
     <button id="theme-toggle" class="theme-btn">🌙</button>
@@ -97,18 +23,17 @@
 
     <a href="index.html#projets" class="back-btn">← Retour aux projets</a>
 
-    <div class="projet-hero">
+    <div class="section-hero">
         <div class="badge-row">
             <span class="badge">🎓 Projet BTS SIO SISR</span>
-            <span class="badge">📡 Réseau sans fil</span>
-            <span class="badge">📅 Mars 2026</span>
+            <span class="badge">📡 Wireless</span>
+            <span class="badge">📅 2ème année</span>
         </div>
-        <h1>Projet — <span class="txt-gradient">Borne Wi-Fi</span></h1>
-        <p class="subtitle">Configuration et sécurisation d'un point d'accès Wi-Fi professionnel</p>
+        <h1>Projet — <span class="txt-gradient">Configuration Borne Wi-Fi</span></h1>
+        <p class="subtitle">Mise en place et sécurisation d'une borne Wi-Fi professionnelle</p>
         <p style="max-width: 700px; font-size: 0.95rem;">
-            Projet de mise en place d'une <strong>borne Wi-Fi professionnelle</strong> dans un environnement
-            d'entreprise. L'objectif est de configurer un accès sans fil sécurisé, segmenté par VLAN,
-            avec une gestion des droits d'accès différenciée selon les utilisateurs.
+            Configuration d'une borne Wi-Fi d'entreprise avec authentification WPA2/WPA3,
+            segmentation des réseaux, et gestion des bandes 2.4GHz / 5GHz.
         </p>
     </div>
 
@@ -118,93 +43,101 @@
             <h2>🎯 Objectifs du projet</h2>
             <div class="mission-block">
                 <ul>
-                    <li>Installer et configurer une <strong>borne Wi-Fi</strong> (point d'accès) professionnelle.</li>
-                    <li>Créer des <strong>SSIDs séparés</strong> : réseau entreprise et réseau invité.</li>
-                    <li>Segmenter les accès par <strong>VLAN</strong> pour isoler les flux réseau.</li>
-                    <li>Appliquer le protocole de sécurité <strong>WPA2-Enterprise</strong> avec authentification.</li>
-                    <li>Configurer la <strong>puissance d'émission</strong> et les canaux pour optimiser la couverture.</li>
-                    <li>Tester la connectivité et la sécurité de l'installation.</li>
+                    <li>Configurer une borne Wi-Fi avec authentification forte.</li>
+                    <li>Mettre en place plusieurs réseaux Wi-Fi (Guest, Corporate, Management).</li>
+                    <li>Optimiser la couverture et les performances.</li>
+                    <li>Implémenter la sécurité périmétrique.</li>
+                    <li>Tester la connexion et la sécurité.</li>
                 </ul>
             </div>
         </div>
 
         <div class="chapitre">
-            <h2>🏗️ Architecture mise en place</h2>
+            <h2>🏗️ Architecture Wi-Fi</h2>
             <div class="schema">
-                🌐 Réseau d'entreprise
-                │
-                ├── 🔀  Switch manageable (trunk 802.1Q)
-                │        ├── VLAN 10 — Employés (réseau interne)
-                │        └── VLAN 20 — Invités (accès Internet uniquement)
-                │
-                └── 📡  Borne Wi-Fi (Point d'accès)
-                         ├── SSID "Entreprise" → VLAN 10 · WPA2-Enterprise
-                         └── SSID "Invités"    → VLAN 20 · WPA2-Personal (mot de passe)
+                Borne Wi-Fi (AP)
+                    |
+                    ├── SSID 1 : « Corporate » (WPA2-Enterprise)
+                    ├── SSID 2 : « Guest » (WPA2-PSK, Isolé)
+                    └── SSID 3 : « Management » (Caché)
+                    ↓
+                Clients sans fil
+                (Accès au réseau LAN via AP)
             </div>
         </div>
 
         <div class="chapitre">
-            <h2>⚙️ Étapes de réalisation</h2>
+            <h2>⚙️ Étapes de configuration</h2>
 
             <div class="mission-block">
-                <h3>1 · Accès à l'interface d'administration</h3>
+                <h3>1 · Paramètres de base de l'AP</h3>
                 <ul>
-                    <li>Connexion à l'interface web de la borne via son adresse IP de gestion.</li>
-                    <li>Mise à jour du firmware de la borne pour corriger les failles de sécurité.</li>
-                    <li>Changement du mot de passe administrateur par défaut.</li>
+                    <li>Accès à l'interface web de la borne (192.168.1.1).</li>
+                    <li>Configuration du SSID primaire et mot de passe administrateur.</li>
+                    <li>Choix du canal Wi-Fi (1, 6, 11 en 2.4GHz).</li>
+                    <li>Mise à jour du firmware si nécessaire.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">Interface web</span>
-                    <span class="tool-tag">Firmware</span>
-                    <span class="tool-tag">Administration</span>
-                </div>
-            </div>
-
-            <div class="mission-block">
-                <h3>2 · Configuration des SSIDs et VLANs</h3>
-                <ul>
-                    <li>Création du SSID <strong>"Entreprise"</strong> associé au VLAN 10 (réseau interne sécurisé).</li>
-                    <li>Création du SSID <strong>"Invités"</strong> associé au VLAN 20 (accès Internet uniquement, isolé du réseau interne).</li>
-                    <li>Configuration du lien <strong>trunk 802.1Q</strong> entre la borne et le switch.</li>
-                    <li>Vérification de l'isolation entre les VLANs pour la sécurité.</li>
-                </ul>
-                <div class="tools-used">
+                    <span class="tool-tag">Configuration AP</span>
                     <span class="tool-tag">SSID</span>
-                    <span class="tool-tag">VLAN</span>
-                    <span class="tool-tag">802.1Q</span>
-                    <span class="tool-tag">Trunk</span>
+                    <span class="tool-tag">Canaux</span>
                 </div>
             </div>
 
             <div class="mission-block">
-                <h3>3 · Sécurisation des accès Wi-Fi</h3>
+                <h3>2 · Sécurité — Chiffrement WPA2/WPA3</h3>
                 <ul>
-                    <li>Application du protocole <strong>WPA2</strong> sur les deux SSIDs.</li>
-                    <li>Configuration du réseau entreprise en <strong>WPA2-Enterprise</strong> avec authentification centralisée.</li>
-                    <li>Réseau invités en <strong>WPA2-Personal</strong> avec mot de passe dédié.</li>
-                    <li>Activation du <strong>filtrage MAC</strong> pour le réseau entreprise.</li>
-                    <li>Désactivation de la diffusion du SSID entreprise (réseau masqué).</li>
+                    <li>Activation du chiffrement WPA2 (minimum) ou WPA3.</li>
+                    <li>Définition d'une passphrase robuste (16+ caractères).</li>
+                    <li>Désactivation des standards non sécurisés (WEP, WPA 1).</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">WPA2-Enterprise</span>
-                    <span class="tool-tag">WPA2-Personal</span>
-                    <span class="tool-tag">Filtrage MAC</span>
-                    <span class="tool-tag">Sécurité Wi-Fi</span>
+                    <span class="tool-tag">WPA2/WPA3</span>
+                    <span class="tool-tag">Chiffrement</span>
+                    <span class="tool-tag">Sécurité</span>
                 </div>
             </div>
 
             <div class="mission-block">
-                <h3>4 · Optimisation radio et tests</h3>
+                <h3>3 · Réseaux multiples (SSID)</h3>
                 <ul>
-                    <li>Sélection du <strong>canal Wi-Fi</strong> optimal pour éviter les interférences (analyse de l'environnement radio).</li>
-                    <li>Choix de la bande : <strong>5 GHz</strong> pour le réseau entreprise, <strong>2,4 GHz</strong> pour les invités.</li>
-                    <li>Réglage de la <strong>puissance d'émission</strong> pour couvrir la zone souhaitée sans débordement.</li>
-                    <li>Tests de connectivité depuis différents postes et vérification de l'isolation des VLANs.</li>
+                    <li>Création d'un SSID « Guest » pour visiteurs (isolation du réseau principal).</li>
+                    <li>Création d'un SSID « Management » caché pour administrateurs.</li>
+                    <li>Attribution de bandes passantes différentes par SSID.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">5 GHz / 2,4 GHz</span>
-                    <span class="tool-tag">Canaux Wi-Fi</span>
-                    <span class="tool-tag">Tests réseau</span>
+                    <span class="tool-tag">Multi-SSID</span>
+                    <span class="tool-tag">Isolation réseau</span>
+                    <span class="tool-tag">QoS</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>4 · Filtrage et accès</h3>
+                <ul>
+                    <li>Filtrage des adresses MAC (liste blanche/noire).</li>
+                    <li>Limitation du nombre de clients connectés.</li>
+                    <li>Configuration d'accès par horaires si possible.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">MAC Filtering</span>
+                    <span class="tool-tag">Contrôle d'accès</span>
+                    <span class="tool-tag">Configuration avancée</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>5 · Tests et monitoring</h3>
+                <ul>
+                    <li>Test de connexion avec différents appareils.</li>
+                    <li>Vérification de la portée et de la qualité du signal.</li>
+                    <li>Tests de sécurité avec analyste Wi-Fi (ex: Wireshark).</li>
+                    <li>Monitoring des clients connectés et de la bande passante.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Tests connectivité</span>
+                    <span class="tool-tag">Wireshark</span>
+                    <span class="tool-tag">Monitoring</span>
                 </div>
             </div>
         </div>
@@ -213,20 +146,20 @@
             <h2>📋 Compétences validées</h2>
             <div class="bilan-grid">
                 <div class="bilan-item">
-                    <h4>📡 Réseau sans fil</h4>
-                    <p>Configuration d'un point d'accès Wi-Fi professionnel avec SSIDs multiples et optimisation radio.</p>
+                    <h4>📡 Technologie Wi-Fi</h4>
+                    <p>Standards 802.11, canaux, bandes, couverture.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🔀 VLANs & segmentation</h4>
-                    <p>Création de VLANs, configuration du trunk 802.1Q, isolation des flux réseau.</p>
+                    <h4>🔐 Sécurité sans fil</h4>
+                    <p>WPA2/WPA3, chiffrement, filtrage MAC, isolation réseau.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🔐 Sécurité réseau</h4>
-                    <p>WPA2-Enterprise, filtrage MAC, SSID masqué, isolation du réseau invité.</p>
+                    <h4>⚙️ Configuration AP</h4>
+                    <p>Interface web, paramètres avancés, multi-SSID.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🧪 Tests & validation</h4>
-                    <p>Vérification de la connectivité, tests d'isolation des VLANs et de la couverture Wi-Fi.</p>
+                    <h4>🧪 Tests et diagnostic</h4>
+                    <p>Vérification de sécurité, analyse de trafic, monitoring.</p>
                 </div>
             </div>
         </div>
@@ -234,9 +167,6 @@
         <div class="chapitre">
             <h2>📎 Documents</h2>
             <a href="index.html#projets" class="btn-secondary">← Retour aux projets</a>
-            <p style="margin-top: 15px; font-size: 0.85rem; color: #aaa;">
-                💡 Tu peux ajouter ici des captures d'écran de l'interface d'administration ou un schéma réseau.
-            </p>
         </div>
 
     </div>

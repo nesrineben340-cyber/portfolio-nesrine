@@ -6,72 +6,6 @@
     <title>Stage XEFI - Nesrine Benallal</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        .stage-hero {
-            background: linear-gradient(135deg, #e3f0ff 0%, #f0f4ff 100%);
-            padding: 60px 10% 40px;
-            border-bottom: 1px solid #cfe0f7;
-        }
-        body.dark-theme .stage-hero {
-            background: linear-gradient(135deg, #1a1e35 0%, #1e2545 100%);
-            border-bottom: 1px solid #2a3060;
-        }
-        .stage-hero h1 { font-size: 2rem; margin-bottom: 8px; }
-        .stage-hero .subtitle { font-size: 1rem; color: #777; margin-bottom: 20px; }
-        body.dark-theme .stage-hero .subtitle { color: #aaa; }
-        .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
-        .badge {
-            background: white; border: 1px solid #ddd;
-            border-radius: 20px; padding: 5px 14px;
-            font-size: 0.8rem; font-weight: 600;
-        }
-        body.dark-theme .badge { background: #2a2f55; border-color: #3a4070; color: white; }
-
-        .chapitre {
-            background: var(--white); border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            padding: 35px; margin-bottom: 30px;
-        }
-        body.dark-theme .chapitre { background: #252545; }
-        .chapitre h2 {
-            font-size: 1.2rem; margin-bottom: 20px;
-            padding-bottom: 10px; border-bottom: 2px solid var(--blue);
-            display: flex; align-items: center; gap: 10px;
-        }
-        .mission-block {
-            margin-bottom: 25px; padding-left: 15px;
-            border-left: 3px solid #dce8fb;
-        }
-        body.dark-theme .mission-block { border-left-color: #2a3060; }
-        .mission-block h3 { font-size: 1rem; margin-bottom: 8px; color: #5588cc; }
-        body.dark-theme .mission-block h3 { color: #88aaee; }
-        .mission-block ul { margin-left: 20px; }
-        .mission-block li { margin-bottom: 6px; font-size: 0.92rem; }
-        .tools-used { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-        .tool-tag {
-            background: #eaf1ff; color: #3366bb;
-            border-radius: 10px; padding: 3px 12px;
-            font-size: 0.78rem; font-weight: 600;
-        }
-        body.dark-theme .tool-tag { background: #2a3060; color: #88aaee; }
-
-        .bilan-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; margin-top: 15px;
-        }
-        .bilan-item { background: #f5f8ff; border-radius: 15px; padding: 20px; }
-        body.dark-theme .bilan-item { background: #1e2240; }
-        .bilan-item h4 { font-size: 0.9rem; margin-bottom: 8px; color: #5588cc; }
-        body.dark-theme .bilan-item h4 { color: #88aaee; }
-        .bilan-item p { font-size: 0.85rem; }
-
-        .back-btn {
-            display: inline-block; margin: 20px 10%;
-            color: #5588cc; text-decoration: none;
-            font-weight: 600; font-size: 0.9rem;
-        }
-        .back-btn:hover { text-decoration: underline; }
-    </style>
 </head>
 <body>
     <button id="theme-toggle" class="theme-btn">🌙</button>
@@ -89,123 +23,112 @@
 
     <a href="index.html#parcours" class="back-btn">← Retour au parcours</a>
 
-    <div class="stage-hero">
+    <div class="section-hero">
         <div class="badge-row">
-            <span class="badge">🗓️ 2022 – 2023</span>
-            <span class="badge">📍 XEFI Montpellier Ouest</span>
+            <span class="badge">🗓️ Juin 2023</span>
+            <span class="badge">📍 Montpellier</span>
             <span class="badge">🎓 BTS SIO SISR — 1ère année</span>
+            <span class="badge">⏱️ 4 semaines</span>
         </div>
-        <h1>Stage — <span class="txt-gradient">XEFI</span> Montpellier Ouest</h1>
-        <p class="subtitle">Support informatique · Gestion de tickets · Maintenance</p>
-        <p style="max-width: 700px; font-size: 0.95rem;">
-            Premier stage en entreprise effectué chez XEFI, prestataire informatique spécialisé dans 
-            le support et la maintenance pour les TPE/PME. Découverte du métier de technicien support 
-            et première expérience en environnement professionnel.
+        <h1>Stage — XEFI Montpellier <span class="txt-gradient">Technicienne Support</span></h1>
+        <p class="subtitle">Support utilisateur N1 et gestion des tickets GLPI</p>
+        <p style="max-width: 750px; font-size: 0.95rem;">
+            Stage de découverte en tant que technicienne support au sein de XEFI Montpellier Ouest,
+            leader français de l'infogérance. Expérience en support utilisateur N1 et gestion
+            des tickets informatiques via GLPI.
         </p>
     </div>
 
     <div class="container">
 
         <div class="chapitre">
-            <h2>🏢 Présentation de l'entreprise</h2>
-            <p style="font-size: 0.92rem; line-height: 1.8;">
-                XEFI est un prestataire de services informatiques dédié aux TPE et PME. 
-                L'agence de Montpellier Ouest assure le support, la maintenance et le déploiement 
-                de solutions informatiques pour un portefeuille de clients locaux variés 
-                (commerces, cabinets médicaux, PME industrielles…).
-            </p>
+            <h2>🏢 Contexte du stage</h2>
+            <table class="entreprise-table">
+                <tr><td>Entreprise</td><td>XEFI — Infogérance IT</td></tr>
+                <tr><td>Localisation</td><td>Montpellier Ouest, France</td></tr>
+                <tr><td>Domaine</td><td>Services informatiques externalisés (Infogérance)</td></tr>
+                <tr><td>Clients</td><td>PME/PMI, collectivités, secteur médical</td></tr>
+                <tr><td>Infrastructure</td><td>Centre d'appels, NMS, salles serveurs</td></tr>
+            </table>
         </div>
 
         <div class="chapitre">
-            <h2>🎫 Gestion des tickets & Support utilisateur</h2>
+            <h2>⚙️ Missions effectuées</h2>
+
             <div class="mission-block">
-                <h3>Traitement de tickets via GLPI</h3>
+                <h3>1 · Support utilisateur N1 — Hotline</h3>
                 <ul>
-                    <li>Réception, qualification et priorisation des demandes d'assistance via <strong>GLPI</strong>.</li>
-                    <li>Prise en charge des incidents de niveau 1 : pannes logicielles, problèmes de connexion, réinitialisation de comptes.</li>
-                    <li>Escalade vers le niveau 2 pour les incidents matériels complexes.</li>
-                    <li>Rédaction des comptes rendus d'intervention et clôture des tickets.</li>
+                    <li>Traitement des appels des clients : accès réseau, logiciels, imprimantes.</li>
+                    <li>Diagnostic rapide des problèmes.</li>
+                    <li>Escalade vers N2 si nécessaire.</li>
+                    <li>Résolution d'incidents simples en première ligne.</li>
+                </ul>
+                <div class="tools-used">
+                    <span class="tool-tag">Support N1</span>
+                    <span class="tool-tag">Hotline</span>
+                    <span class="tool-tag">Communication</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>2 · Gestion des tickets GLPI</h3>
+                <ul>
+                    <li>Création et suivi des tickets via GLPI.</li>
+                    <li>Classification des incidents (critiques, normaux, mineurs).</li>
+                    <li>Clôture des tickets avec documentation de la solution.</li>
+                    <li>Calcul des SLA (Service Level Agreements).</li>
                 </ul>
                 <div class="tools-used">
                     <span class="tool-tag">GLPI</span>
-                    <span class="tool-tag">Support N1</span>
-                    <span class="tool-tag">Helpdesk</span>
+                    <span class="tool-tag">Ticketing</span>
+                    <span class="tool-tag">Documentation</span>
                 </div>
             </div>
+
             <div class="mission-block">
-                <h3>Assistance et relation utilisateur</h3>
+                <h3>3 · Maintenance matérielle et logicielle</h3>
                 <ul>
-                    <li>Accompagnement téléphonique et à distance des utilisateurs.</li>
-                    <li>Interventions sur site chez les clients pour résolution d'incidents.</li>
-                    <li>Sensibilisation des utilisateurs aux bonnes pratiques informatiques.</li>
+                    <li>Visite chez les clients pour maintenance préventive.</li>
+                    <li>Diagnostic de pannes matérielles sur site.</li>
+                    <li>Mise à jour de logiciels et de systèmes.</li>
+                    <li>Gestion du matériel de remplacement.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">Prise en main à distance</span>
-                    <span class="tool-tag">Relation client</span>
+                    <span class="tool-tag">Maintenance</span>
+                    <span class="tool-tag">Diagnostic</span>
+                    <span class="tool-tag">Terrain</span>
                 </div>
             </div>
         </div>
 
         <div class="chapitre">
-            <h2>🔧 Maintenance & Déploiement</h2>
-            <div class="mission-block">
-                <h3>Maintenance préventive et corrective</h3>
-                <ul>
-                    <li>Nettoyage, mise à jour et vérification de l'état du matériel informatique.</li>
-                    <li>Installation et configuration de postes de travail Windows.</li>
-                    <li>Mise à jour des systèmes d'exploitation et des logiciels métiers.</li>
-                </ul>
-                <div class="tools-used">
-                    <span class="tool-tag">Windows 10 / 11</span>
-                    <span class="tool-tag">Maintenance matérielle</span>
-                    <span class="tool-tag">Mises à jour</span>
-                </div>
-            </div>
-            <div class="mission-block">
-                <h3>Configuration réseau de base</h3>
-                <ul>
-                    <li>Paramétrage de box et routeurs chez les clients.</li>
-                    <li>Configuration des partages réseau et des imprimantes.</li>
-                    <li>Vérification de la connectivité et dépannage réseau simple.</li>
-                </ul>
-                <div class="tools-used">
-                    <span class="tool-tag">Réseau LAN</span>
-                    <span class="tool-tag">Configuration routeur</span>
-                    <span class="tool-tag">Partages réseau</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="chapitre">
-            <h2>📋 Bilan — Compétences acquises</h2>
+            <h2>📋 Compétences validées</h2>
             <div class="bilan-grid">
                 <div class="bilan-item">
-                    <h4>🎫 Gestion des incidents</h4>
-                    <p>Maîtrise de l'outil GLPI, cycle de vie d'un ticket, escalade et clôture.</p>
+                    <h4>📞 Support client</h4>
+                    <p>Communication, diagnostic de problèmes, résolution rapide, satisfaction client.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>👥 Relation utilisateur</h4>
-                    <p>Écoute active, vulgarisation technique, accompagnement des non-techniciens.</p>
+                    <h4>🎫 Gestion de tickets</h4>
+                    <p>GLPI, classement, priorités, SLA, documentation.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🖥️ Maintenance système</h4>
-                    <p>Installation, configuration et mise à jour de postes Windows en environnement professionnel.</p>
+                    <h4>🔧 Compétences techniques</h4>
+                    <p>Diagnostic matériel/logiciel, maintenance, dépannage.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🌐 Réseaux de base</h4>
-                    <p>Dépannage réseau, configuration d'équipements simples, partages et impressions.</p>
+                    <h4>💼 Professionnel</h4>
+                    <p>Rigueur, réactivité, travail en équipe, respect des délais.</p>
                 </div>
             </div>
         </div>
 
         <div class="chapitre">
             <h2>📎 Documents</h2>
-            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 30px;">
+                <a href="Attestation%20de%20stage%201.pdf" target="_blank" class="btn-main">📋 Attestation</a>
                 <a href="index.html#parcours" class="btn-secondary">← Retour au portfolio</a>
             </div>
-            <p style="margin-top: 15px; font-size: 0.85rem; color: #aaa;">
-                💡 Tu peux ajouter ici un lien vers ton rapport de stage ou tes attestations.
-            </p>
         </div>
 
     </div>
@@ -214,7 +137,6 @@
         <p>Nesrine Benallal — 2026 — Portfolio BTS SIO SISR</p>
         <p>📍 Montpellier | 📧 <a href="mailto:nesrine.benallal@ecoles-epsi.net">nesrine.benallal@ecoles-epsi.net</a></p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

@@ -3,85 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Infrastructure Réseau - Nesrine Benallal</title>
+    <title>Projet Réseau - Nesrine Benallal</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        .projet-hero {
-            background: linear-gradient(135deg, #e8f5e9 0%, #f5fff5 100%);
-            padding: 60px 10% 40px;
-            border-bottom: 1px solid #c8e6c9;
-        }
-        body.dark-theme .projet-hero {
-            background: linear-gradient(135deg, #1a2a1a 0%, #1e301e 100%);
-            border-bottom: 1px solid #2a4a2a;
-        }
-        .projet-hero h1 { font-size: 2rem; margin-bottom: 8px; }
-        .projet-hero .subtitle { font-size: 1rem; color: #777; margin-bottom: 20px; }
-        body.dark-theme .projet-hero .subtitle { color: #aaa; }
-        .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
-        .badge {
-            background: white; border: 1px solid #ddd;
-            border-radius: 20px; padding: 5px 14px;
-            font-size: 0.8rem; font-weight: 600;
-        }
-        body.dark-theme .badge { background: #1e301e; border-color: #2a4a2a; color: white; }
-
-        .chapitre {
-            background: var(--white); border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            padding: 35px; margin-bottom: 30px;
-        }
-        body.dark-theme .chapitre { background: #252545; }
-        .chapitre h2 {
-            font-size: 1.2rem; margin-bottom: 20px;
-            padding-bottom: 10px; border-bottom: 2px solid #a5d6a7;
-            display: flex; align-items: center; gap: 10px;
-        }
-        .mission-block {
-            margin-bottom: 25px; padding-left: 15px;
-            border-left: 3px solid #c8e6c9;
-        }
-        body.dark-theme .mission-block { border-left-color: #2a4a2a; }
-        .mission-block h3 { font-size: 1rem; margin-bottom: 8px; color: #4a9a4a; }
-        body.dark-theme .mission-block h3 { color: #88cc88; }
-        .mission-block ul { margin-left: 20px; }
-        .mission-block li { margin-bottom: 6px; font-size: 0.92rem; }
-        .tools-used { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-        .tool-tag {
-            background: #e8f5e9; color: #4a9a4a;
-            border-radius: 10px; padding: 3px 12px;
-            font-size: 0.78rem; font-weight: 600;
-        }
-        body.dark-theme .tool-tag { background: #1e301e; color: #88cc88; }
-
-        .archi-schema {
-            background: #f5fff5; border: 1px solid #c8e6c9;
-            border-radius: 15px; padding: 25px;
-            font-family: monospace; font-size: 0.85rem;
-            line-height: 2; color: #2a5a2a; margin: 15px 0;
-        }
-        body.dark-theme .archi-schema {
-            background: #1a2a1a; border-color: #2a4a2a; color: #88cc88;
-        }
-
-        .bilan-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px; margin-top: 15px;
-        }
-        .bilan-item { background: #f5fff5; border-radius: 15px; padding: 20px; }
-        body.dark-theme .bilan-item { background: #1a2a1a; }
-        .bilan-item h4 { font-size: 0.9rem; margin-bottom: 8px; color: #4a9a4a; }
-        body.dark-theme .bilan-item h4 { color: #88cc88; }
-        .bilan-item p { font-size: 0.85rem; }
-
-        .back-btn {
-            display: inline-block; margin: 20px 10%;
-            color: #4a9a4a; text-decoration: none;
-            font-weight: 600; font-size: 0.9rem;
-        }
-        .back-btn:hover { text-decoration: underline; }
-    </style>
 </head>
 <body>
     <button id="theme-toggle" class="theme-btn">🌙</button>
@@ -99,18 +23,17 @@
 
     <a href="index.html#projets" class="back-btn">← Retour aux projets</a>
 
-    <div class="projet-hero">
+    <div class="section-hero">
         <div class="badge-row">
             <span class="badge">🎓 Projet BTS SIO SISR</span>
-            <span class="badge">🖥️ Infrastructure Réseau</span>
-            <span class="badge">⚙️ Active Directory & DNS</span>
+            <span class="badge">🔗 Infrastructure Réseau</span>
+            <span class="badge">📅 1ère année</span>
         </div>
-        <h1>Projet — <span class="txt-gradient">Infrastructure Réseau</span></h1>
-        <p class="subtitle">Mise en place d'un serveur Active Directory, DNS et DHCP sous Windows Server</p>
+        <h1>Projet — <span class="txt-gradient">Configuration Réseau Local</span></h1>
+        <p class="subtitle">Mise en place d'une infrastructure réseau complète avec switchs, VLANs et services</p>
         <p style="max-width: 700px; font-size: 0.95rem;">
-            Projet réalisé dans le cadre du BTS SIO SISR consistant à concevoir et déployer 
-            une infrastructure réseau complète en environnement virtualisé : contrôleur de domaine 
-            Active Directory, serveur DNS, serveur DHCP et gestion des utilisateurs.
+            Conception et déploiement d'une infrastructure réseau en laboratoire incluant switchs,
+            routeurs, VLANs, services DHCP, DNS et accès inter-VLAN.
         </p>
     </div>
 
@@ -120,107 +43,103 @@
             <h2>🎯 Objectifs du projet</h2>
             <div class="mission-block">
                 <ul>
-                    <li>Déployer un <strong>contrôleur de domaine Active Directory</strong> sous Windows Server.</li>
-                    <li>Configurer un <strong>serveur DNS</strong> pour la résolution de noms au sein du domaine.</li>
-                    <li>Mettre en place un <strong>serveur DHCP</strong> pour l'attribution automatique des adresses IP.</li>
-                    <li>Créer et gérer des <strong>comptes utilisateurs, groupes et unités d'organisation (OU)</strong>.</li>
-                    <li>Appliquer des <strong>stratégies de groupe (GPO)</strong> pour uniformiser les environnements utilisateurs.</li>
-                    <li>Intégrer des <strong>postes clients Windows</strong> au domaine.</li>
+                    <li>Concevoir une topologie réseau multi-VLAN.</li>
+                    <li>Configurer des switchs Cisco pour segmentation VLAN.</li>
+                    <li>Mettre en place le routage inter-VLAN.</li>
+                    <li>Configurer les services DHCP et DNS.</li>
+                    <li>Tester la connectivité complète.</li>
                 </ul>
             </div>
         </div>
 
         <div class="chapitre">
-            <h2>🏗️ Architecture mise en place</h2>
-            <div class="archi-schema">
-                🌐 Réseau local (LAN)
-                │
-                ├── 🖥️  Serveur Windows Server 2019
-                │        ├── Contrôleur de domaine (AD DS)
-                │        ├── Serveur DNS → résolution interne
-                │        └── Serveur DHCP → plage IP automatique
-                │
-                ├── 💻  Poste client 1 (Windows 10) — joint au domaine
-                └── 💻  Poste client 2 (Windows 10) — joint au domaine
+            <h2>🏗️ Architecture du réseau</h2>
+            <div class="schema">
+                Internet (ISP)
+                    ↓
+                Routeur (R1)
+                    ↓
+                Switch Principal (S1) — Trunk
+                    |
+                    ├── Switch S2 (Accès VLAN 10, 20)
+                    ├── Switch S3 (Accès VLAN 30)
+                    └── Serveur (VLAN Management)
+                    ↓
+                PC Clients (VLAN 10, 20, 30)
             </div>
-            <p style="font-size: 0.88rem; color: #777; margin-top: 8px;">Infrastructure déployée en environnement virtualisé (VMware Workstation)</p>
         </div>
 
         <div class="chapitre">
-            <h2>⚙️ Étapes de réalisation</h2>
+            <h2>⚙️ Étapes de configuration</h2>
 
             <div class="mission-block">
-                <h3>1 · Installation et configuration de Windows Server</h3>
+                <h3>1 · Planification et conception</h3>
                 <ul>
-                    <li>Installation de Windows Server 2019 en machine virtuelle.</li>
-                    <li>Configuration de l'adresse IP statique du serveur.</li>
-                    <li>Renommage du serveur et paramétrage initial.</li>
+                    <li>Définition des VLANs : Admin (10), Comptabilité (20), Production (30).</li>
+                    <li>Adressage IP : 192.168.10.0/24, 192.168.20.0/24, 192.168.30.0/24.</li>
+                    <li>Schéma de câblage et topologie.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">Windows Server 2019</span>
-                    <span class="tool-tag">VMware Workstation</span>
+                    <span class="tool-tag">Planification</span>
+                    <span class="tool-tag">Adressage IP</span>
+                    <span class="tool-tag">Cisco Packet Tracer</span>
                 </div>
             </div>
 
             <div class="mission-block">
-                <h3>2 · Déploiement d'Active Directory (AD DS)</h3>
+                <h3>2 · Configuration des VLANs</h3>
                 <ul>
-                    <li>Installation du rôle <strong>AD DS</strong> via le Gestionnaire de serveur.</li>
-                    <li>Promotion du serveur en <strong>contrôleur de domaine</strong>.</li>
-                    <li>Création du domaine (ex : <code>nesrine.local</code>).</li>
-                    <li>Création des <strong>Unités d'Organisation (OU)</strong> : Utilisateurs, Groupes, Ordinateurs.</li>
-                    <li>Création de comptes utilisateurs et attribution aux groupes appropriés.</li>
+                    <li>Création des VLANs sur les switchs.</li>
+                    <li>Configuration des ports en accès (Access) ou trunk.</li>
+                    <li>Vérification avec <code>show vlan brief</code>.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">Active Directory</span>
-                    <span class="tool-tag">AD DS</span>
-                    <span class="tool-tag">OU</span>
-                    <span class="tool-tag">Utilisateurs & Groupes</span>
+                    <span class="tool-tag">Cisco IOS</span>
+                    <span class="tool-tag">VLANs</span>
+                    <span class="tool-tag">Trunk</span>
                 </div>
             </div>
 
             <div class="mission-block">
-                <h3>3 · Configuration DNS et DHCP</h3>
+                <h3>3 · Routage inter-VLAN</h3>
                 <ul>
-                    <li>Configuration des <strong>zones DNS</strong> directe et inverse pour le domaine.</li>
-                    <li>Création des enregistrements A et PTR pour les hôtes.</li>
-                    <li>Configuration du serveur <strong>DHCP</strong> avec une plage d'adresses dédiée.</li>
-                    <li>Exclusion des adresses statiques (serveur, imprimantes…).</li>
+                    <li>Configuration du routeur : interfaces virtuelles (Sub-interfaces) par VLAN.</li>
+                    <li>Attribution des adresses IP de passerelle (gateway) par VLAN.</li>
+                    <li>Activation du routage dynamique si nécessaire.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">DNS</span>
+                    <span class="tool-tag">Routeur Cisco</span>
+                    <span class="tool-tag">Sub-interfaces</span>
+                    <span class="tool-tag">Routage</span>
+                </div>
+            </div>
+
+            <div class="mission-block">
+                <h3>4 · Services DHCP et DNS</h3>
+                <ul>
+                    <li>Configuration d'un serveur DHCP pour distribution automatique d'IP par VLAN.</li>
+                    <li>Configuration d'un serveur DNS pour résolution de noms.</li>
+                    <li>Tests avec <code>ipconfig /all</code> et ping.</li>
+                </ul>
+                <div class="tools-used">
                     <span class="tool-tag">DHCP</span>
-                    <span class="tool-tag">Zones DNS</span>
-                    <span class="tool-tag">Enregistrements A/PTR</span>
+                    <span class="tool-tag">DNS</span>
+                    <span class="tool-tag">Serveurs</span>
                 </div>
             </div>
 
             <div class="mission-block">
-                <h3>4 · Stratégies de groupe (GPO)</h3>
+                <h3>5 · Tests et validation</h3>
                 <ul>
-                    <li>Création de <strong>GPO</strong> pour uniformiser le fond d'écran des postes du domaine.</li>
-                    <li>Restriction de l'accès au Panneau de configuration pour les utilisateurs standard.</li>
-                    <li>Déploiement de paramètres de sécurité (verrouillage de session automatique).</li>
+                    <li>Ping entre VLANs : vérification du routage.</li>
+                    <li>Vérification des baux DHCP.</li>
+                    <li>Résolution DNS.</li>
+                    <li>Documentation de la configuration.</li>
                 </ul>
                 <div class="tools-used">
-                    <span class="tool-tag">GPO</span>
-                    <span class="tool-tag">Group Policy</span>
-                    <span class="tool-tag">Sécurité</span>
-                </div>
-            </div>
-
-            <div class="mission-block">
-                <h3>5 · Intégration des postes clients au domaine</h3>
-                <ul>
-                    <li>Configuration des postes clients pour pointer vers le serveur DNS du domaine.</li>
-                    <li>Jonction des postes Windows 10 au domaine Active Directory.</li>
-                    <li>Vérification de l'authentification des utilisateurs du domaine sur les postes clients.</li>
-                    <li>Test d'application des GPO sur les sessions utilisateurs.</li>
-                </ul>
-                <div class="tools-used">
-                    <span class="tool-tag">Windows 10</span>
-                    <span class="tool-tag">Jonction domaine</span>
-                    <span class="tool-tag">Authentification AD</span>
+                    <span class="tool-tag">Tests connectivité</span>
+                    <span class="tool-tag">Troubleshooting</span>
+                    <span class="tool-tag">Documentation</span>
                 </div>
             </div>
         </div>
@@ -229,32 +148,27 @@
             <h2>📋 Compétences validées</h2>
             <div class="bilan-grid">
                 <div class="bilan-item">
-                    <h4>🖥️ Windows Server</h4>
-                    <p>Installation, configuration des rôles AD DS, DNS et DHCP en environnement virtualisé.</p>
+                    <h4>🔗 Configuration réseau</h4>
+                    <p>Switchs, routeurs, VLANs, trunk, adressage IP.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>👥 Active Directory</h4>
-                    <p>Création d'une structure OU, gestion des comptes, groupes et stratégies de groupe (GPO).</p>
+                    <h4>📍 Services réseau</h4>
+                    <p>DHCP, DNS, routage inter-VLAN.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>🌐 Services réseau</h4>
-                    <p>Configuration DNS (zones, enregistrements) et DHCP (plages, exclusions, baux).</p>
+                    <h4>🧪 Tests et diagnostic</h4>
+                    <p>Ping, tracert, vérification des configurations.</p>
                 </div>
                 <div class="bilan-item">
-                    <h4>💻 Virtualisation</h4>
-                    <p>Déploiement et interconnexion de machines virtuelles sous VMware Workstation.</p>
+                    <h4>📊 Planification</h4>
+                    <p>Schéma réseau, adressage, segmentation VLAN.</p>
                 </div>
             </div>
         </div>
 
         <div class="chapitre">
             <h2>📎 Documents</h2>
-            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                <a href="index.html#projets" class="btn-secondary">← Retour aux projets</a>
-            </div>
-            <p style="margin-top: 15px; font-size: 0.85rem; color: #aaa;">
-                💡 Tu peux ajouter ici des captures d'écran ou un compte rendu de projet.
-            </p>
+            <a href="index.html#projets" class="btn-secondary">← Retour aux projets</a>
         </div>
 
     </div>
@@ -263,7 +177,6 @@
         <p>Nesrine Benallal — 2026 — Portfolio BTS SIO SISR</p>
         <p>📍 Montpellier | 📧 <a href="mailto:nesrine.benallal@ecoles-epsi.net">nesrine.benallal@ecoles-epsi.net</a></p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
