@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille RGPD - Nesrine Benallal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .veille-hero { background: linear-gradient(135deg, #0d1b2a 0%, #1b2838 100%); padding: 60px 10% 40px; border-bottom: 2px solid #4fc3f7; color: white; }
+        .veille-hero h1 { font-size: 2rem; margin-bottom: 8px; color: white; }
+        .veille-hero .subtitle { font-size: 1rem; color: #aaa; margin-bottom: 20px; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 14px; font-size: 0.8rem; font-weight: 600; color: white; }
+        .sources-bar { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .source-chip { background: rgba(79,195,247,0.15); border: 1px solid #4fc3f7; border-radius: 8px; padding: 5px 14px; font-size: 0.8rem; font-weight: 600; color: #4fc3f7; }
+        .chapitre { background: var(--white); border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); padding: 35px; margin-bottom: 30px; }
+        body.dark-theme .chapitre { background: #252545; }
+        .chapitre h2 { font-size: 1.2rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #4fc3f7; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 15px 0; }
+        .stat-card { background: #0d1b2a; border-radius: 12px; padding: 20px; text-align: center; color: white; }
+        .stat-card .number { font-size: 1.8rem; font-weight: 700; color: #4fc3f7; }
+        .stat-card .label { font-size: 0.75rem; color: #aaa; margin-top: 4px; }
+        .sanction-card { border-left: 4px solid #4fc3f7; padding: 18px 20px; background: #f0f8ff; border-radius: 0 12px 12px 0; margin-bottom: 15px; }
+        body.dark-theme .sanction-card { background: #0d1b2a; }
+        .sanction-card .montant { font-size: 1.3rem; font-weight: 700; color: #4fc3f7; }
+        .sanction-card h4 { font-size: 0.95rem; margin: 4px 0 8px; }
+        .sanction-card p { font-size: 0.85rem; color: #666; }
+        body.dark-theme .sanction-card p { color: #aaa; }
+        .sanction-card .categorie { font-size: 0.75rem; color: #888; font-style: italic; margin-bottom: 8px; }
+        .droit-item { display: flex; gap: 15px; padding: 12px 0; border-bottom: 1px solid #f0f0f0; align-items: flex-start; }
+        body.dark-theme .droit-item { border-bottom-color: #3a3660; }
+        .droit-art { background: #4fc3f7; color: white; border-radius: 8px; padding: 4px 10px; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; white-space: nowrap; }
+        .droit-item p { font-size: 0.85rem; margin: 0; }
+        .regle-card { display: grid; grid-template-columns: 90px 1fr; gap: 15px; border: 1px solid #eee; border-radius: 12px; padding: 18px; margin-bottom: 12px; align-items: start; }
+        body.dark-theme .regle-card { border-color: #3a3660; }
+        .regle-card .sigle { background: #0d1b2a; color: #4fc3f7; border-radius: 8px; padding: 10px; text-align: center; font-weight: 800; font-size: 0.85rem; }
+        .regle-card p { font-size: 0.85rem; color: #666; margin-top: 4px; }
+        body.dark-theme .regle-card p { color: #aaa; }
+        .reco-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+        body.dark-theme .reco-item { border-bottom-color: #3a3660; }
+        .reco-ok { color: #4caf50; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+        .reco-item p { font-size: 0.88rem; margin: 0; }
+        .incident-card { border: 1px solid #eee; border-radius: 12px; padding: 18px; margin-bottom: 12px; border-left: 4px solid #4fc3f7; }
+        body.dark-theme .incident-card { border-color: #3a3660; }
+        .incident-card .date { font-size: 0.75rem; color: #4fc3f7; font-weight: 700; }
+        .incident-card h4 { font-size: 0.95rem; margin: 4px 0 8px; }
+        .incident-card p { font-size: 0.85rem; color: #666; }
+        body.dark-theme .incident-card p { color: #aaa; }
+        .back-btn { display: inline-block; margin: 20px 10%; color: #4fc3f7; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .typo-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 12px; }
+        .typo-table td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+        body.dark-theme .typo-table td { border-bottom-color: #3a3660; }
+        .typo-table td:first-child { font-weight: 700; color: #4fc3f7; width: 60px; }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+    <nav>
+        <div class="logo">MonPortfolio.</div>
+        <div class="burger" id="burger"><span></span><span></span><span></span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html#projets">Projets</a></li>
+            <li><a href="index.html#competences">Compétences</a></li>
+            <li><a href="index.html#parcours">Parcours</a></li>
+            <li><a href="index.html#veille">Veille</a></li>
+            <li><a href="CV Benallal Nesrine.pdf" download class="btn-cv">Mon CV</a></li>
+        </ul>
+    </nav>
+
+    <a href="index.html#veille" class="back-btn">← Retour à la veille</a>
+
+    <div class="veille-hero">
+        <div class="badge-row">
+            <span class="badge">🎓 BTS SIO SISR — Veille technologique</span>
+            <span class="badge">📅 Rapport mensuel — Mai 2026</span>
+            <span class="badge">🛡️ RGPD & Données personnelles</span>
+        </div>
+        <h1>Veille RGPD & Données Personnelles — Mai 2026</h1>
+        <p class="subtitle">Conformité, violations, sanctions et nouveaux enjeux (IA, NIS2)</p>
+        <p style="font-size:0.92rem; color:#ccc; max-width:700px;">Rapport exhaustif couvrant janvier–mai 2026. Sources : CNIL (Rapport annuel 19 mai 2026), CEPD, ANSSI, ICO et ZATAZ.</p>
+        <div class="sources-bar">
+            <span class="source-chip">CNIL</span>
+            <span class="source-chip">CEPD</span>
+            <span class="source-chip">ANSSI</span>
+            <span class="source-chip">ICO</span>
+            <span class="source-chip">ZATAZ</span>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="chapitre">
+            <h2>📊 Chiffres clés — Rapport CNIL 2025</h2>
+            <p style="font-size:0.85rem; color:#888; margin-bottom:15px;">Rapport annuel rendu public le 19 mai 2026 par Marie-Laure Denis, présidente de la CNIL</p>
+            <div class="stats-grid">
+                <div class="stat-card"><div class="number">6 167</div><div class="label">Violations notifiées</div></div>
+                <div class="stat-card"><div class="number">487 M€</div><div class="label">Total amendes</div></div>
+                <div class="stat-card"><div class="number">20 150</div><div class="label">Plaintes reçues</div></div>
+                <div class="stat-card"><div class="number">83</div><div class="label">Sanctions</div></div>
+            </div>
+            <p style="margin-top:15px; font-size:0.88rem; font-style:italic; color:#555; border-left:3px solid #4fc3f7; padding-left:12px;">
+                « C'est 50% de plus sur ces trois dernières années. Aucune structure n'est épargnée. »<br>
+                <strong>— Marie-Laure Denis, présidente de la CNIL, 19 mai 2026</strong>
+            </p>
+            <h3 style="margin-top:20px; font-size:1rem;">Répartition par secteur</h3>
+            <table class="typo-table">
+                <tr><td>50%</td><td><strong>Piratages informatiques</strong></td><td style="color:#888; font-size:0.82rem;">Ransomware, phishing, exfiltration</td></tr>
+                <tr><td>20%</td><td><strong>Administration publique</strong></td><td style="color:#888; font-size:0.82rem;">En forte hausse (vs 11% en 2023)</td></tr>
+                <tr><td>15%</td><td><strong>Secteur de la santé</strong></td><td style="color:#888; font-size:0.82rem;">Hôpitaux et groupements médicaux</td></tr>
+                <tr><td>10%</td><td><strong>Activités financières</strong></td><td style="color:#888; font-size:0.82rem;">Extraction coordonnées bancaires, IBAN</td></tr>
+                <tr><td>5%</td><td><strong>Erreurs humaines internes</strong></td><td style="color:#888; font-size:0.82rem;">Divulgations accidentelles</td></tr>
+            </table>
+            <p style="margin-top:12px; font-size:0.82rem; color:#888; font-style:italic;">France : 2e pays mondial le plus touché — 40,3 millions de comptes compromis — +47% vs 2024.</p>
+        </div>
+
+        <div class="chapitre">
+            <h2>⚖️ Sanctions RGPD majeures 2025–2026</h2>
+            <div class="sanction-card">
+                <div class="montant">530 M€</div>
+                <div class="categorie">Novembre 2025 · DPC irlandaise · International</div>
+                <h4>TikTok — Transfert de données vers la Chine</h4>
+                <p>Transferts de données de mineurs européens vers des serveurs en Chine sans garanties adéquates. Circonstance aggravante : TikTok avait certifié qu'aucun flux ne transitait vers ce territoire. Appel en cours.</p>
+            </div>
+            <div class="sanction-card">
+                <div class="montant">42 M€</div>
+                <div class="categorie">13 janvier 2026 · CNIL · Télécommunications France</div>
+                <h4>FREE & FREE MOBILE — API non sécurisée</h4>
+                <p>API non sécurisée exploitée pour extraire les données et IBAN de 24 millions d'abonnés. Manquements : Art. 32, absence de détection d'anomalies, notification tardive.</p>
+            </div>
+            <div class="sanction-card">
+                <div class="montant">17 M€</div>
+                <div class="categorie">24 février 2026 · ICO britannique</div>
+                <h4>Reddit — Profilage publicitaire de mineurs</h4>
+                <p>Collecte et analyse des données de navigation de mineurs (-13 ans) à des fins publicitaires sans base légale. Absence de vérification d'âge jugée délibérée.</p>
+            </div>
+            <div class="sanction-card">
+                <div class="montant">5 M€</div>
+                <div class="categorie">22 janvier 2026 · CNIL · Secteur public</div>
+                <h4>France Travail — Absence de MFA</h4>
+                <p>Intrusion via phishing sur des comptes sans MFA. Droits d'accès trop permissifs, détection supérieure à plusieurs semaines.</p>
+            </div>
+            <div class="sanction-card">
+                <div class="montant">112 000 €</div>
+                <div class="categorie">Mars 2026 · Datatilsynet · Santé Europe</div>
+                <h4>CHU Norvégien — Dossiers médicaux accessibles à tous</h4>
+                <p>Dossiers médicaux sur un partage réseau accessible par défaut sans restriction ni journalisation. Jurisprudence sur le principe du "besoin d'en connaître".</p>
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>🚨 Incidents documentés — Jan–Mai 2026</h2>
+            <div class="incident-card">
+                <div class="date">15 avril 2026</div>
+                <h4>Cyberattaque contre l'ANTS (France Titres)</h4>
+                <p>Faille Zero-Day sur un serveur tiers. Données de <strong>12 millions de citoyens</strong> compromises. Mineur de 15 ans interpellé. Notification CNIL sous 72h.</p>
+            </div>
+            <div class="incident-card">
+                <div class="date">4 février 2026</div>
+                <h4>Compromission "Choisir le service public"</h4>
+                <p>Compte gestionnaire sans MFA exploité. CV, diplômes, numéros de sécu de <strong>377 418 candidats</strong> exfiltrés et mis en vente sur forum russophone.</p>
+            </div>
+            <div class="incident-card">
+                <div class="date">Janvier 2026</div>
+                <h4>Révélations ZATAZ sur France Travail</h4>
+                <p>Des accès frauduleux revendus sur le darkweb depuis le 2e trimestre 2022, révélant 4 ans sans surveillance comportementale.</p>
+            </div>
+            <div class="incident-card">
+                <div class="date">Mai 2026</div>
+                <h4>Fuites CRM — McDonald's, Meetic, LDLC + réseau 79M d'enregistrements</h4>
+                <p>Exfiltrations successives de bases clients + arrestation d'un cybercriminel administrant une base de <strong>79 millions</strong> d'enregistrements de citoyens français via Telegram.</p>
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>🤖 IA & RGPD — Nouveaux enjeux 2026</h2>
+            <p style="font-size:0.88rem; margin-bottom:15px;">La CNIL désignée autorité nationale unique de contrôle de l'<strong>AI Act</strong> en France.</p>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap:15px;">
+                <div style="background:#f0f8ff; border-radius:12px; padding:18px; border-top:3px solid #4fc3f7;">
+                    <p style="font-weight:700; font-size:0.88rem; color:#4fc3f7; margin:0 0 8px;">RGPD dans les LLM</p>
+                    <p style="font-size:0.82rem;">Les droits à l'effacement (Art. 17) et de rectification (Art. 16) doivent s'exercer sur les poids des modèles entraînés, sous peine d'interdiction.</p>
+                </div>
+                <div style="background:#f0f8ff; border-radius:12px; padding:18px; border-top:3px solid #4fc3f7;">
+                    <p style="font-weight:700; font-size:0.88rem; color:#4fc3f7; margin:0 0 8px;">Bases d'entraînement</p>
+                    <p style="font-size:0.82rem;">Base légale obligatoire (Art. 6). La CNIL préconise l'anonymisation irréversible et les données de synthèse.</p>
+                </div>
+                <div style="background:#fff3e0; border-radius:12px; padding:18px; border-top:3px solid #ff9800;">
+                    <p style="font-weight:700; font-size:0.88rem; color:#e65100; margin:0 0 8px;">⚠️ Shadow IA en entreprise</p>
+                    <p style="font-size:0.82rem;">Utilisation non contrôlée de ChatGPT, Claude, Midjourney = violation RGPD majeure engageant la responsabilité de l'employeur.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chapitre">
+            <h2>⚖️ Cadre réglementaire interconnecté</h2>
+            <div class="regle-card"><div class="sigle">RGPD</div><div><p style="font-weight:600; font-size:0.92rem; margin:0;">Règlement Général sur la Protection des Données</p><p>Notification sous 72h, registre des traitements, DPO. Sanctions : jusqu'à 20 M€ ou 4% du CA mondial.</p></div></div>
+            <div class="regle-card"><div class="sigle">AI Act</div><div><p style="font-weight:600; font-size:0.92rem; margin:0;">Règlement Européen sur l'IA</p><p>Approche par les risques. Interdit la surveillance biométrique de masse. Transparence et supervision humaine obligatoires pour les IA à haut risque.</p></div></div>
+            <div class="regle-card"><div class="sigle">NIS2</div><div><p style="font-weight:600; font-size:0.92rem; margin:0;">Directive Network and Information Security 2</p><p>15 000 entités en France. Notification sous 24h à l'ANSSI. Jusqu'à 10 M€ ou 2% du CA.</p></div></div>
+            <div class="regle-card"><div class="sigle">DORA</div><div><p style="font-weight:600; font-size:0.92rem; margin:0;">Digital Operational Resilience Act</p><p>Secteur financier. Pentests certifiés, gestion des tiers, PRA validés. 3 fintechs françaises sanctionnées en 2026.</p></div></div>
+            <div class="regle-card"><div class="sigle">Code Pénal</div><div><p style="font-weight:600; font-size:0.92rem; margin:0;">Art. 226-16 et suivants</p><p>Jusqu'à 5 ans d'emprisonnement et 300 000 € d'amende. Responsabilité pénale directe du DPO ou dirigeant possible.</p></div></div>
+        </div>
+
+        <div class="chapitre">
+            <h2>👤 Les 8 droits fondamentaux du RGPD</h2>
+            <div class="droit-item"><span class="droit-art">Art. 15</span><p><strong>Droit d'accès</strong> — Obtenir confirmation du traitement et copie des données.</p></div>
+            <div class="droit-item"><span class="droit-art">Art. 16</span><p><strong>Droit de rectification</strong> — Corriger les données inexactes ou obsolètes.</p></div>
+            <div class="droit-item"><span class="droit-art">Art. 17</span><p><strong>Droit à l'effacement</strong> — Supprimer définitivement si la finalité est atteinte ou le traitement illicite.</p></div>
+            <div class="droit-item"><span class="droit-art">Art. 18</span><p><strong>Droit à la limitation</strong> — Verrouiller temporairement le traitement pendant une contestation.</p></div>
+            <div class="droit-item"><span class="droit-art">Art. 20</span><p><strong>Droit à la portabilité</strong> — Récupérer ses données dans un format lisible par machine.</p></div>
+            <div class="droit-item"><span class="droit-art">Art. 21</span><p><strong>Droit d'opposition</strong> — S'opposer au traitement pour des motifs légitimes.</p></div>
+            <div class="droit-item"><span class="droit-art">Art. 22</span><p><strong>Droit anti-décision automatisée</strong> — Interdire une décision juridique fondée uniquement sur un algorithme.</p></div>
+            <div class="droit-item"><span class="droit-art">Art. 13-14</span><p><strong>Droit à l'information</strong> — Être informé dès la collecte de la finalité, durée et destinataires.</p></div>
+        </div>
+
+        <div class="chapitre">
+            <h2>✅ Recommandations stratégiques</h2>
+            <h3 style="font-size:0.95rem; margin-bottom:12px; color:#4fc3f7;">Sécurisation technique</h3>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>MFA généralisé</strong> — Sur tous les accès distants : VPN, webmails, consoles cloud, comptes à privilèges.</p></div>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Chiffrement AES-256 / TLS 1.3</strong> — Données au repos et en transit.</p></div>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Segmentation réseau</strong> — Principe du moindre privilège, interdire les répertoires partagés ouverts.</p></div>
+            <h3 style="font-size:0.95rem; margin:20px 0 12px; color:#4fc3f7;">Gouvernance & IA</h3>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Registre des traitements (Art. 30)</strong> — Mise à jour hebdomadaire par le DPO.</p></div>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Plan de réponse SLA 72h</strong> — Exercices de simulation pour notifier la CNIL dans les délais.</p></div>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Interdiction Shadow IA</strong> — Bloquer les outils d'IA non approuvés au niveau des proxys.</p></div>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Privacy by Design</strong> — Minimisation et anonymisation dès la conception.</p></div>
+        </div>
+
+        <div class="chapitre">
+            <h2>📎 Documents</h2>
+            <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                <a href="Veille_RGPD_Mai2026_Complet.pdf" target="_blank" class="btn-main">📄 Rapport complet (PDF)</a>
+                <a href="Veille_RGPD_Mai2026_Complet.pdf" download class="btn-secondary">⬇️ Télécharger</a>
+                <a href="index.html#veille" class="btn-secondary">← Retour à la veille</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>BENALLAL Nesrine — 2026 — Portfolio BTS SIO SISR</p>
+        <p>📍 Montpellier | 📧 <a href="mailto:nesrine.benallal@ecoles-epsi.net">nesrine.benallal@ecoles-epsi.net</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

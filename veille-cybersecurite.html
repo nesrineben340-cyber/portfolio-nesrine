@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Cybersécurité - Nesrine Benallal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .veille-hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 60px 10% 40px;
+            border-bottom: 2px solid #e94560;
+            color: white;
+        }
+        .veille-hero h1 { font-size: 2rem; margin-bottom: 8px; color: white; }
+        .veille-hero .subtitle { font-size: 1rem; color: #aaa; margin-bottom: 20px; }
+        .badge-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+        .badge {
+            background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px; padding: 5px 14px;
+            font-size: 0.8rem; font-weight: 600; color: white;
+        }
+        .sources-bar {
+            display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;
+        }
+        .source-chip {
+            background: rgba(233,69,96,0.2); border: 1px solid #e94560;
+            border-radius: 8px; padding: 5px 14px;
+            font-size: 0.8rem; font-weight: 600; color: #e94560;
+        }
+
+        .chapitre {
+            background: var(--white); border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            padding: 35px; margin-bottom: 30px;
+        }
+        body.dark-theme .chapitre { background: #252545; }
+        .chapitre h2 {
+            font-size: 1.2rem; margin-bottom: 20px;
+            padding-bottom: 10px; border-bottom: 2px solid #e94560;
+        }
+
+        /* STATS */
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px; margin: 15px 0;
+        }
+        .stat-card {
+            background: #1a1a2e; border-radius: 12px; padding: 20px;
+            text-align: center; color: white;
+        }
+        .stat-card .number { font-size: 2rem; font-weight: 700; color: #e94560; }
+        .stat-card .label { font-size: 0.75rem; color: #aaa; margin-top: 4px; }
+
+        /* MENACES */
+        .menace-card {
+            border-left: 4px solid #e94560; padding: 15px 20px;
+            background: #fff5f6; border-radius: 0 12px 12px 0;
+            margin-bottom: 15px;
+        }
+        body.dark-theme .menace-card { background: #2a1a20; }
+        .menace-card .niveau {
+            display: inline-block; padding: 2px 10px; border-radius: 20px;
+            font-size: 0.72rem; font-weight: 700; margin-bottom: 8px;
+        }
+        .niveau-critique { background: #ffebee; color: #c62828; }
+        .niveau-eleve { background: #fff3e0; color: #e65100; }
+        .niveau-surveillance { background: #e8f5e9; color: #2e7d32; }
+        .niveau-structurel { background: #e3f2fd; color: #1565c0; }
+        body.dark-theme .niveau-critique { background: #3a0a0a; color: #ef9a9a; }
+        body.dark-theme .niveau-eleve { background: #3a2000; color: #ffcc80; }
+        body.dark-theme .niveau-surveillance { background: #0a2a0a; color: #a5d6a7; }
+        body.dark-theme .niveau-structurel { background: #0a1a2a; color: #90caf9; }
+
+        /* INCIDENTS */
+        .incident-card {
+            border: 1px solid #eee; border-radius: 12px; padding: 18px;
+            margin-bottom: 12px; border-left: 4px solid #e94560;
+        }
+        body.dark-theme .incident-card { border-color: #3a3660; }
+        .incident-card .date { font-size: 0.75rem; color: #e94560; font-weight: 700; }
+        .incident-card h4 { font-size: 0.95rem; margin: 4px 0 8px; }
+        .incident-card p { font-size: 0.85rem; color: #666; }
+        body.dark-theme .incident-card p { color: #aaa; }
+
+        /* REGLEMENTATION */
+        .regle-card {
+            display: grid; grid-template-columns: 100px 1fr; gap: 15px;
+            border: 1px solid #eee; border-radius: 12px; padding: 18px;
+            margin-bottom: 12px; align-items: start;
+        }
+        body.dark-theme .regle-card { border-color: #3a3660; }
+        .regle-card .sigle {
+            background: #1a1a2e; color: #e94560;
+            border-radius: 8px; padding: 10px; text-align: center;
+            font-weight: 800; font-size: 1rem;
+        }
+        .regle-card p { font-size: 0.85rem; color: #666; margin-top: 4px; }
+        body.dark-theme .regle-card p { color: #aaa; }
+
+        /* RECOMMANDATIONS */
+        .reco-item {
+            display: flex; align-items: flex-start; gap: 12px;
+            padding: 10px 0; border-bottom: 1px solid #f0f0f0;
+        }
+        body.dark-theme .reco-item { border-bottom-color: #3a3660; }
+        .reco-ok { color: #4caf50; font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+        .reco-item p { font-size: 0.88rem; margin: 0; }
+
+        .back-btn {
+            display: inline-block; margin: 20px 10%;
+            color: #e94560; text-decoration: none;
+            font-weight: 600; font-size: 0.9rem;
+        }
+        .back-btn:hover { text-decoration: underline; }
+
+        .secteur-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 12px; }
+        .secteur-table td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+        body.dark-theme .secteur-table td { border-bottom-color: #3a3660; }
+        .secteur-table td:first-child { font-weight: 700; color: #e94560; width: 60px; }
+        .secteur-table td:nth-child(2) { font-weight: 600; }
+        .secteur-table td:last-child { color: #888; font-size: 0.82rem; }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle" class="theme-btn">🌙</button>
+    <nav>
+        <div class="logo">MonPortfolio.</div>
+        <div class="burger" id="burger"><span></span><span></span><span></span></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html#projets">Projets</a></li>
+            <li><a href="index.html#competences">Compétences</a></li>
+            <li><a href="index.html#parcours">Parcours</a></li>
+            <li><a href="index.html#veille">Veille</a></li>
+            <li><a href="CV Benallal Nesrine.pdf" download class="btn-cv">Mon CV</a></li>
+        </ul>
+    </nav>
+
+    <a href="index.html#veille" class="back-btn">← Retour à la veille</a>
+
+    <div class="veille-hero">
+        <div class="badge-row">
+            <span class="badge">🎓 BTS SIO SISR — Veille technologique</span>
+            <span class="badge">📅 Rapport mensuel — Mai 2026</span>
+            <span class="badge">🔐 Cybersécurité</span>
+        </div>
+        <h1>Veille Cybersécurité — Mai 2026</h1>
+        <p class="subtitle">Évolution des menaces & protection des infrastructures</p>
+        <p style="font-size:0.92rem; color:#ccc; max-width:700px;">
+            Rapport mensuel couvrant la période janvier–mai 2026. Synthèse des informations publiées 
+            par l'ANSSI, CERT-FR, ZATAZ et Google Alerts sur l'évolution du paysage des cybermenaces 
+            en France et en Europe.
+        </p>
+        <div class="sources-bar">
+            <span class="source-chip">ANSSI</span>
+            <span class="source-chip">CERT-FR</span>
+            <span class="source-chip">ZATAZ.com</span>
+            <span class="source-chip">Le Monde Informatique</span>
+            <span class="source-chip">Google Alerts</span>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- CHIFFRES CLÉS -->
+        <div class="chapitre">
+            <h2>📊 Chiffres clés — Panorama ANSSI 2025</h2>
+            <p style="font-size:0.85rem; color:#888; margin-bottom:15px;">Rapport annuel publié le 11 mars 2026 par l'ANSSI</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number">3 586</div>
+                    <div class="label">Événements traités</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">1 366</div>
+                    <div class="label">Incidents confirmés</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">196</div>
+                    <div class="label">Exfiltrations de données</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">128</div>
+                    <div class="label">Attaques ransomware</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top:20px; font-size:1rem;">Répartition des incidents par secteur</h3>
+            <table class="secteur-table">
+                <tr><td>34%</td><td>Éducation & Recherche</td><td>Premier secteur ciblé en France</td></tr>
+                <tr><td>24%</td><td>Collectivités & Ministères</td><td>Administrations très exposées</td></tr>
+                <tr><td>10%</td><td>Secteur de la santé</td><td>Hôpitaux et cabinets médicaux</td></tr>
+                <tr><td>9%</td><td>Télécommunications</td><td>Opérateurs réseau et FAI</td></tr>
+                <tr><td>23%</td><td>Autres secteurs</td><td>Industrie, finance, énergie</td></tr>
+            </table>
+            <p style="margin-top:12px; font-size:0.82rem; color:#888; font-style:italic;">
+                La France est le 2e pays le plus ciblé par les cyberattaques en Europe (13% des attaques) — 
+                3 vols de données par jour en moyenne depuis début 2026.
+            </p>
+        </div>
+
+        <!-- MENACES EN ÉVOLUTION -->
+        <div class="chapitre">
+            <h2>⚠️ Les menaces en évolution</h2>
+
+            <div class="menace-card">
+                <span class="niveau niveau-critique">🔴 Critique</span>
+                <h3 style="font-size:1rem; margin:0 0 8px;">Intelligence Artificielle offensive & attaques automatisées</h3>
+                <p style="font-size:0.88rem;">L'IA transforme les cybercriminels isolés en opérateurs capables de produire des attaques en série. Phishing hyper-personnalisé, deepfakes, détection automatisée de failles. Les attaques OT ciblant les infrastructures industrielles sont optimisées par l'IA. Le <strong>Shadow IA</strong> constitue une nouvelle surface d'attaque non contrôlée.</p>
+                <p style="font-size:0.78rem; color:#888; margin-top:6px;">Sources : ANSSI / Le Monde Informatique / Orange Pro</p>
+            </div>
+
+            <div class="menace-card">
+                <span class="niveau niveau-surveillance">📈 Surveillance</span>
+                <h3 style="font-size:1rem; margin:0 0 8px;">Ransomware : bascule vers l'exfiltration pure</h3>
+                <p style="font-size:0.88rem;">Le modèle classique du ransomware évolue. Les groupes privilégient l'exfiltration de données sans chiffrement : moins risqué, plus discret, pression médiatique maximale. Les exfiltrations sont passées de <strong>130 en 2024 à 196 en 2025 (+51%)</strong>. Les Initial Access Brokers (IAB) jouent un rôle croissant.</p>
+                <p style="font-size:0.78rem; color:#888; margin-top:6px;">Sources : CERT-FR (CERTFR-2026-CTI-002) / ZATAZ mai 2026</p>
+            </div>
+
+            <div class="menace-card">
+                <span class="niveau niveau-eleve">🟠 Élevé</span>
+                <h3 style="font-size:1rem; margin:0 0 8px;">Espionnage étatique — Salt Typhoon, Turla</h3>
+                <p style="font-size:0.88rem;">Les modes opératoires liés à la Russie et à la Chine restent les plus actifs. <strong>Salt Typhoon (Chine)</strong> a étendu son ciblage au-delà des télécoms. <strong>Turla (FSB russe)</strong> a ciblé des ambassades à Moscou. La convergence entre groupes étatiques et cybercriminels complique le travail d'attribution.</p>
+                <p style="font-size:0.78rem; color:#888; margin-top:6px;">Sources : ANSSI Panorama 2025 / CERT-FR</p>
+            </div>
+
+            <div class="menace-card">
+                <span class="niveau niveau-structurel">🔵 Structurel</span>
+                <h3 style="font-size:1rem; margin:0 0 8px;">Infrastructures critiques OT/IoT</h3>
+                <p style="font-size:0.88rem;">Les systèmes industriels sont la nouvelle frontière des cyberattaques. La convergence IT/OT élargit massivement la surface d'attaque. En entreprise, on compte en moyenne <strong>144 identités machines</strong> pour une seule identité humaine — un risque sous-estimé.</p>
+                <p style="font-size:0.78rem; color:#888; margin-top:6px;">Sources : Orange Pro / jamespot.com mars 2026</p>
+            </div>
+        </div>
+
+        <!-- INCIDENTS MAI 2026 -->
+        <div class="chapitre">
+            <h2>🚨 Incidents récents documentés — Mai 2026</h2>
+
+            <div class="incident-card">
+                <div class="date">15 avril 2026 — État / Critique</div>
+                <h4>Cyberattaque contre l'ANTS (France Titres)</h4>
+                <p>Le portail national France Titres a subi une intrusion massive. Les données de <strong>12 millions de citoyens</strong> ont été compromises (état civil, adresses, historiques de documents officiels). Un mineur de 15 ans a été interpellé par la gendarmerie.</p>
+            </div>
+
+            <div class="incident-card">
+                <div class="date">6 mai 2026 — Collectivité</div>
+                <h4>Mairie de Quiberon — Ransomware Qilin</h4>
+                <p>La mairie a subi une attaque revendiquée par le groupe <strong>Qilin</strong> sur le darkweb. L'activité municipale a été perturbée. Qilin est un groupe RaaS actif depuis 2022.</p>
+            </div>
+
+            <div class="incident-card">
+                <div class="date">Mars 2026 — Entreprise</div>
+                <h4>Defacement de Warner Bros France</h4>
+                <p>Plusieurs sous-domaines de warnerbros.fr ont été victimes d'une opération de defacement. Groupes pirates impliqués : Simsimi, Vandathegod.</p>
+            </div>
+
+            <div class="incident-card">
+                <div class="date">Mai 2026 — Entreprises</div>
+                <h4>Fuites de données — McDonald's France, Meetic, LDLC</h4>
+                <p>Plusieurs entreprises du secteur grand public touchées par des fuites de bases de données clients. Risques sur les cartes fidélité, coordonnées et historiques d'achat.</p>
+            </div>
+
+            <div class="incident-card">
+                <div class="date">4 février 2026 — Fonction publique</div>
+                <h4>Compromission de "Choisir le service public"</h4>
+                <p>Les données de <strong>377 418 candidats</strong> à la fonction publique (CV, diplômes, numéros de sécurité sociale) ont été exfiltrées suite à l'exploitation d'un compte sans MFA.</p>
+            </div>
+        </div>
+
+        <!-- PLAN GOUVERNEMENTAL -->
+        <div class="chapitre">
+            <h2>🏛️ Plan d'action gouvernemental — 30 avril 2026</h2>
+            <p style="font-size:0.88rem; margin-bottom:15px; font-style:italic;">
+                « Un casse du siècle qui a pratiquement lieu tous les mois. » — <strong>Sébastien Lecornu</strong>, Premier ministre
+            </p>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:15px;">
+                <div style="background:#fff5f6; border-radius:12px; padding:18px; border-top:3px solid #e94560;">
+                    <p style="font-weight:700; font-size:0.85rem; color:#e94560;">AXE 1</p>
+                    <p style="font-size:0.88rem; font-weight:600; margin:4px 0;">200 M€ débloqués d'urgence</p>
+                    <p style="font-size:0.82rem; color:#666;">Enveloppe France 2030 pour moderniser les infrastructures numériques de l'État.</p>
+                </div>
+                <div style="background:#fff5f6; border-radius:12px; padding:18px; border-top:3px solid #e94560;">
+                    <p style="font-weight:700; font-size:0.85rem; color:#e94560;">AXE 2</p>
+                    <p style="font-size:0.88rem; font-weight:600; margin:4px 0;">Autorité numérique de l'État</p>
+                    <p style="font-size:0.82rem; color:#666;">Fusion DINUM + DITP pour standardiser et sécuriser les SI de tous les ministères.</p>
+                </div>
+                <div style="background:#fff5f6; border-radius:12px; padding:18px; border-top:3px solid #e94560;">
+                    <p style="font-weight:700; font-size:0.85rem; color:#e94560;">AXE 3</p>
+                    <p style="font-size:0.88rem; font-weight:600; margin:4px 0;">Obligation 5% + pentests</p>
+                    <p style="font-size:0.82rem; color:#666;">Toutes les administrations doivent consacrer min. 5% de leur budget IT à la cybersécurité.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RÉGLEMENTATION -->
+        <div class="chapitre">
+            <h2>⚖️ Cadre réglementaire européen et français</h2>
+            <div class="regle-card">
+                <div class="sigle">NIS2</div>
+                <div>
+                    <p style="font-weight:600; font-size:0.92rem; margin:0;">Directive Network and Information Security 2</p>
+                    <p>Étendue à 18 secteurs critiques, concerne 10 000 à 15 000 entités en France. Obligations : gestion des risques, notification des incidents sous 24h, responsabilité directe de la direction. Sanction : jusqu'à 10 M€ ou 2% du CA mondial. Taux de conformité : 62% en 2026.</p>
+                </div>
+            </div>
+            <div class="regle-card">
+                <div class="sigle">DORA</div>
+                <div>
+                    <p style="font-weight:600; font-size:0.92rem; margin:0;">Digital Operational Resilience Act</p>
+                    <p>Spécifique au secteur financier : tests de pénétration obligatoires, gestion des prestataires tiers critiques, plans de continuité. En 2026, 3 fintechs françaises ont suspendu leurs services pour non-conformité.</p>
+                </div>
+            </div>
+            <div class="regle-card">
+                <div class="sigle">RGPD</div>
+                <div>
+                    <p style="font-weight:600; font-size:0.92rem; margin:0;">Règlement Général sur la Protection des Données</p>
+                    <p>Notification obligatoire à la CNIL sous 72h en cas de violation. Sanctions : jusqu'à 20 M€ ou 4% du CA mondial. Les amendes CNIL seront désormais affectées au fonds de modernisation numérique.</p>
+                </div>
+            </div>
+            <div class="regle-card">
+                <div class="sigle">CRA</div>
+                <div>
+                    <p style="font-weight:600; font-size:0.92rem; margin:0;">Cyber Resilience Act</p>
+                    <p>Impose la sécurité dès la conception (security by design) pour tous les produits connectés. Les fabricants devront déclarer les vulnérabilités et fournir des mises à jour pendant toute la durée de vie du produit.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RECOMMANDATIONS -->
+        <div class="chapitre">
+            <h2>✅ Recommandations et bonnes pratiques</h2>
+
+            <h3 style="font-size:0.95rem; margin-bottom:12px; color:#e94560;">Gouvernance & Zero Trust</h3>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Adoption du Zero Trust</strong> — Ne jamais faire confiance, toujours vérifier. Chaque accès authentifié, autorisé et surveillé.</p></div>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Budget min. 5% du budget IT</strong> — Objectif gouvernemental 2026. Privilégier les solutions souveraines certifiées ANSSI.</p></div>
+
+            <h3 style="font-size:0.95rem; margin:20px 0 12px; color:#e94560;">Détection & réponse aux incidents</h3>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>SOC et surveillance 24/7</strong> — Security Operations Center pour la détection en temps réel (SIEM, UEBA).</p></div>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Tests d'intrusion réguliers</strong> — Pentests annuels et exercices de crise. L'État lui-même s'y astreint désormais.</p></div>
+
+            <h3 style="font-size:0.95rem; margin:20px 0 12px; color:#e94560;">Protection des données & accès</h3>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>MFA généralisé</strong> — Authentification multifacteur obligatoire sur tous les accès sensibles.</p></div>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Chiffrement des données</strong> — AES-256 au repos, TLS 1.3 en transit. Pseudonymiser les données personnelles.</p></div>
+
+            <h3 style="font-size:0.95rem; margin:20px 0 12px; color:#e94560;">Supply chain & formation</h3>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Audit des prestataires</strong> — Évaluer le niveau de sécurité de chaque prestataire. Clauses sécurité dans les contrats.</p></div>
+            <div class="reco-item"><span class="reco-ok">OK</span><p><strong>Formation obligatoire min. 8h/an</strong> — Exigence NIS2. Simulations de phishing pour mesurer la vigilance.</p></div>
+        </div>
+
+        <div class="chapitre">
+            <h2>📎 Documents</h2>
+            <div style="display:flex; gap:15px; flex-wrap:wrap;">
+                <a href="Veille_Cybersecurite_Mai2026_Complet.pdf" download class="btn-main">⬇️ Télécharger le rapport complet</a>
+                <a href="index.html#veille" class="btn-secondary">← Retour à la veille</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>BENALLAL Nesrine — 2026 — Portfolio BTS SIO SISR</p>
+        <p>📍 Montpellier | 📧 <a href="mailto:nesrine.benallal@ecoles-epsi.net">nesrine.benallal@ecoles-epsi.net</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
