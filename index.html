@@ -155,10 +155,9 @@
     <section id="parcours" class="container">
         <div class="section-divider">5 · Parcours & Formation</div>
         <h2>Mon Parcours Professionnel</h2>
-        <div class="grid">
 
-            <!-- TIMELINE PARCOURS -->
-            <div class="card" style="border-left: 5px solid var(--pink); grid-column: 1 / -1;">
+            <!-- TIMELINE PARCOURS pleine largeur -->
+            <div class="card" style="border-left: 5px solid var(--pink); margin-bottom: 25px;">
                 <span class="tag">🎓 Mon Parcours de Formation</span>
                 <h3>De la terminale au BTS SIO</h3>
                 <div style="margin-top: 20px; position: relative; padding-left: 20px;">
@@ -193,6 +192,8 @@
                     </div>
                 </div>
             </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
 
             <!-- BTS explication -->
             <div class="card" style="border-left: 5px solid var(--pink);">
@@ -429,7 +430,7 @@
     <section id="stages" class="container">
         <div class="section-divider">10 & 11 · Stages — 1ère & 2ème année</div>
         <h2>Mes Stages</h2>
-        <div class="grid">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
             <!-- STAGE 2EME ANNÉE -->
             <a href="stage-smag.html" class="card-link">
                 <div class="card" style="border-left: 5px solid var(--purple);">
