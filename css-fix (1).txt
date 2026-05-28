@@ -1,0 +1,32 @@
+/* ===== CORRECTIFS GRILLES STAGES ===== */
+#stages .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    align-items: stretch !important;
+}
+
+#stages .card {
+    height: 100% !important;
+    box-sizing: border-box !important;
+}
+
+@media screen and (max-width: 900px) {
+    #stages .grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ===== CORRECTIFS GRILLE VEILLE ===== */
+#veille .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    align-items: stretch !important;
+}
+
+#veille .card-link {
+    display: block !important;
+}
+
+@media screen and (max-width: 768px) {
+    #veille .grid {
+        grid-template-columns: 1fr !important;
+    }
+}
