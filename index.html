@@ -193,7 +193,7 @@
                 </div>
             </div>
 
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px;">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 25px;">
 
             <!-- BTS explication -->
             <div class="card" style="border-left: 5px solid var(--pink);">
@@ -237,43 +237,6 @@
                 </p>
             </div>
 
-            <a href="stage-smag.html" class="card-link">
-                <div class="card" style="border-left: 5px solid var(--purple);">
-                    <span class="tag">Stage Jan–Fév 2026 · 8 semaines</span>
-                    <h3>Administratrice Systèmes & Réseaux</h3>
-                    <p><strong>SMAG Montpellier</strong> — Pôle Infrastructure</p>
-                    <p style="margin-top: 8px; font-size: 0.88rem;">
-                        🔐 Audit Fortinet · 🖥️ PXE · ⚙️ PowerShell · 🎫 Support N2 · 📦 RGPD · 🔑 802.1X
-                    </p>
-                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;">
-                        <span class="click-info" style="margin:0;">→ Voir les détails</span>
-                        <a href="attestation%20de%20stage%20smag.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📋 Attestation</a>
-                    </div>
-                </div>
-            </a>
-
-            <a href="stage-tlemcen.html" class="card-link">
-                <div class="card">
-                    <span class="tag">Stage Mars–Avr 2024</span>
-                    <h3>Technicienne Support</h3>
-                    <p><strong>Mairie de Tlemcen (Algérie)</strong></p>
-                    <p>Administration des serveurs locaux, maintenance du parc municipal.</p>
-                    <p class="click-info">→ Voir rapport & diaporama</p>
-                    <a href="diaporama-mairie-tlemcen-nesrine.pdf" target="_blank" class="btn-secondary" style="display: block; text-align: center; margin-top: 12px;" onclick="event.stopPropagation();">
-                        📊 Diaporama (PDF)
-                    </a>
-                </div>
-            </a>
-
-            <a href="stage-xefi.html" class="card-link">
-                <div class="card">
-                    <span class="tag">Stage Juin 2023</span>
-                    <h3>Technicienne Support</h3>
-                    <p><strong>XEFI Montpellier Ouest</strong></p>
-                    <p>Tickets GLPI, maintenance matérielle, support utilisateur N1.</p>
-                    <p class="click-info">→ Voir les documents</p>
-                </div>
-            </a>
         </div>
     </section>
 
@@ -430,60 +393,72 @@
     <section id="stages" class="container">
         <div class="section-divider">10 & 11 · Stages — 1ère & 2ème année</div>
         <h2>Mes Stages</h2>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;">
-            <!-- STAGE 2EME ANNÉE -->
-            <a href="stage-smag.html" class="card-link">
-                <div class="card" style="border-left: 5px solid var(--purple);">
-                    <span class="tag">Stage 2ème année · Jan–Fév 2026 · 8 semaines</span>
-                    <h3>SMAG Montpellier — Pôle Infrastructure</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; align-items: start;">
+
+            <!-- SMAG -->
+            <a href="stage-smag.html" class="card-link" style="display:block; height:100%;">
+                <div class="card" style="border-left: 5px solid var(--purple); height:100%; box-sizing:border-box;">
+                    <span class="tag">Stage 2ème année · Jan–Fév 2026</span>
+                    <h3>SMAG Montpellier</h3>
+                    <p style="font-size:0.82rem; color:#888;">Pôle Infrastructure · 8 semaines</p>
                     <p style="margin-top: 8px; font-size: 0.88rem;">
-                        🔐 Audit pare-feu Fortinet (FortiOS)<br>
-                        🖥️ Déploiement PXE & masterisation des postes<br>
-                        ⚙️ Scripts PowerShell · Serveur Syslog/rsyslog<br>
-                        🎫 Support N2 & tickets GLPI<br>
-                        📦 Décommissionnement RGPD · 🔑 802.1X · KeePass 2
+                        🔐 Audit pare-feu Fortinet<br>
+                        🖥️ Déploiement PXE<br>
+                        ⚙️ Scripts PowerShell · Syslog<br>
+                        🎫 Support N2 · GLPI<br>
+                        📦 RGPD · 🔑 802.1X · KeePass 2
                     </p>
-                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;">
+                    <div style="display:flex; flex-direction:column; gap:8px; margin-top: 14px;">
                         <span class="click-info" style="margin:0;">→ Voir le détail des missions</span>
-                        <a href="Rapport_de_stage_SAMG.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📄 Rapport</a>
-                        <a href="attestation%20de%20stage%20smag.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📋 Attestation</a>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                            <a href="Rapport_de_stage_SAMG.pdf" target="_blank" class="btn-secondary" style="font-size:0.78rem; padding: 5px 12px;" onclick="event.stopPropagation();">📄 Rapport</a>
+                            <a href="attestation%20de%20stage%20smag.pdf" target="_blank" class="btn-secondary" style="font-size:0.78rem; padding: 5px 12px;" onclick="event.stopPropagation();">📋 Attestation</a>
+                        </div>
                     </div>
                 </div>
             </a>
 
-            <!-- STAGE 1ERE ANNÉE -->
-            <a href="stage-tlemcen.html" class="card-link">
-                <div class="card" style="border-left: 5px solid var(--pink);">
+            <!-- TLEMCEN -->
+            <a href="stage-tlemcen.html" class="card-link" style="display:block; height:100%;">
+                <div class="card" style="border-left: 5px solid var(--pink); height:100%; box-sizing:border-box;">
                     <span class="tag">Stage 1ère année · Mars–Avr 2024</span>
-                    <h3>Mairie de Tlemcen (Algérie)</h3>
+                    <h3>Mairie de Tlemcen</h3>
+                    <p style="font-size:0.82rem; color:#888;">Algérie</p>
                     <p style="margin-top: 8px; font-size: 0.88rem;">
                         🖥️ Administration des serveurs locaux<br>
-                        🔧 Maintenance du parc informatique municipal<br>
+                        🔧 Maintenance du parc municipal<br>
                         👥 Support et formation des agents
                     </p>
-                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;">
+                    <div style="display:flex; flex-direction:column; gap:8px; margin-top: 14px;">
                         <span class="click-info" style="margin:0;">→ Voir le rapport</span>
-                        <a href="diaporama-mairie-tlemcen-nesrine.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📊 Diaporama</a>
-                        <a href="attestation-de-stage-mairie-de-tlemcen.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📋 Attestation</a>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                            <a href="diaporama-mairie-tlemcen-nesrine.pdf" target="_blank" class="btn-secondary" style="font-size:0.78rem; padding: 5px 12px;" onclick="event.stopPropagation();">📊 Diaporama</a>
+                            <a href="attestation-de-stage-mairie-de-tlemcen.pdf" target="_blank" class="btn-secondary" style="font-size:0.78rem; padding: 5px 12px;" onclick="event.stopPropagation();">📋 Attestation</a>
+                        </div>
                     </div>
                 </div>
             </a>
 
-            <a href="stage-xefi.html" class="card-link">
-                <div class="card">
+            <!-- XEFI -->
+            <a href="stage-xefi.html" class="card-link" style="display:block; height:100%;">
+                <div class="card" style="height:100%; box-sizing:border-box;">
                     <span class="tag">Stage 1ère année · Juin 2023</span>
                     <h3>XEFI Montpellier Ouest</h3>
+                    <p style="font-size:0.82rem; color:#888;">Montpellier</p>
                     <p style="margin-top: 8px; font-size: 0.88rem;">
                         🎫 Gestion de tickets GLPI<br>
                         🔧 Maintenance matérielle & logicielle<br>
                         👥 Support utilisateur N1
                     </p>
-                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;">
+                    <div style="display:flex; flex-direction:column; gap:8px; margin-top: 14px;">
                         <span class="click-info" style="margin:0;">→ Voir les documents</span>
-                        <a href="Attestation%20de%20stage%201.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📋 Attestation</a>
+                        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                            <a href="Attestation%20de%20stage%201.pdf" target="_blank" class="btn-secondary" style="font-size:0.78rem; padding: 5px 12px;" onclick="event.stopPropagation();">📋 Attestation</a>
+                        </div>
                     </div>
                 </div>
             </a>
+
         </div>
     </section>
 
