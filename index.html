@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio BTS SIO - Nesrine Benallal</title>
+    <title>Portfolio BTS SIO SISR - Benallal Nesrine</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -13,6 +13,12 @@
             gap: 60px; padding: 80px 10%; text-align: left;
         }
         .hero-content { flex: 1; max-width: 560px; }
+        .hero-name {
+            font-size: 2.6rem; font-weight: 700; line-height: 1.1;
+            background: linear-gradient(45deg, #b19cd9, #ffb7ce);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 6px;
+        }
         .hero-photo-wrap { flex-shrink: 0; position: relative; }
         .hero-photo {
             width: 220px; height: 220px; border-radius: 50%;
@@ -26,6 +32,22 @@
             animation: spin-slow 18s linear infinite;
         }
         @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+        /* INFO CARDS SOUS LE HERO */
+        .info-bar {
+            display: flex; flex-wrap: wrap; gap: 15px;
+            padding: 0 10% 40px; justify-content: center;
+        }
+        .info-chip {
+            background: var(--white); border-radius: 50px;
+            padding: 10px 22px; font-size: 0.88rem; font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            display: flex; align-items: center; gap: 8px;
+            text-decoration: none; color: var(--dark);
+            transition: 0.2s;
+        }
+        .info-chip:hover { transform: translateY(-3px); border: 1px solid var(--purple); }
+        .dark-theme .info-chip { background: #252545; color: white; }
 
         /* TABLEAU DE SYNTHÈSE */
         .synthese-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; margin-top: 15px; }
@@ -70,10 +92,18 @@
         .dark-theme .contact-section p { color: #aaa; }
         .contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
 
+        /* SÉPARATEUR DE SECTION */
+        .section-divider {
+            text-align: center; padding: 10px 0 0;
+            font-size: 0.75rem; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: #bbb;
+        }
+
         @media screen and (max-width: 768px) {
             .hero { flex-direction: column-reverse; text-align: center; gap: 30px; padding: 50px 6%; }
             .hero-photo { width: 160px; height: 160px; }
             .synthese-table { font-size: 0.68rem; }
+            .info-bar { padding: 0 6% 30px; }
         }
     </style>
 </head>
@@ -83,39 +113,273 @@
         <div class="logo">MonPortfolio.</div>
         <div class="burger" id="burger"><span></span><span></span><span></span></div>
         <ul class="nav-links" id="nav-links">
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#parcours">Parcours & BTS</a></li>
             <li><a href="#synthese">Tableau E5</a></li>
-            <li><a href="#parcours">Parcours</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#stages">Stages</a></li>
             <li><a href="#veille">Veille</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="Benallal-Nesrine-cv.pdf" download class="btn-cv">Mon CV</a></li>
+            <li><a href="CV Benallal Nesrine.pdf" download class="btn-cv">Mon CV</a></li>
         </ul>
     </nav>
 
-    <!-- ===== HERO ===== -->
-    <header class="hero">
+    <!-- ===== 1. PRÉSENTATION PERSONNELLE ===== -->
+    <header class="hero" id="presentation">
         <div class="hero-content">
-            <h1><span class="txt-gradient">BENALLAL Nesrine</span> 👋</h1>
-            <p>Étudiante en <strong>BTS SIO SISR</strong> à l'<strong>EPSI Montpellier</strong>.</p>
-            <p>Future administratrice systèmes & réseaux, passionnée par la <strong>Cybersécurité</strong>.</p>
+            <p style="font-size:0.9rem; font-weight:600; color:#aaa; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px;">Portfolio BTS SIO SISR — Session 2026</p>
+            <div class="hero-name">BENALLAL Nesrine</div>
+            <p style="font-size: 1rem; margin: 12px 0 6px;">Étudiante en <strong>BTS SIO — Option SISR</strong></p>
+            <p style="font-size: 0.95rem; color: #777;">🏫 EPSI Montpellier (AFINUM) | 📍 Montpellier, Hérault</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">Future administratrice systèmes & réseaux, passionnée par la <strong>Cybersécurité</strong>.</p>
             <div class="hero-buttons" style="margin-top: 25px;">
-                <a href="https://www.linkedin.com/in/nesrine-benallal-472a7b250" target="_blank" class="btn-main">Mon LinkedIn</a>
-                <a href="CV Benallal Nesrine.pdf" download class="btn-secondary">Télécharger mon CV</a>
+                <a href="https://www.linkedin.com/in/nesrine-benallal-472a7b250" target="_blank" class="btn-main">💼 Mon LinkedIn</a>
+                <a href="CV Benallal Nesrine.pdf" download class="btn-secondary">📄 Télécharger mon CV</a>
             </div>
         </div>
         <div class="hero-photo-wrap">
             <div class="hero-photo-ring"></div>
-            <img src="photo-nesrine.png" alt="Photo de Nesrine Benallal" class="hero-photo">
+            <img src="photo-nesrine.png" alt="Photo de Benallal Nesrine" class="hero-photo">
         </div>
     </header>
 
-    <!-- ===== PROJETS ===== -->
+    <!-- ===== 2. CV + 3. LINKEDIN + 4. GITHUB ===== -->
+    <div class="info-bar">
+        <a href="CV Benallal Nesrine.pdf" download class="info-chip">📄 Télécharger mon CV</a>
+        <a href="https://www.linkedin.com/in/nesrine-benallal-472a7b250" target="_blank" class="info-chip">💼 LinkedIn — Nesrine Benallal</a>
+        <a href="https://github.com/nesrineben340-cyber/portfolio-nesrine" target="_blank" class="info-chip">🐙 GitHub — nesrineben340-cyber</a>
+        <span class="info-chip">🎓 N° candidat : 02045632666</span>
+    </div>
+
+    <!-- ===== 5. PARCOURS + 6. PRÉSENTATION BTS ===== -->
+    <section id="parcours" class="container">
+        <div class="section-divider">5 · Parcours & Formation</div>
+        <h2>Mon Parcours Professionnel</h2>
+        <div class="grid">
+
+            <!-- TIMELINE PARCOURS -->
+            <div class="card" style="border-left: 5px solid var(--pink); grid-column: 1 / -1;">
+                <span class="tag">🎓 Mon Parcours de Formation</span>
+                <h3>De la terminale au BTS SIO</h3>
+                <div style="margin-top: 20px; position: relative; padding-left: 20px;">
+                    <!-- Ligne verticale -->
+                    <div style="position:absolute; left:7px; top:8px; bottom:8px; width:2px; background: linear-gradient(to bottom, var(--pink), var(--purple)); border-radius:2px;"></div>
+
+                    <!-- Bac STMG -->
+                    <div style="position:relative; margin-bottom:28px; padding-left:25px;">
+                        <div style="position:absolute; left:-5px; top:4px; width:14px; height:14px; border-radius:50%; background:var(--pink); border:2px solid white; box-shadow:0 0 0 2px var(--pink);"></div>
+                        <p style="font-size:0.75rem; color:#aaa; font-weight:600; text-transform:uppercase; letter-spacing:1px;">2019 – 2022</p>
+                        <p style="font-weight:700; font-size:0.95rem; margin-top:2px;">🎓 Baccalauréat STMG</p>
+                        <p style="font-size:0.85rem; color:#666; margin-top:3px;">Sciences et Technologies du Management et de la Gestion</p>
+                        <p style="font-size:0.82rem; color:#999; margin-top:3px;">Lycée Jean Mermoz — Montpellier</p>
+                    </div>
+
+                    <!-- BTS Lycée Jean Mermoz -->
+                    <div style="position:relative; margin-bottom:28px; padding-left:25px;">
+                        <div style="position:absolute; left:-5px; top:4px; width:14px; height:14px; border-radius:50%; background:#ffb3b3; border:2px solid white; box-shadow:0 0 0 2px #ffb3b3;"></div>
+                        <p style="font-size:0.75rem; color:#aaa; font-weight:600; text-transform:uppercase; letter-spacing:1px;">2022 – 2023</p>
+                        <p style="font-weight:700; font-size:0.95rem; margin-top:2px;">📚 BTS SIO SISR — 1ère tentative</p>
+                        <p style="font-size:0.85rem; color:#666; margin-top:3px;">Lycée Jean Mermoz — Montpellier</p>
+                        <p style="font-size:0.82rem; color:#cc6666; margin-top:4px; font-style:italic;">BTS non validé → décision de candidater à l'EPSI pour repasser le diplôme dans de meilleures conditions.</p>
+                    </div>
+
+                    <!-- EPSI -->
+                    <div style="position:relative; padding-left:25px;">
+                        <div style="position:absolute; left:-5px; top:4px; width:14px; height:14px; border-radius:50%; background:var(--purple); border:2px solid white; box-shadow:0 0 0 2px var(--purple);"></div>
+                        <p style="font-size:0.75rem; color:#aaa; font-weight:600; text-transform:uppercase; letter-spacing:1px;">2023 – 2026</p>
+                        <p style="font-weight:700; font-size:0.95rem; margin-top:2px;">🏫 BTS SIO SISR — EPSI Montpellier (AFINUM)</p>
+                        <p style="font-size:0.85rem; color:#666; margin-top:3px;">Reprise du BTS SIO option SISR — Session 2026</p>
+                        <p style="font-size:0.82rem; color:#9c88d4; margin-top:4px; font-weight:600;">✅ Candidate à la session 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BTS explication -->
+            <div class="card" style="border-left: 5px solid var(--pink);">
+                <span class="tag">🎓 Formation — 6. Présentation BTS</span>
+                <h3>BTS SIO — Option SISR</h3>
+                <p><strong>EPSI Montpellier (AFINUM)</strong> | 2023 – 2026</p>
+
+                <p style="margin-top: 14px; font-size:0.92rem; font-weight:600;">Qu'est-ce que le BTS SIO ?</p>
+                <p style="font-size:0.88rem; margin-top:6px;">
+                    Le <strong>BTS Services Informatiques aux Organisations (SIO)</strong> est un diplôme
+                    de niveau Bac+2 qui forme des techniciens informatiques capables de répondre aux besoins
+                    des entreprises en matière de systèmes d'information. Il se prépare en 2 ans et comprend
+                    des périodes de stage obligatoires en entreprise.
+                </p>
+
+                <p style="margin-top: 14px; font-size:0.92rem; font-weight:600;">Les deux options :</p>
+
+                <div style="margin-top: 8px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div style="background: #f3eeff; border-radius: 12px; padding: 14px; border-left: 3px solid var(--purple);">
+                        <p style="font-weight:700; font-size:0.85rem; color:#7c65c1;">⚙️ Option SISR</p>
+                        <p style="font-size:0.78rem; margin-top:4px; font-weight:600;">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                        <p style="font-size:0.78rem; margin-top:6px; color:#555;">
+                            Spécialisée dans l'administration des réseaux, serveurs et infrastructures informatiques.
+                            Installe, configure et sécurise les équipements réseau, les serveurs et les postes de travail.
+                        </p>
+                        <p style="font-size:0.75rem; margin-top:6px; color:#9c88d4; font-weight:600;">✅ Mon option</p>
+                    </div>
+                    <div style="background: #e3f2fd; border-radius: 12px; padding: 14px; border-left: 3px solid #90caf9;">
+                        <p style="font-weight:700; font-size:0.85rem; color:#1976d2;">💻 Option SLAM</p>
+                        <p style="font-size:0.78rem; margin-top:4px; font-weight:600;">Solutions Logicielles et Applications Métiers</p>
+                        <p style="font-size:0.78rem; margin-top:6px; color:#555;">
+                            Spécialisée dans le développement d'applications et de logiciels métiers.
+                            Conçoit, développe et maintient des applications web, mobiles et de gestion.
+                        </p>
+                        <p style="font-size:0.75rem; margin-top:6px; color:#1976d2; font-weight:600;">Autre option disponible</p>
+                    </div>
+                </div>
+
+                <p style="margin-top: 12px; font-size:0.82rem; color:#888;">
+                    📚 Modules SISR : Administration systèmes · Réseaux · Cybersécurité · Virtualisation · Support · Services Cloud
+                </p>
+            </div>
+
+            <a href="stage-smag.html" class="card-link">
+                <div class="card" style="border-left: 5px solid var(--purple);">
+                    <span class="tag">Stage Jan–Fév 2026 · 8 semaines</span>
+                    <h3>Administratrice Systèmes & Réseaux</h3>
+                    <p><strong>SMAG Montpellier</strong> — Pôle Infrastructure</p>
+                    <p style="margin-top: 8px; font-size: 0.88rem;">
+                        🔐 Audit Fortinet · 🖥️ PXE · ⚙️ PowerShell · 🎫 Support N2 · 📦 RGPD · 🔑 802.1X
+                    </p>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;">
+                        <span class="click-info" style="margin:0;">→ Voir les détails</span>
+                        <a href="attestation%20de%20stage%20smag.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📋 Attestation</a>
+                    </div>
+                </div>
+            </a>
+
+            <a href="stage-tlemcen.html" class="card-link">
+                <div class="card">
+                    <span class="tag">Stage Mars–Avr 2024</span>
+                    <h3>Technicienne Support</h3>
+                    <p><strong>Mairie de Tlemcen (Algérie)</strong></p>
+                    <p>Administration des serveurs locaux, maintenance du parc municipal.</p>
+                    <p class="click-info">→ Voir rapport & diaporama</p>
+                    <a href="diaporama-mairie-tlemcen-nesrine.pdf" target="_blank" class="btn-secondary" style="display: block; text-align: center; margin-top: 12px;" onclick="event.stopPropagation();">
+                        📊 Diaporama (PDF)
+                    </a>
+                </div>
+            </a>
+
+            <a href="stage-xefi.html" class="card-link">
+                <div class="card">
+                    <span class="tag">Stage Juin 2023</span>
+                    <h3>Technicienne Support</h3>
+                    <p><strong>XEFI Montpellier Ouest</strong></p>
+                    <p>Tickets GLPI, maintenance matérielle, support utilisateur N1.</p>
+                    <p class="click-info">→ Voir les documents</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== 7. TABLEAU RÉCAPITULATIF COMPÉTENCES E5 ===== -->
+    <section id="synthese" class="container">
+        <div class="section-divider">7 · Tableau récapitulatif des compétences</div>
+        <h2>Tableau de Synthèse — Épreuve E5</h2>
+        <p style="color:#888; font-size:0.9rem; margin-bottom: 5px;">
+            BTS SIO SISR — EPSI Montpellier | N° candidat : 02045632666
+        </p>
+        <p style="color:#888; font-size:0.85rem; margin-bottom: 20px;">
+            📎 <a href="tableau_competences_complet.xlsx" download style="color: var(--purple);">Télécharger le tableau officiel (.xlsx)</a>
+        </p>
+        <div style="overflow-x: auto;">
+        <table class="synthese-table">
+            <thead>
+                <tr>
+                    <th style="width:28%; text-align:left;">Réalisation professionnelle</th>
+                    <th style="width:14%;">Période</th>
+                    <th title="Gérer le patrimoine informatique">🖥️ Patrimoine</th>
+                    <th title="Répondre aux incidents et demandes">🎫 Incidents</th>
+                    <th title="Développer la présence en ligne">🌐 Présence</th>
+                    <th title="Travailler en mode projet">📋 Projet</th>
+                    <th title="Mettre à disposition un service informatique">⚙️ Service</th>
+                    <th title="Organiser son développement professionnel">📈 Dev. pro.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="section-header"><td colspan="8">📚 8 & 9 · Projets — Formation</td></tr>
+                <tr>
+                    <td>Installation et configuration de GLPI</td>
+                    <td class="periode">01/03/2026 →</td>
+                    <td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td>
+                </tr>
+                <tr>
+                    <td>Configuration d'une borne Wi-Fi</td>
+                    <td class="periode">01/03/2026 →</td>
+                    <td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td>
+                </tr>
+                <tr>
+                    <td>Configuration d'un réseau local</td>
+                    <td class="periode">01/10/2025 → 30/11/2025</td>
+                    <td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td>
+                </tr>
+                <tr>
+                    <td>Déploiement d'un serveur web Apache</td>
+                    <td class="periode">01/12/2025 → 28/02/2026</td>
+                    <td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td>
+                </tr>
+                <tr>
+                    <td>Portfolio professionnel & veille technologique</td>
+                    <td class="periode">22/09/2025 → 18/05/2026</td>
+                    <td class="check"></td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td>
+                </tr>
+
+                <tr class="section-header"><td colspan="8">💼 10 · Stage 1ère année — XEFI</td></tr>
+                <tr>
+                    <td>Stage XEFI Montpellier Ouest — Support N1 & GLPI</td>
+                    <td class="periode">05/06/2023 → 30/06/2023</td>
+                    <td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td>
+                </tr>
+
+                <tr class="section-header"><td colspan="8">💼 11 · Stage 2ème année — SMAG</td></tr>
+                <tr>
+                    <td>
+                        Stage SMAG — Pôle Infrastructure<br>
+                        <span style="font-size:0.72rem; color:#888;">Fortinet · PXE · PowerShell · GLPI · RGPD · 802.1X · KeePass · Syslog</span>
+                    </td>
+                    <td class="periode">06/01/2026 → 27/02/2026<br><span style="color:#b19cd9; font-weight:600;">8 semaines</span></td>
+                    <td class="check">✅</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <!-- ATTESTATIONS -->
+        <h3 style="margin-top: 40px;">📄 Attestations de stage</h3>
+        <div class="attest-grid">
+            <div class="attest-card">
+                <h4>🏢 SMAG Montpellier — 2ème année</h4>
+                <p>06/01/2026 → 27/02/2026 · 8 semaines</p>
+                <p>Signé par : KROURI Alain — DSI</p>
+                <a href="attestation%20de%20stage%20smag.pdf" target="_blank" class="btn-main" style="text-align:center; margin-top: 8px;">📄 Voir l'attestation</a>
+            </div>
+            <div class="attest-card">
+                <h4>🏛️ Mairie de Tlemcen — 1ère année</h4>
+                <p>10/03/2024 → 18/04/2024 · 1 mois et demi</p>
+                <p>Signé par : BELKUITEH Mohammed</p>
+                <a href="attestation-de-stage-mairie-de-tlemcen.pdf" target="_blank" class="btn-main" style="text-align:center; margin-top: 8px;">📄 Voir l'attestation</a>
+            </div>
+            <div class="attest-card">
+                <h4>🔵 XEFI Montpellier — 1ère année</h4>
+                <p>05/06/2023 → 30/06/2023 · 4 semaines</p>
+                <p>Signé par : AUDOUARD V. — Responsable technique</p>
+                <a href="Attestation%20de%20stage%201.pdf" target="_blank" class="btn-main" style="text-align:center; margin-top: 8px;">📄 Voir l'attestation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 8 & 9. PROJETS ===== -->
     <section id="projets" class="container">
+        <div class="section-divider">8 & 9 · Projets 1ère & 2ème année</div>
         <h2>Mes Réalisations</h2>
         <div class="grid">
             <a href="projet-gsb.html" class="card-link">
                 <div class="card">
+                    <span class="tag" style="background:#e8eaf6; color:#5c6bc0;">1ère année</span>
                     <h3>Projet GSB</h3>
                     <p>Application de gestion de frais développée en PHP/MySQL.</p>
                     <span class="tag">Développement</span>
@@ -124,6 +388,7 @@
             </a>
             <a href="projet-reseau.html" class="card-link">
                 <div class="card">
+                    <span class="tag" style="background:#e8eaf6; color:#5c6bc0;">1ère année</span>
                     <h3>Infrastructure Réseau</h3>
                     <p>Configuration d'un réseau local — switchs, VLANs, services réseau.</p>
                     <span class="tag">Réseau</span>
@@ -132,14 +397,16 @@
             </a>
             <a href="projet-glpi.html" class="card-link">
                 <div class="card">
+                    <span class="tag" style="background:#e0f2f1; color:#00897b;">2ème année</span>
                     <h3>Installation GLPI</h3>
-                    <p>Déploiement et configuration d'un serveur GLPI de gestion de parc informatique.</p>
+                    <p>Déploiement et configuration d'un serveur GLPI de gestion de parc.</p>
                     <span class="tag">Système</span>
                     <p class="click-info">→ Voir les détails</p>
                 </div>
             </a>
             <a href="projet-wifi.html" class="card-link">
                 <div class="card">
+                    <span class="tag" style="background:#e0f2f1; color:#00897b;">2ème année</span>
                     <h3>Configuration Borne Wi-Fi</h3>
                     <p>Mise en place et sécurisation d'une borne Wi-Fi professionnelle.</p>
                     <span class="tag">Réseau</span>
@@ -148,8 +415,9 @@
             </a>
             <a href="projet-serveur-web.html" class="card-link">
                 <div class="card">
+                    <span class="tag" style="background:#e0f2f1; color:#00897b;">2ème année</span>
                     <h3>Déploiement Serveur Web</h3>
-                    <p>Installation et configuration d'un serveur web Apache/Nginx sous Linux.</p>
+                    <p>Installation et configuration d'un serveur Apache sous Linux.</p>
                     <span class="tag">Système</span>
                     <p class="click-info">→ Voir les détails</p>
                 </div>
@@ -157,8 +425,70 @@
         </div>
     </section>
 
-    <!-- ===== COMPÉTENCES ===== -->
+    <!-- ===== 10 & 11. STAGES DÉTAILLÉS ===== -->
+    <section id="stages" class="container">
+        <div class="section-divider">10 & 11 · Stages — 1ère & 2ème année</div>
+        <h2>Mes Stages</h2>
+        <div class="grid">
+            <!-- STAGE 2EME ANNÉE -->
+            <a href="stage-smag.html" class="card-link">
+                <div class="card" style="border-left: 5px solid var(--purple);">
+                    <span class="tag">Stage 2ème année · Jan–Fév 2026 · 8 semaines</span>
+                    <h3>SMAG Montpellier — Pôle Infrastructure</h3>
+                    <p style="margin-top: 8px; font-size: 0.88rem;">
+                        🔐 Audit pare-feu Fortinet (FortiOS)<br>
+                        🖥️ Déploiement PXE & masterisation des postes<br>
+                        ⚙️ Scripts PowerShell · Serveur Syslog/rsyslog<br>
+                        🎫 Support N2 & tickets GLPI<br>
+                        📦 Décommissionnement RGPD · 🔑 802.1X · KeePass 2
+                    </p>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;">
+                        <span class="click-info" style="margin:0;">→ Voir le détail des missions</span>
+                        <a href="Rapport_de_stage_SAMG.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📄 Rapport</a>
+                        <a href="attestation%20de%20stage%20smag.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📋 Attestation</a>
+                    </div>
+                </div>
+            </a>
+
+            <!-- STAGE 1ERE ANNÉE -->
+            <a href="stage-tlemcen.html" class="card-link">
+                <div class="card" style="border-left: 5px solid var(--pink);">
+                    <span class="tag">Stage 1ère année · Mars–Avr 2024</span>
+                    <h3>Mairie de Tlemcen (Algérie)</h3>
+                    <p style="margin-top: 8px; font-size: 0.88rem;">
+                        🖥️ Administration des serveurs locaux<br>
+                        🔧 Maintenance du parc informatique municipal<br>
+                        👥 Support et formation des agents
+                    </p>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;">
+                        <span class="click-info" style="margin:0;">→ Voir le rapport</span>
+                        <a href="diaporama-mairie-tlemcen-nesrine.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📊 Diaporama</a>
+                        <a href="attestation-de-stage-mairie-de-tlemcen.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📋 Attestation</a>
+                    </div>
+                </div>
+            </a>
+
+            <a href="stage-xefi.html" class="card-link">
+                <div class="card">
+                    <span class="tag">Stage 1ère année · Juin 2023</span>
+                    <h3>XEFI Montpellier Ouest</h3>
+                    <p style="margin-top: 8px; font-size: 0.88rem;">
+                        🎫 Gestion de tickets GLPI<br>
+                        🔧 Maintenance matérielle & logicielle<br>
+                        👥 Support utilisateur N1
+                    </p>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top: 14px;">
+                        <span class="click-info" style="margin:0;">→ Voir les documents</span>
+                        <a href="Attestation%20de%20stage%201.pdf" target="_blank" class="btn-secondary" style="font-size:0.8rem; padding: 6px 14px;" onclick="event.stopPropagation();">📋 Attestation</a>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== 12 & 13. COMPÉTENCES (SITUATION 1 & 2) ===== -->
     <section id="competences" class="container">
+        <div class="section-divider">12 & 13 · Situation 1 & 2 — Compétences</div>
         <h2>Mes Compétences</h2>
         <div class="grid">
             <div class="card">
@@ -177,18 +507,18 @@
                     <tr><td>Configuration switchs & VLANs</td><td>✅</td></tr>
                     <tr><td>Services réseau (DNS, DHCP)</td><td>✅</td></tr>
                     <tr><td>Pare-feu Fortinet (FortiOS)</td><td>✅</td></tr>
-                    <tr><td>Standard 802.1X (authentification réseau)</td><td>✅</td></tr>
-                    <tr><td>Gestion des accès avec KeePass 2</td><td>✅</td></tr>
+                    <tr><td>Standard 802.1X</td><td>✅</td></tr>
+                    <tr><td>Gestion des accès KeePass 2</td><td>✅</td></tr>
                 </table>
             </div>
             <div class="card">
                 <h3>⚙️ Automatisation & Supervision</h3>
                 <table class="comp-table">
-                    <tr><td>Scripts PowerShell (collecte de logs)</td><td>✅</td></tr>
-                    <tr><td>Serveur Syslog / rsyslog (Linux)</td><td>✅</td></tr>
+                    <tr><td>Scripts PowerShell</td><td>✅</td></tr>
+                    <tr><td>Serveur Syslog / rsyslog</td><td>✅</td></tr>
                     <tr><td>Tâches planifiées Windows</td><td>✅</td></tr>
-                    <tr><td>MobaXterm (tests & administration SSH)</td><td>✅</td></tr>
-                    <tr><td>Collecte logs SQL Server & MySQL</td><td>✅</td></tr>
+                    <tr><td>MobaXterm / SSH</td><td>✅</td></tr>
+                    <tr><td>Logs SQL Server & MySQL</td><td>✅</td></tr>
                 </table>
             </div>
             <div class="card">
@@ -224,142 +554,50 @@
         </div>
     </section>
 
-    <!-- ===== TABLEAU DE SYNTHÈSE E5 ===== -->
-    <section id="synthese" class="container">
-        <h2>Tableau de Synthèse — Épreuve E5</h2>
-        <p style="color:#888; font-size:0.9rem; margin-bottom: 5px;">
-            BTS SIO SISR — EPSI Montpellier | N° candidat : 02045632666
-        </p>
-        <p style="color:#888; font-size:0.85rem; margin-bottom: 20px;">
-            📎 <a href="tableau_competences_complet.xlsx" download style="color: var(--purple);">Télécharger le tableau officiel (.xlsx)</a>
-        </p>
-
-        <div style="overflow-x: auto;">
-        <table class="synthese-table">
-            <thead>
-                <tr>
-                    <th style="width:28%; text-align:left;">Réalisation professionnelle</th>
-                    <th style="width:14%;">Période</th>
-                    <th title="Gérer le patrimoine informatique">🖥️ Patrimoine</th>
-                    <th title="Répondre aux incidents et demandes">🎫 Incidents</th>
-                    <th title="Développer la présence en ligne">🌐 Présence en ligne</th>
-                    <th title="Travailler en mode projet">📋 Projet</th>
-                    <th title="Mettre à disposition un service informatique">⚙️ Service</th>
-                    <th title="Organiser son développement professionnel">📈 Dev. pro.</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- EN FORMATION -->
-                <tr class="section-header">
-                    <td colspan="8">📚 Réalisations en cours de formation</td>
-                </tr>
-                <tr>
-                    <td>Installation et configuration de GLPI</td>
-                    <td class="periode">01/03/2026 →</td>
-                    <td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td>
-                </tr>
-                <tr>
-                    <td>Configuration et mise en place d'une borne Wi-Fi</td>
-                    <td class="periode">01/03/2026 →</td>
-                    <td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td>
-                </tr>
-                <tr>
-                    <td>Configuration d'un réseau local</td>
-                    <td class="periode">01/10/2025 → 30/11/2025</td>
-                    <td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td>
-                </tr>
-                <tr>
-                    <td>Déploiement d'un serveur web</td>
-                    <td class="periode">01/12/2025 → 28/02/2026</td>
-                    <td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td>
-                </tr>
-                <tr>
-                    <td>Création du portfolio professionnel et veille technologique</td>
-                    <td class="periode">22/09/2025 → 18/05/2026</td>
-                    <td class="check"></td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td>
-                </tr>
-
-                <!-- 1ERE ANNÉE -->
-                <tr class="section-header">
-                    <td colspan="8">💼 Milieu professionnel — 1ère année</td>
-                </tr>
-                <tr>
-                    <td>Stage XEFI Montpellier Ouest</td>
-                    <td class="periode">05/06/2023 → 30/06/2023</td>
-                    <td class="check">✅</td><td class="check">✅</td><td class="check"></td><td class="check">✅</td><td class="check">✅</td><td class="check"></td>
-                </tr>
-
-                <!-- 2EME ANNÉE -->
-                <tr class="section-header">
-                    <td colspan="8">💼 Milieu professionnel — 2ème année</td>
-                </tr>
-                <tr>
-                    <td>
-                        Stage SMAG Montpellier — Pôle Infrastructure<br>
-                        <span style="font-size:0.72rem; color:#888;">
-                            Audit pare-feu Fortinet · Déploiement PXE · Scripts PowerShell ·
-                            Support N2 GLPI · Gestion RGPD du parc · 802.1X · KeePass 2 · Syslog
-                        </span>
-                    </td>
-                    <td class="periode">06/01/2026 → 27/02/2026<br><span style="color:#b19cd9; font-weight:600;">8 semaines</span></td>
-                    <td class="check">✅</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td><td class="check">✅</td>
-                </tr>
-            </tbody>
-        </table>
-        </div>
-
-        <!-- ATTESTATIONS -->
-        <h3 style="margin-top: 40px;">📄 Attestations de stage</h3>
-        <div class="attest-grid">
-            <div class="attest-card">
-                <h4>🏢 SMAG Montpellier</h4>
-                <p>06/01/2026 → 27/02/2026 · 8 semaines</p>
-                <p>Signé par : KROURI Alain — DSI</p>
-                <a href="attestation%20de%20stage%20smag.pdf" target="_blank" class="btn-main" style="text-align:center; margin-top: 8px;">📄 Voir l'attestation</a>
-            </div>
-            <div class="attest-card">
-                <h4>🏛️ Mairie de Tlemcen</h4>
-                <p>10/03/2024 → 18/04/2024 · 1 mois et demi</p>
-                <p>Signé par : BELKUITEH Mohammed</p>
-                <a href="attestation-de-stage-mairie-de-tlemcen.pdf" target="_blank" class="btn-main" style="text-align:center; margin-top: 8px;">📄 Voir l'attestation</a>
-            </div>
-            <div class="attest-card">
-                <h4>🔵 XEFI Montpellier Ouest</h4>
-                <p>05/06/2023 → 30/06/2023 · 4 semaines</p>
-                <p>Signé par : AUDOUARD V. — Responsable technique</p>
-                <a href="Attestation%20de%20stage%201.pdf" target="_blank" class="btn-main" style="text-align:center; margin-top: 8px;">📄 Voir l'attestation</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== PARCOURS ===== -->
-    <section id="parcours" class="container">
-        <h2>Mon Parcours Professionnel</h2>
-     
-    </section>
-
-    <!-- ===== VEILLE ===== -->
+    <!-- ===== 14 & 15. VEILLE ===== -->
     <section id="veille" class="container">
+        <div class="section-divider">14 & 15 · Veille Technologique</div>
         <h2>Veille Technologique</h2>
-      
+        <div class="grid">
+            <div class="card">
+                <h3>📡 Veille 1 — Sources & Méthodes</h3>
+                <p>Thème : <strong>Cybersécurité</strong> — évolution des menaces et protection des infrastructures.</p>
+                <ul class="veille-list" style="list-style: none; margin-top: 12px;">
+                    <li>🔔 Google Alerts (mots-clés : ransomware, ANSSI, CVE…)</li>
+                    <li>📰 Le Monde Informatique & Zataz.com</li>
+                    <li>🔐 ANSSI — Agence Nationale de la Cybersécurité</li>
+                    <li>📡 Flux RSS hebdomadaires spécialisés</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>📋 Veille 2 — Synthèse & Analyse</h3>
+                <p>Analyse approfondie des <strong>Ransomwares</strong> et de la <strong>double authentification (MFA)</strong>.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; color: #888;">
+                    Méthode : alertes automatiques + lecture hebdomadaire + tableau de synthèse mis à jour régulièrement.
+                </p>
+                <a href="documents/tableau-veille.pdf" target="_blank" class="btn-secondary" style="margin-top: 12px; display: inline-block;">📊 Ouvrir mon tableau de veille</a>
+            </div>
+        </div>
     </section>
 
-    <!-- ===== CONTACT ===== -->
+    <!-- ===== 16. CONTACT ===== -->
     <section id="contact" class="container">
+        <div class="section-divider">16 · Contact</div>
         <div class="contact-section">
             <h2>Me Contacter 📬</h2>
             <p>Recruteur, enseignant ou jury E4/E5 — n'hésitez pas à me contacter !</p>
             <div class="contact-links">
                 <a href="mailto:nesrine.benallal@ecoles-epsi.net" class="btn-main">✉️ nesrine.benallal@ecoles-epsi.net</a>
                 <a href="https://www.linkedin.com/in/nesrine-benallal-472a7b250" target="_blank" class="btn-secondary">💼 LinkedIn</a>
-                <a href="Benallal-Nesrine-cv.pdf" download class="btn-secondary">📄 Télécharger mon CV</a>
+                <a href="CV Benallal Nesrine.pdf" download class="btn-secondary">📄 Télécharger mon CV</a>
+                <a href="https://github.com/nesrineben340-cyber/portfolio-nesrine" target="_blank" class="btn-secondary">🐙 GitHub</a>
             </div>
             <p style="margin-top: 20px; font-size: 0.85rem; color: #aaa;">📍 Montpellier, Hérault (34)</p>
         </div>
     </section>
 
     <footer>
-        <p>Nesrine Benallal — 2026 — Portfolio BTS SIO SISR</p>
+        <p>BENALLAL Nesrine — 2026 — Portfolio BTS SIO SISR</p>
         <p>📍 Montpellier | 📧 <a href="mailto:nesrine.benallal@ecoles-epsi.net">nesrine.benallal@ecoles-epsi.net</a></p>
     </footer>
 
